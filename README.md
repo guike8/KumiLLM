@@ -6,6 +6,12 @@ The first release contains **96 executed synthetic episodes and 432 assistant-ta
 
 This is a bootstrap corpus. It does not contain real Ableton sessions, audio evaluations, trained model weights, or a claim of production reliability.
 
+## Sol Ultra pilot (v2)
+
+The [first Sol teacher batch](data/v2-sol-ultra-pilot/README.md) adds **4 admitted episodes and 20 train-only assistant targets**. GPT-6.1 Sol at Ultra supplied public actions through a Codex file queue; Kumi executed them on the Studio's synthetic bridge. All records passed strict admission and exact tokenizer checks. Two original traces remain quarantined after exposing verifier defects; corrected fresh attempts provide the admitted transport and preference examples.
+
+The existing v1 LoRA pilot continues on its original snapshot and has saved a real adapter checkpoint. It has not consumed v2 data. No trained-model competitive result is established. See the [training snapshot](provenance/v1-training-pilot.json), [distillation workflow](docs/sol-distillation.md), [collector protocol](docs/sol-collector-protocol.md), and [verification evidence](provenance/sol-verification.json).
+
 ## Dataset v1
 
 | Split | Episodes | Assistant-target examples |
@@ -94,9 +100,9 @@ Recorded verification includes 19 parser regressions, 3 simulator regressions, 1
 
 ## Status and limits
 
-No task-specific model was trained for this release. An earlier base-model observation passed **5 of 18 existing synthetic predicates** with the 4-bit Qwen checkpoint and greedy decoding. That segmented baseline included a timeout correction and a prompt-cache reset; it is not a post-fix score, a trained-model result, or a production success rate.
+No completed task-specific model or model weights are released here. A v1 LoRA pilot is in progress; its dated checkpoint evidence is linked above. An earlier base-model observation passed **5 of 18 existing synthetic predicates** with the 4-bit Qwen checkpoint and greedy decoding. That segmented baseline included a timeout correction and a prompt-cache reset; it is not a post-fix score, a trained-model result, or a production success rate.
 
-The corpus uses four scripted templates and one project layout. Seed groups vary names and values, so its validation/test splits do not establish unseen-template or unseen-layout generalization. Memory examples verify queued notes for an unsaved Set, not persistence after saving. Real Ableton execution and audio-quality verification remain future collection stages.
+The v1 corpus uses four scripted templates and one project layout. Seed groups vary names and values, so its validation/test splits do not establish unseen-template or unseen-layout generalization. Memory examples verify queued notes for an unsaved Set, not persistence after saving. Real Ableton execution and audio-quality verification remain future collection stages.
 
 ## Attribution
 

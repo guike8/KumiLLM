@@ -1,0 +1,52 @@
+{
+  "manifest_sha256": "97fae5ba82bef03cc4a8cdaeceaba3f76542f01c9141c1919165270383e68013",
+  "freeze_utc": "2026-11-05T21:34:44Z",
+  "counts": {
+    "tasks": 40,
+    "layouts": 5,
+    "projects": 5,
+    "tasks_per_layout": 8,
+    "task_families": 14,
+    "task_families_by_count": {
+      "device_chain_creation": 2,
+      "device_instance_parameters": 4,
+      "instruction_revision": 2,
+      "memory_revision_scope": 4,
+      "midi_multi_slot_composition": 3,
+      "read_only_diagnostics": 5,
+      "reference_disambiguation": 2,
+      "relational_balance": 3,
+      "selective_history_reversal": 3,
+      "semantic_name_exchange": 1,
+      "send_bus_isolation": 3,
+      "stereo_geometry": 2,
+      "track_append_composition": 4,
+      "transport_stop_safety": 2
+    }
+  },
+  "families": [
+    "device_chain_creation",
+    "device_instance_parameters",
+    "instruction_revision",
+    "memory_revision_scope",
+    "midi_multi_slot_composition",
+    "read_only_diagnostics",
+    "reference_disambiguation",
+    "relational_balance",
+    "selective_history_reversal",
+    "semantic_name_exchange",
+    "send_bus_isolation",
+    "stereo_geometry",
+    "track_append_composition",
+    "transport_stop_safety"
+  ],
+  "limitations": [
+    "Frozen prospective specification only: no benchmark execution, model score, success rate or comparative result.",
+    "A future isolated evaluator initializer and predicate adapter are required; the current Sol collector initializes only its four renamed pilot fixtures and cannot ingest these layouts as-is.",
+    "Five layouts and forty cases remain a small synthetic sample; shared layouts and task families create correlated observations.",
+    "Synthetic bridge success does not establish actual Ableton behavior, rendered-audio quality or saved/reopened project memory.",
+    "Public summary omits task inputs, seeds, layouts, expected states and verifier rules to preserve held-out status.",
+    "Model identity is declared by the orchestrator; the Codex file queue does not supply independently authenticated provider token accounting.",
+    "The protected cases and close derivatives must never enter training, curriculum generation or validation-based model selection."
+  ]
+}

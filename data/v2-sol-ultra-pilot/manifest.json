@@ -1,0 +1,175 @@
+{
+  "format_version": 2,
+  "raw_format_version": 1,
+  "corpus_version": "v2-sol-ultra-pilot",
+  "scope": "executed_synthetic_kumi",
+  "teacher": "gpt-6.1-sol-ultra",
+  "teacher_model": "gpt-6.1-sol",
+  "teacher_reasoning_effort": "ultra",
+  "teacher_transport": "codex_agent_file_queue",
+  "real_live_verified": false,
+  "teacher_usage_reported": false,
+  "teacher_provenance_check": "exact declared model/effort/transport; not independent provider authentication",
+  "normalizer_sha256": "85211ab3a1a343c7da203f227b71895d7e2958121fae58ad31a8732389881d7e",
+  "validator_sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+  "raw_directory": "raw-evidence.tar.gz:raw",
+  "raw_files_preserved": true,
+  "source_episodes": 6,
+  "accepted_episodes": 4,
+  "quarantined_episodes": 2,
+  "records_by_split": {
+    "train": 20,
+    "valid": 0,
+    "test": 0
+  },
+  "dataset_readiness": {
+    "empty_splits": [
+      "valid",
+      "test"
+    ],
+    "all_training_validation_test_splits_nonempty": false,
+    "pilot_only": true,
+    "generalization_evaluation_established": false
+  },
+  "output_sha256": {
+    "train.jsonl": "315c5ac6d183b0c2369633992ff657cf35567b6337fb9f1b82aeb656de13e5b5",
+    "valid.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "episodes": [
+    {
+      "source": "kumi-sol-v2-S02E01.json",
+      "source_sha256": "ebc5950ef8ea055ef2b75c5b4500a0ab65255ed731eb531133ed1d0e45876f1b",
+      "source_bytes": 452922,
+      "identity": {
+        "episode_id": "kumi-sol-v2-S02E01",
+        "project_id": "sol-project-S02E01",
+        "project_family_id": "sol-novel-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-sol-v2-S02E02.json",
+      "source_sha256": "efd38b7d262b951a79106318d000afeb41a56341ede2ff03eca62597fd36d53b",
+      "source_bytes": 764934,
+      "identity": {
+        "episode_id": "kumi-sol-v2-S02E02",
+        "project_id": "sol-project-S02E02",
+        "project_family_id": "sol-novel-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 7
+    },
+    {
+      "source": "kumi-sol-v2-S02E03.json",
+      "source_sha256": "40a80e5a613b93cb8aaa9d1d02217e1b4d04298753d837aa592d25bd5fe586ba",
+      "source_bytes": 444775,
+      "identity": {
+        "episode_id": "kumi-sol-v2-S02E03",
+        "project_id": "sol-project-S02E03",
+        "project_family_id": "sol-novel-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "quarantined",
+      "reasons": [
+        "verification_failed"
+      ],
+      "accepted_records": 0
+    },
+    {
+      "source": "kumi-sol-v2-S02E04.json",
+      "source_sha256": "b31dfc85e5686635cceb603e6f23d2f6310218ff3091d8656dd8c64ecef7412c",
+      "source_bytes": 587238,
+      "identity": {
+        "episode_id": "kumi-sol-v2-S02E04",
+        "project_id": "sol-project-S02E04",
+        "project_family_id": "sol-novel-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "quarantined",
+      "reasons": [
+        "verification_failed"
+      ],
+      "accepted_records": 0
+    },
+    {
+      "source": "kumi-sol-v2-S03E03.json",
+      "source_sha256": "f1c371224f11088e72b3c6923a98c6b0c045f5b77f34344df366a242b4f969aa",
+      "source_bytes": 444772,
+      "identity": {
+        "episode_id": "kumi-sol-v2-S03E03",
+        "project_id": "sol-project-S03E03",
+        "project_family_id": "sol-novel-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-sol-v2-S03E04.json",
+      "source_sha256": "f3e6632caf8580161f4ca3360daaac3bda3ca09e93611965ad8f18e9dfd9fd74",
+      "source_bytes": 587233,
+      "identity": {
+        "episode_id": "kumi-sol-v2-S03E04",
+        "project_id": "sol-project-S03E04",
+        "project_family_id": "sol-novel-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 5
+    }
+  ],
+  "limitations": [
+    "Verification is execution against Kumi's synthetic bridge, not Ableton Live or audio verification.",
+    "Teacher actions were supplied through a Codex-agent file queue; this is not a direct OpenAI API sampling log.",
+    "Provider token usage and private reasoning are not supplied by this transport and are not training data.",
+    "Train-only pilots have no validation/test coverage and must not be treated as a complete evaluation corpus.",
+    "Successful teacher examples do not establish a competitive success rate; all held-out evaluation attempts must be scored separately.",
+    "Token lengths, prompt masks and musical quality require separate checks."
+  ],
+  "public_export": {
+    "source_manifest_sha256": "bc6ecc797d00080ad213a8949d50e99614a2eb87d8710f6a1f0cdcf1840884e9",
+    "changed_fields": [
+      "raw_directory",
+      "public_export"
+    ],
+    "note": "Only this manifest path label is redacted. Normalized JSONL and all raw episode bytes are unchanged from Studio."
+  }
+}

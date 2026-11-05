@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "scope": "executed_synthetic_kumi",
+  "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+  "teacher": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "transport": "codex_agent_file_queue",
+    "configured_by": "Codex subagent model/effort override",
+    "independent_provider_authentication": false,
+    "private_reasoning_collected": false,
+    "provider_token_usage_reported": false
+  },
+  "execution_host": "mac_studio",
+  "batches": [
+    {
+      "name": "pilot1",
+      "started_at_utc": "2026-11-05T21:31:53Z",
+      "episodes": [
+        "S02E01",
+        "S02E02",
+        "S02E03",
+        "S02E04"
+      ],
+      "teacher_calls": 20,
+      "predicate_passed_episodes": 2,
+      "source_patch": "patches/archive/kumi-sol-ultra-pilot1.patch",
+      "source_patch_sha256": "a0431184c410c5f5d0b8b8f674e8197b10c66e3a6b68aeef77dd99b11fd045a0",
+      "binary_sha256": "bd24a4c8666ac39894d1f1c090039a4343f0ebc08004e58ea7292adf18c9d124",
+      "native_regressions_passed": 12
+    },
+    {
+      "name": "corrected",
+      "started_at_utc": "2026-11-05T21:43:33Z",
+      "episodes": [
+        "S03E03",
+        "S03E04"
+      ],
+      "teacher_calls": 9,
+      "predicate_passed_episodes": 2,
+      "source_patch": "patches/kumi-sol-ultra-collection.patch",
+      "source_patch_sha256": "e1b606a7fda2c5939a91b91a7b11ed9ab6f1547f91bf6dd739ef462d317ea8e2",
+      "binary_sha256": "5a6691562d60d256ddbafdc480da0577b9ddfc02bb8be2eb6a8b201246151c5d",
+      "native_regressions_passed": 14,
+      "selection": {
+        "start": 2,
+        "limit": 2,
+        "series": "S03"
+      }
+    }
+  ],
+  "admission": {
+    "attempted_episodes": 6,
+    "accepted_episodes": 4,
+    "quarantined_episodes": 2,
+    "records_by_split": {
+      "train": 20,
+      "valid": 0,
+      "test": 0
+    },
+    "quarantine_details": {
+      "S02E03": "Original verifier missed legitimate native make_changes transport composition. Original failed predicate remains unchanged.",
+      "S02E04": "Original affirmative phrase matcher missed names to be UPPERCASE. Original failed predicates remain unchanged."
+    },
+    "corrective_policy": "New independently executed episodes after general verifier fixes; no original raw relabeling.",
+    "normalizer_sha256": "85211ab3a1a343c7da203f227b71895d7e2958121fae58ad31a8732389881d7e",
+    "validator_sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+    "local_reproduction_jsonl_identical_to_studio": true,
+    "normalized_sha256": {
+      "train.jsonl": "315c5ac6d183b0c2369633992ff657cf35567b6337fb9f1b82aeb656de13e5b5",
+      "valid.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "all_raw_sha256_identical_to_studio": true,
+    "raw_sha256": {
+      "kumi-sol-v2-S02E01.json": "ebc5950ef8ea055ef2b75c5b4500a0ab65255ed731eb531133ed1d0e45876f1b",
+      "kumi-sol-v2-S03E04.json": "f3e6632caf8580161f4ca3360daaac3bda3ca09e93611965ad8f18e9dfd9fd74",
+      "kumi-sol-v2-S02E04.json": "b31dfc85e5686635cceb603e6f23d2f6310218ff3091d8656dd8c64ecef7412c",
+      "kumi-sol-v2-S02E03.json": "40a80e5a613b93cb8aaa9d1d02217e1b4d04298753d837aa592d25bd5fe586ba",
+      "kumi-sol-v2-S02E02.json": "efd38b7d262b951a79106318d000afeb41a56341ede2ff03eca62597fd36d53b",
+      "kumi-sol-v2-S03E03.json": "f1c371224f11088e72b3c6923a98c6b0c045f5b77f34344df366a242b4f969aa"
+    }
+  },
+  "verification": {
+    "public_python_regressions_passed": 69,
+    "corrected_native_regressions_passed": 14,
+    "exact_tokenizer_report": "sol-tokenization.json",
+    "all_twenty_records_passed_exact_prompt_prefix_and_positive_target_checks": true,
+    "max_context_checked": 32768,
+    "evaluation_splits_empty": true
+  },
+  "transport_note": "One SSH control connection dropped during the original undo episode and was restored. Acknowledged mutations were not replayed; the actual undo predicate checks exactly one undo. Detached jobs remained running. Queue overhead is not direct API inference latency.",
+  "trained_on_this_corpus": false,
+  "real_live_verified": false,
+  "audio_quality_verified": false,
+  "competitive_result_established": false,
+  "heldout_design": "sol-heldout-freeze.json"
+}

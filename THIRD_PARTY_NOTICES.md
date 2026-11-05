@@ -9,7 +9,7 @@ Original KumiLLM contributions are under the MIT license in [LICENSE](LICENSE), 
 - Copyright (c) 2026 Ableton MCP Beyond contributors.
 - License: MIT; the complete upstream text and trademark notice are preserved in [licenses/Kumi-MIT.txt](licenses/Kumi-MIT.txt).
 
-The dataset reproduces Kumi's instructions and tool definitions. The collection and simulator patch also contains Kumi source context. These are upstream MIT material, alongside the new synthetic goals, scripted-teacher actions, verification records and collection code. Preserve the Kumi copyright and permission notice when redistributing copies or substantial portions of that material, including the embedded instructions and schemas.
+The dataset reproduces Kumi's instructions and tool definitions. The collection and simulator patch also contains Kumi source context. These are upstream MIT material, alongside the new synthetic goals, teacher actions, verification records and collection code. Preserve the Kumi copyright and permission notice when redistributing copies or substantial portions of that material, including the embedded instructions and schemas.
 
 KumiLLM changes add a read-only mixer-display simulation path, focused regression checks, a bounded scripted teacher, complete request/response capture and strict episode admission. The source patch identifies the changed code; this repository does not claim to be an upstream Kumi release.
 
@@ -45,7 +45,7 @@ The full Apache License, Version 2.0 is preserved in [licenses/QWEN-VLLM-APACHE-
 - Reference: <https://huggingface.co/mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit>.
 - Pinned revision: `6e302ea604ad9ab206367e2c501d1571023e7b6d`.
 
-Model weights and tokenizer assets are not bundled. Users obtain them separately under their applicable terms. The released demonstrations use a scripted teacher; they are not outputs sampled from this model.
+Model weights and tokenizer assets are not bundled. Users obtain them separately under their applicable terms. The v1 demonstrations use a scripted teacher. The v2 pilot uses GPT-6.1 Sol with Ultra reasoning through a Codex agent file queue. Neither corpus contains outputs sampled from the referenced Qwen model. The v2 provenance describes that outer transport and its limitations.
 
 ## Distribution scope
 

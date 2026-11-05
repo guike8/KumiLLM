@@ -1,9 +1,27 @@
 {
-  "format_version": 1,
+  "format_version": 2,
   "repository": "guike8/KumiLLM",
   "scope": "executed_synthetic_kumi",
-  "accepted_episodes": 96,
-  "assistant_target_records": 432,
+  "accepted_episodes": 100,
+  "quarantined_episodes": 2,
+  "assistant_target_records": 452,
+  "corpora": {
+    "v1": {
+      "accepted_episodes": 96,
+      "assistant_target_records": 432,
+      "teacher": "scripted_oracle_v1",
+      "unchanged_from_commit": "2c75dff3ac239e5c43eeb4c0bf239a1a8c7d97c7"
+    },
+    "v2-sol-ultra-pilot": {
+      "attempted_episodes": 6,
+      "accepted_episodes": 4,
+      "quarantined_episodes": 2,
+      "assistant_target_records": 20,
+      "teacher": "gpt-6.1-sol-ultra",
+      "teacher_transport": "codex_agent_file_queue",
+      "train_only": true
+    }
+  },
   "public_artifacts": [
     {
       "path": ".gitattributes",
@@ -12,8 +30,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 281,
-      "sha256": "681ec6b9ac7311fee741c18aa61da7cc0f5697b8a13dec8209677a6c93c13e3d"
+      "bytes": 312,
+      "sha256": "9f3a14ad9d1005eaa85542d427d9947427cf68964c3e46efddfabdc461c43ccd"
     },
     {
       "path": "DATASET_CARD.md",
@@ -27,13 +45,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 5793,
-      "sha256": "edbd7c469d727df8e20084e2a046bb069ce2d327dcd98c510fd1bf29d2c3a3b2"
+      "bytes": 6808,
+      "sha256": "04a2d2117b293d0397d0d5bcccf04f6c10ae1a3378d48118330cb6e009165035"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 4345,
-      "sha256": "1cfc14595d7a88f7b5b90e3af6470d470261b83650fbf3bbba853c07761ea91b"
+      "bytes": 4511,
+      "sha256": "bc3f5133f7ad7582266d4e6b1556717d5cafd7fe0817652cf38f147062ffe58a"
     },
     {
       "path": "data/v1/LICENSE.txt",
@@ -66,6 +84,51 @@
       "sha256": "8a421333a70b8c9886e5b7cddef2f6699bce05a911625b9897750cd85a527eae"
     },
     {
+      "path": "data/v2-sol-ultra-pilot/LICENSE.txt",
+      "bytes": 1217,
+      "sha256": "f6a4bf820a492313c9d4e100e16bd474cd5cf06c0fba27c1035238acb4af75cb"
+    },
+    {
+      "path": "data/v2-sol-ultra-pilot/README.md",
+      "bytes": 3976,
+      "sha256": "4e82b080f568f82f849aade4151b29214b13efd6e56df4caad8f8f5adec9d436"
+    },
+    {
+      "path": "data/v2-sol-ultra-pilot/manifest.json",
+      "bytes": 6700,
+      "sha256": "6f94735ab5d01569e3461c93658ad77c6c2bc4166a5d54d929be8cec2df4e588"
+    },
+    {
+      "path": "data/v2-sol-ultra-pilot/raw-evidence.tar.gz",
+      "bytes": 787237,
+      "sha256": "9763df8eefc981329c20e358985e799ddd3027e40657df9bd3b54ac9edde824a"
+    },
+    {
+      "path": "data/v2-sol-ultra-pilot/test.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/v2-sol-ultra-pilot/train.jsonl",
+      "bytes": 1606770,
+      "sha256": "315c5ac6d183b0c2369633992ff657cf35567b6337fb9f1b82aeb656de13e5b5"
+    },
+    {
+      "path": "data/v2-sol-ultra-pilot/valid.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/sol-collector-protocol.md",
+      "bytes": 8488,
+      "sha256": "de51f49a279ae1e85ed630476dc7511912147816ed7168bfbd20a04fd4400903"
+    },
+    {
+      "path": "docs/sol-distillation.md",
+      "bytes": 8691,
+      "sha256": "0fd99b56404335e80cc39183e6b8ababea1951d3d176b0f51cb8309786642079"
+    },
+    {
       "path": "licenses/Kumi-MIT.txt",
       "bytes": 1217,
       "sha256": "f6a4bf820a492313c9d4e100e16bd474cd5cf06c0fba27c1035238acb4af75cb"
@@ -91,6 +154,16 @@
       "sha256": "ae03cb4aa7df1dfa8c7e7d0f0cac42d2ab39478a91b77ec97b6364fb410b09b5"
     },
     {
+      "path": "patches/archive/kumi-sol-ultra-pilot1.patch",
+      "bytes": 98888,
+      "sha256": "a0431184c410c5f5d0b8b8f674e8197b10c66e3a6b68aeef77dd99b11fd045a0"
+    },
+    {
+      "path": "patches/kumi-sol-ultra-collection.patch",
+      "bytes": 103413,
+      "sha256": "e1b606a7fda2c5939a91b91a7b11ed9ab6f1547f91bf6dd739ef462d317ea8e2"
+    },
+    {
       "path": "patches/kumi-verified-collection.patch",
       "bytes": 48843,
       "sha256": "4f77b8555dbd87610bf208b52b5b1370afed557b856896b91c81dc14bc4716f9"
@@ -111,6 +184,31 @@
       "sha256": "471dcb7495f971da1d65fdf78cae86d603b8f5996364741bb6f50cfd80f32410"
     },
     {
+      "path": "provenance/sol-competition-plan.json",
+      "bytes": 8406,
+      "sha256": "c455bbe4fa14326e0271a81201efb92df8f40afdc22e2bd28b918a47212bdea1"
+    },
+    {
+      "path": "provenance/sol-heldout-freeze.json",
+      "bytes": 2225,
+      "sha256": "aa69cadb93cd59002d4cb2bf8a5446fc98e60dcefb30ddcd4ecd9f8a5d95a9f7"
+    },
+    {
+      "path": "provenance/sol-tokenization.json",
+      "bytes": 1022,
+      "sha256": "58dbe58c92a2b13bc2c13e1fe04d415f36d17f9710c586e968d188eade3df010"
+    },
+    {
+      "path": "provenance/sol-verification.json",
+      "bytes": 4298,
+      "sha256": "e44e429c02f7999d8706a796b9bbd721bf78cfb80e836649578a88076bba3aeb"
+    },
+    {
+      "path": "provenance/v1-training-pilot.json",
+      "bytes": 2511,
+      "sha256": "877d1fe3531d9451a558a02cb554f04489d5e8277f258034d3877d60104089e5"
+    },
+    {
       "path": "provenance/verification.json",
       "bytes": 4255,
       "sha256": "ce46a80ddf37352a0999ade82c7836f6ea168e87e79acd3677e2462f58256e93"
@@ -124,6 +222,11 @@
       "path": "scripts/normalize_episodes.py",
       "bytes": 21741,
       "sha256": "b97da48c85a086f6a56f7a3ad6fe6f4e06c1e125f14006cd29fb4d350a8b973b"
+    },
+    {
+      "path": "scripts/normalize_sol_episodes.py",
+      "bytes": 25061,
+      "sha256": "85211ab3a1a343c7da203f227b71895d7e2958121fae58ad31a8732389881d7e"
     },
     {
       "path": "scripts/parser-fix/README.md",
@@ -161,6 +264,11 @@
       "sha256": "79c2a7765d7ee8892cbc373c8a6abeedb44522c974b3086be39dce314ed23db4"
     },
     {
+      "path": "scripts/test_normalize_sol_episodes.py",
+      "bytes": 15869,
+      "sha256": "1b73118334dc40aa8919b282f5f7d62acd6545faa896ddbbc894579b4c1839bf"
+    },
+    {
       "path": "scripts/test_validate_dataset.py",
       "bytes": 4764,
       "sha256": "ee707ef208107003518a2a93d0ad0472839b8f2d147504a27de12968970694cc"
@@ -172,10 +280,15 @@
     }
   ],
   "excluded_local_paths": [
-    "data/v1/raw/"
+    "data/v1/raw/",
+    "data/v2-sol-ultra-pilot/raw/"
   ],
+  "private_heldout_task_inputs_included": false,
   "privacy_scan": "passed",
-  "public_tools_regressions_passed": 49,
+  "public_tools_regressions_passed": 69,
+  "corrected_native_collector_regressions_passed": 14,
   "dataset_hashes_identical_to_verified_studio_outputs": true,
-  "raw_sources_unchanged": true
+  "raw_sources_unchanged": true,
+  "sol_tokenizer_records_passed": 20,
+  "trained_model_competitiveness_established": false
 }

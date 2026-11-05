@@ -1,0 +1,164 @@
+{
+  "format_version": 1,
+  "status": "planned; no competitive result established",
+  "objective": {
+    "domain": "Kumi DAW tool use",
+    "target": "Match or exceed the declared Sol Ultra teacher on fresh held-out Kumi tasks with a smaller local model.",
+    "claim_boundary": "No claim of matching general frontier-model capability; synthetic and real-DAW results remain separate."
+  },
+  "teacher": {
+    "teacher": "gpt-6.1-sol-ultra",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "transport": "codex_agent_file_queue",
+    "captured_output": "Public assistant tool actions and final text plus actual Kumi tool results.",
+    "not_captured": [
+      "private reasoning",
+      "invented provider token usage"
+    ],
+    "provenance_limit": "The collector records the orchestrator-requested model and transport. Admission cannot independently authenticate a model provider."
+  },
+  "students": {
+    "current_pilot": {
+      "base": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+      "revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d",
+      "type": "30B MoE with approximately 3B active parameters",
+      "status": "Existing v1 LoRA pilot continues on its immutable v1 snapshot."
+    },
+    "next_comparison": {
+      "candidate_size_range": "7\u201314B dense models",
+      "selection_status": "Not selected; choose only after compatibility, long-context memory, and held-out task profiling.",
+      "control": "Compare unmodified base and trained adapter for every selected student."
+    }
+  },
+  "pilot": {
+    "episode_cap": 4,
+    "corpus": "v2-sol-ultra-pilot",
+    "task_families": [
+      "MIDI writing with exact note readback and preservation of existing clips",
+      "Selective undo that preserves a preceding requested edit",
+      "Deferred transport discovery and seek without starting playback",
+      "Producer-scoped preference persisted and applied on a subsequent turn"
+    ],
+    "admission": "Whole episode requires independent final-state checks, preservation of unrelated state, complete captured calls, clean successful matching tool results and exact teacher provenance.",
+    "failure_policy": "Preserve failed attempts in quarantine; never use a failed teacher action as a positive label.",
+    "readiness": "Train-only pilot outputs are allowed but explicitly lack validation/test coverage. Full tokenization and target-mask checks remain required before training.",
+    "observed_result": {
+      "attempted_episodes": 6,
+      "accepted_episodes": 4,
+      "quarantined_episodes": 2,
+      "assistant_target_records": 20,
+      "teacher_calls": 29,
+      "splits": {
+        "train": 20,
+        "valid": 0,
+        "test": 0
+      },
+      "note": "Original false-negative verifier outcomes are preserved; corrected targeted reruns are new raw episodes. These are curation counts, not teacher benchmark scores."
+    }
+  },
+  "expansion": {
+    "initial_target_accepted_episodes": 5000,
+    "scale_condition": "Expand only after pilot admission, tokenizer and curriculum-coverage checks pass; grow according to measured student failures and budget.",
+    "initial_task_families": [
+      "Discovery and reference grounding",
+      "Gain, pan and sends in native/display units",
+      "Track and scene organization",
+      "MIDI construction and exact note editing",
+      "Device/parameter bounds and enum controls",
+      "History and selective undo",
+      "Transport position and playback permissions",
+      "Producer versus project memory",
+      "Multi-turn preferences and corrections",
+      "Adversarial project labels",
+      "Capability-gap reporting and refusal without side effects",
+      "Recovery from observed failures"
+    ],
+    "diversity_gates": {
+      "planned_minimum_task_families": 12,
+      "planned_minimum_project_layouts": 5,
+      "maximum_single_family_share": 0.25
+    },
+    "policy_note": "The current clean-episode gate does not admit failed-action recovery traces. A separately reviewed per-step recovery policy is needed before using those histories as training data.",
+    "data_separation": "Do not modify the currently running v1 pilot or its snapshots. Version and validate any future combined corpus separately."
+  },
+  "split_and_leakage_control": {
+    "assign_before_generation": [
+      "episode_id",
+      "project_id",
+      "project_family_id",
+      "split"
+    ],
+    "group_rules": [
+      "All expanded assistant prefixes from one source episode remain together.",
+      "All related project variants remain in one split.",
+      "Hold out goal-program compositions and project layouts, not merely renamed copies."
+    ],
+    "held_out_evaluation": "Freeze separate fresh task manifests and expected-state checks before collecting teacher training demonstrations. Keep checks unavailable to the teacher training role.",
+    "exclusions": [
+      "Original 18-case benchmark episodes and close case copies",
+      "Any held-out competition task or teacher answer for it",
+      "Validation/test records from gradient updates",
+      "Teacher-private reasoning or fabricated tool observations"
+    ],
+    "selection": "Use validation for configuration/checkpoint selection; keep final test sealed until the student configuration is frozen.",
+    "freeze_timing": "The initial four pilot families were defined independently before teacher collection. The separate 40-task heldout specification is frozen before curriculum expansion; it is not an executed benchmark."
+  },
+  "comparison_protocol": {
+    "initial_proposed_held_out_cases": 40,
+    "status": "Evaluation manifest and budgets must be frozen before runs; not executed by this plan.",
+    "controlled_inputs": [
+      "Same user task",
+      "Same initial project state and scenario seed",
+      "Same Kumi instructions and active/deferred tool definitions",
+      "Same grounded observations and tool-result semantics",
+      "Same public-action, tool-call and per-turn wall-clock limits"
+    ],
+    "fixed_before_runs": [
+      "Maximum model calls",
+      "Maximum tool calls",
+      "Public output budget",
+      "Per-turn timeout",
+      "Repeat seeds and trial count"
+    ],
+    "attempt_accounting": "Score every held-out attempt, including errors and timeouts. Do not filter the denominator to successful teacher cases.",
+    "transport_limit": "The file-queue Codex teacher has an outer adapter prompt and orchestration overhead. Record those differences; do not present it as identical native API inference.",
+    "latency_reporting": "Measure end-to-end latency and queue/tool overhead separately where observable. Do not invent inference-only latency, provider cost or reasoning-token counts.",
+    "frozen_specification": {
+      "manifest_sha256": "97fae5ba82bef03cc4a8cdaeceaba3f76542f01c9141c1919165270383e68013",
+      "frozen_at": "2026-11-05T21:34:44Z",
+      "tasks": 40,
+      "layouts": 5,
+      "families": 14,
+      "status": "frozen_specification_not_executed",
+      "executed_tasks": 0,
+      "requires": "isolated evaluator initializer and predicate adapter",
+      "summary": "sol-heldout-freeze.json"
+    }
+  },
+  "metrics": {
+    "primary": "Episode success: requested goal reached with no unrequested mutations.",
+    "secondary": [
+      "Invalid or rejected tool-call rate",
+      "Unrequested-state-change rate",
+      "Unsupported success-claim rate",
+      "Fresh-reference/readback compliance",
+      "Selective-undo correctness",
+      "Memory scope and persistence correctness",
+      "Observed-error recovery correctness when supported",
+      "Latency, model-call count and memory footprint"
+    ],
+    "uncertainty": "Report trial counts, paired task-level differences and uncertainty intervals; do not turn a small synthetic sample into a production accuracy estimate.",
+    "competitive_criterion": "Only claim domain competitiveness after matched held-out attempts support comparable or better success with the desired size/latency/resource tradeoff."
+  },
+  "real_daw_stage": {
+    "status": "Not yet verified",
+    "requirements": [
+      "Disposable real Ableton projects",
+      "Actual API readback and preservation checks",
+      "Saved/reopened project-memory checks",
+      "Rendered audio and independent listening where the target concerns sound"
+    ],
+    "reporting": "Keep actual Live execution, audible quality and synthetic-tool success as distinct evidence."
+  }
+}

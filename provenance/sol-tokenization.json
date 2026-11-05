@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "max_seq_length": 32768,
+  "splits": {
+    "train": {
+      "records": 20,
+      "checked": 20,
+      "tokens": {
+        "full": {
+          "min": 22263,
+          "max": 24002
+        },
+        "prompt": {
+          "min": 22208,
+          "max": 23968
+        },
+        "target": {
+          "min": 15,
+          "max": 200
+        }
+      }
+    }
+  },
+  "error_count": 0,
+  "errors": [],
+  "format_version": 1,
+  "provided_splits": [
+    "train"
+  ],
+  "intentionally_empty_splits": [
+    "valid",
+    "test"
+  ],
+  "train_sha256": "315c5ac6d183b0c2369633992ff657cf35567b6337fb9f1b82aeb656de13e5b5",
+  "model_repository": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+  "model_revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d",
+  "local_files_only": true,
+  "trust_remote_code": false,
+  "training_started_on_this_corpus": false,
+  "verification": "Exact rendered prompt-token prefix, positive final-target token count and no context truncation.",
+  "missing_evaluation_coverage": true
+}

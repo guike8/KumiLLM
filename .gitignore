@@ -28,3 +28,5 @@ cache/
 
 # Unpack the published evidence archive locally.
 /data/v1/raw/
+
+/data/v2-sol-ultra-pilot/raw/

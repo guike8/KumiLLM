@@ -1,0 +1,77 @@
+{
+  "format_version": 1,
+  "as_of_utc": "2026-11-05T21:38:39.232908+00:00",
+  "status": "training_in_progress",
+  "dataset": {
+    "repository": "https://github.com/guike8/KumiLLM",
+    "commit": "2c75dff3ac239e5c43eeb4c0bf239a1a8c7d97c7",
+    "corpus": "v1",
+    "teacher": "scripted_oracle_v1",
+    "sol_v2_included": false,
+    "test_provided_to_trainer": false
+  },
+  "model": {
+    "repository": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+    "revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d"
+  },
+  "configuration": {
+    "rank": 16,
+    "targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "layers": 48,
+    "max_seq_length": 32768,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "planned_microbatches": 288,
+    "planned_optimizer_updates": 36,
+    "learning_rate": 0.00002,
+    "prompt_masking": true,
+    "gradient_checkpointing": true,
+    "seed": 7
+  },
+  "observed": {
+    "microbatches": 33,
+    "optimizer_updates": 4,
+    "first_saved_checkpoint": {
+      "iteration": 32,
+      "sha256": "0e9d5e4013839c099f03fc6a6d95467e0513e4682f6b5446331458d08680195c",
+      "bytes": 26759782
+    },
+    "validation_first": {
+      "event": "validation",
+      "at": "2026-11-05T21:04:36.864544+00:00",
+      "wall_seconds": 28.333536665999418,
+      "iteration": 0,
+      "val_loss": 2.8533897399902344,
+      "val_time": 27.369672749999154,
+      "mlx_active_memory_gib": 16.025997195392847,
+      "mlx_peak_memory_gib": 26.357969596982002,
+      "mlx_cache_memory_gib": 0.0000915825366973877,
+      "microbatches_completed": 0,
+      "optimizer_updates_completed": 0
+    },
+    "validation_latest": {
+      "event": "validation",
+      "at": "2026-11-05T21:37:05.162426+00:00",
+      "wall_seconds": 1976.6352286250003,
+      "iteration": 31,
+      "val_loss": 0.5796068906784058,
+      "val_time": 31.072929250000016,
+      "mlx_active_memory_gib": 16.10128463804722,
+      "mlx_peak_memory_gib": 40.136796586215496,
+      "mlx_cache_memory_gib": 0.00010779500007629395,
+      "microbatches_completed": 31,
+      "optimizer_updates_completed": 3
+    }
+  },
+  "completed": false,
+  "trained_model_benchmark_run": false,
+  "model_weights_published": false,
+  "limitations": [
+    "Validation is limited to four batches of the v1 synthetic same-template/same-layout split.",
+    "Loss changes do not establish Kumi task success, unseen-task generalization, or competitiveness with Sol.",
+    "The separate v2 Sol corpus has not been used in this running training job."
+  ]
+}
