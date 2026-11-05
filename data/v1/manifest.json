@@ -1,0 +1,1480 @@
+{
+  "format_version": 1,
+  "scope": "executed_synthetic_kumi",
+  "teacher": "scripted_oracle_v1",
+  "real_live_verified": false,
+  "normalizer_sha256": "5de596ef63d7e448feefd01ce9fa355a0654151e52a1fab1bc9710fd02d07c7f",
+  "validator_sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+  "raw_directory": "data/v1/raw",
+  "raw_files_preserved": true,
+  "source_episodes": 96,
+  "accepted_episodes": 96,
+  "quarantined_episodes": 0,
+  "records_by_split": {
+    "train": 288,
+    "valid": 72,
+    "test": 72
+  },
+  "output_sha256": {
+    "train.jsonl": "fb5c79b9578f390a30be619f25b2de09fce86164532e6632ddb832daed54454a",
+    "valid.jsonl": "8a421333a70b8c9886e5b7cddef2f6699bce05a911625b9897750cd85a527eae",
+    "test.jsonl": "148ce83b5ed2a13c6b78b2825bded376719960f7abfcddc61a858a131c1d49b4"
+  },
+  "episodes": [
+    {
+      "source": "kumi-synthetic-v1-G00V00.json",
+      "source_sha256": "11eaefded449c269f78fd1c0f1a71a7f304cfed01b4fca1281e00fcbd098d059",
+      "source_bytes": 390810,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V00",
+        "project_id": "synthetic-project-G00V00",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V01.json",
+      "source_sha256": "4320df686c27ca1f58513e457a0ba8bacfc27bc7f09557b3eb32e08433bb892f",
+      "source_bytes": 392074,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V01",
+        "project_id": "synthetic-project-G00V01",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V02.json",
+      "source_sha256": "056887ff1862014d7f877062a1cbe2028298589ca7ac5adf54af04ea45a02b72",
+      "source_bytes": 562195,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V02",
+        "project_id": "synthetic-project-G00V02",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V03.json",
+      "source_sha256": "c9bd904379865b7fc7e2f1d888bafde956ffa67178de0bdd2b5e7cab72a01425",
+      "source_bytes": 392448,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V03",
+        "project_id": "synthetic-project-G00V03",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V04.json",
+      "source_sha256": "9c6923c05aa939201fc00371352da03390ec8f18e3abb5e1bd47fea0b0639957",
+      "source_bytes": 390867,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V04",
+        "project_id": "synthetic-project-G00V04",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V05.json",
+      "source_sha256": "dc1a19626228f25408290143d43fd25071f2a21b3d08c8b8f2d9917c39a5d7d3",
+      "source_bytes": 391992,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V05",
+        "project_id": "synthetic-project-G00V05",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V06.json",
+      "source_sha256": "804d9aa260d396825d78f247a31f94c60d74bf7d24f9a3d813d541c4baf35c34",
+      "source_bytes": 562040,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V06",
+        "project_id": "synthetic-project-G00V06",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G00V07.json",
+      "source_sha256": "6614a9b978ba02ef7913f200ce411ff21c582d10e67697c5263a21f45df8057f",
+      "source_bytes": 392394,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G00V07",
+        "project_id": "synthetic-project-G00V07",
+        "project_family_id": "synthetic-arrangement-family-00",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V00.json",
+      "source_sha256": "9a10ef254ce0158e855ddd5afe13a2641046020a863b3328a800947c55b0b29d",
+      "source_bytes": 390805,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V00",
+        "project_id": "synthetic-project-G01V00",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V01.json",
+      "source_sha256": "c8a1de3f7e5b1989793daf4f0d8affa2812e36c5e88d454cb1dcea4c0763fc4e",
+      "source_bytes": 391319,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V01",
+        "project_id": "synthetic-project-G01V01",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V02.json",
+      "source_sha256": "6fda956690f3d9a7cd5c487b49ab3f56a78a7d4c7ac9e906b1e2de8341eb532c",
+      "source_bytes": 562058,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V02",
+        "project_id": "synthetic-project-G01V02",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V03.json",
+      "source_sha256": "d2fa05d1f9eb79719f599a9729d1907578a8e97ba82d29d82d15cca43fa2ce4c",
+      "source_bytes": 391770,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V03",
+        "project_id": "synthetic-project-G01V03",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V04.json",
+      "source_sha256": "556cda67042698f8ed0c44f442a56612c8177ae95ef37a50ea8335f700ebcba5",
+      "source_bytes": 390860,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V04",
+        "project_id": "synthetic-project-G01V04",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V05.json",
+      "source_sha256": "d5f9c688c3bd7ab4e35cde174f5cc3bf08001ab35dd9bc242ec8a94863b0bff6",
+      "source_bytes": 391383,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V05",
+        "project_id": "synthetic-project-G01V05",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V06.json",
+      "source_sha256": "674bc010e34c23836860af29ddbd05802f8e2cfd571cd481598fda571d972521",
+      "source_bytes": 562188,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V06",
+        "project_id": "synthetic-project-G01V06",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G01V07.json",
+      "source_sha256": "a5f0b6e73f701bdca6d4bc9a1dbce474d088d6ce06a03b93eea40e9204266820",
+      "source_bytes": 391694,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G01V07",
+        "project_id": "synthetic-project-G01V07",
+        "project_family_id": "synthetic-arrangement-family-01",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V00.json",
+      "source_sha256": "46c9d535a8e740a62de11ab2480587a72b2cd6ba4bcabf661882d1028c36eecb",
+      "source_bytes": 390788,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V00",
+        "project_id": "synthetic-project-G02V00",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V01.json",
+      "source_sha256": "a26f5b4983906bf6c09dbefda3f5c15cb6fa4bbacebc92d4be8cdc5d736767cb",
+      "source_bytes": 391305,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V01",
+        "project_id": "synthetic-project-G02V01",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V02.json",
+      "source_sha256": "7eb0b8e50502947171b0e7d7eaa7173fa244b25bcd24ebf72fe2e57f3d21b550",
+      "source_bytes": 562132,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V02",
+        "project_id": "synthetic-project-G02V02",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V03.json",
+      "source_sha256": "b27242f19f42489c66f97473f8a59b2e26c21e023e857ec89c5d76d255348235",
+      "source_bytes": 391796,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V03",
+        "project_id": "synthetic-project-G02V03",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V04.json",
+      "source_sha256": "959b70767f4e7ae633bce1ce28bb752b7f89bd6e7f880e490b8b95784c177a36",
+      "source_bytes": 390882,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V04",
+        "project_id": "synthetic-project-G02V04",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V05.json",
+      "source_sha256": "cec54f28bb9f7d7bd0e8bbd0f2c5cded39036d05ad0fe4b45b77987f07042606",
+      "source_bytes": 391422,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V05",
+        "project_id": "synthetic-project-G02V05",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V06.json",
+      "source_sha256": "03ec4adba680d24f9af03ec4c075c80b6a8bcbfc0f6b77734942955f1d191323",
+      "source_bytes": 562050,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V06",
+        "project_id": "synthetic-project-G02V06",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G02V07.json",
+      "source_sha256": "9c262365a1bbb24122c53e9992f39b78d21d22fcc97ee696a4062c0284af8b61",
+      "source_bytes": 391822,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G02V07",
+        "project_id": "synthetic-project-G02V07",
+        "project_family_id": "synthetic-arrangement-family-02",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V00.json",
+      "source_sha256": "ee3c42f338185663012afd450aaa01a892f1131ba575e20477c0193fb65fcd28",
+      "source_bytes": 390892,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V00",
+        "project_id": "synthetic-project-G03V00",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V01.json",
+      "source_sha256": "aa56a53442897053abb1b75bd3329351f2bbac905033c1c5148b23f67c0dbc55",
+      "source_bytes": 392091,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V01",
+        "project_id": "synthetic-project-G03V01",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V02.json",
+      "source_sha256": "eb21cd2d84cf35f5239de0b422931a00e01969c656e1e59031b937e46cd68555",
+      "source_bytes": 562247,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V02",
+        "project_id": "synthetic-project-G03V02",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V03.json",
+      "source_sha256": "366cb3be496a10b6c1c1ca3b2de4954f6de0756c1d49aec86c7ea10f1a36cd02",
+      "source_bytes": 392453,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V03",
+        "project_id": "synthetic-project-G03V03",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V04.json",
+      "source_sha256": "5b72d95ee5a117a6fe2ca4cd0b263b704d94236e6e6f6d99143aec3bcfbbb628",
+      "source_bytes": 390803,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V04",
+        "project_id": "synthetic-project-G03V04",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V05.json",
+      "source_sha256": "86b08f22b2fedbc235926e8cf2eca6b62a3b5a132f789ffcad86c7a32aa05b45",
+      "source_bytes": 392003,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V05",
+        "project_id": "synthetic-project-G03V05",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V06.json",
+      "source_sha256": "0e89a93d494e9cf439c3c11a9cdaa327eb9f8394404b8fd11b0b3cd35507fbd8",
+      "source_bytes": 562091,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V06",
+        "project_id": "synthetic-project-G03V06",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G03V07.json",
+      "source_sha256": "4db8c01aead56549e409e939aeb085af67e095bb5e0f8b74575c932c9d51c796",
+      "source_bytes": 392361,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G03V07",
+        "project_id": "synthetic-project-G03V07",
+        "project_family_id": "synthetic-arrangement-family-03",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V00.json",
+      "source_sha256": "5bdf366075a8df5d3c3f13afbebfe1d4b113e8cd01a2acf35d6d54dcd5905be4",
+      "source_bytes": 390802,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V00",
+        "project_id": "synthetic-project-G04V00",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V01.json",
+      "source_sha256": "a4ea7b9a6aacacf028f1e9e373a7035d173aedb8f66224055622356c07f71306",
+      "source_bytes": 391326,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V01",
+        "project_id": "synthetic-project-G04V01",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V02.json",
+      "source_sha256": "c4c030ca03297ff522d144638f4344ae39c7787a1a38a2da9e5132b002219832",
+      "source_bytes": 562133,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V02",
+        "project_id": "synthetic-project-G04V02",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V03.json",
+      "source_sha256": "5865635484f061d5fe5efb8e02c40b9bc43a3e6a2bb568ff809fd0af75db880e",
+      "source_bytes": 391789,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V03",
+        "project_id": "synthetic-project-G04V03",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V04.json",
+      "source_sha256": "7b7d88dfb15d059643a36328fb89302e481ce43f07ecac6be9371a41e66a9706",
+      "source_bytes": 390865,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V04",
+        "project_id": "synthetic-project-G04V04",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V05.json",
+      "source_sha256": "71ee27bd4f749dd8ecd912a2eead6ef78292f7d7cb5c318c1ede1207a2deeaeb",
+      "source_bytes": 391397,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V05",
+        "project_id": "synthetic-project-G04V05",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V06.json",
+      "source_sha256": "980b8eb8ec097924bdba4937ae72723acbb15d9c51c8dbf38976e9b7c26ef837",
+      "source_bytes": 561981,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V06",
+        "project_id": "synthetic-project-G04V06",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G04V07.json",
+      "source_sha256": "25133f14aeacfa608ee4e12e55fe3967baa2f732d43bbe48bc87122abd1caa12",
+      "source_bytes": 391704,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G04V07",
+        "project_id": "synthetic-project-G04V07",
+        "project_family_id": "synthetic-arrangement-family-04",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V00.json",
+      "source_sha256": "ede0596a583de4cee82221c2bc0086f742fb7c54ea54d67ac274f3752f39c660",
+      "source_bytes": 390783,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V00",
+        "project_id": "synthetic-project-G05V00",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V01.json",
+      "source_sha256": "c654ce789c4dda76ddce0622a5eaac31dfae0245b02e0ea9f9a63485e7f7ead4",
+      "source_bytes": 391394,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V01",
+        "project_id": "synthetic-project-G05V01",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V02.json",
+      "source_sha256": "5437442f4ee9df40bccc36bac6270dc63423c419858097201eb55c69e3aa88c8",
+      "source_bytes": 562191,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V02",
+        "project_id": "synthetic-project-G05V02",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V03.json",
+      "source_sha256": "9a841eee6ca571a3f14f4473e6bf96d6ee95c80388f8cbd5eb85cf4d1a7e6146",
+      "source_bytes": 391752,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V03",
+        "project_id": "synthetic-project-G05V03",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V04.json",
+      "source_sha256": "d94029f2d1c9ee644edada13d42ccf68e5c6d2182a87a8651129196893f377f2",
+      "source_bytes": 390850,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V04",
+        "project_id": "synthetic-project-G05V04",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V05.json",
+      "source_sha256": "4d34ad2f08871141a7743e81e827a332f598266a6ba2de84b22ce1e3e0dd4060",
+      "source_bytes": 391349,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V05",
+        "project_id": "synthetic-project-G05V05",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V06.json",
+      "source_sha256": "4578b96ee9a2cc4831d269ce65cad66dc205fbb57ef3495a25001e025b4c3521",
+      "source_bytes": 562250,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V06",
+        "project_id": "synthetic-project-G05V06",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G05V07.json",
+      "source_sha256": "a7ed246236a27b68273ec35aa9c36c778419c385429b98202a58c38da4c8161d",
+      "source_bytes": 391795,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G05V07",
+        "project_id": "synthetic-project-G05V07",
+        "project_family_id": "synthetic-arrangement-family-05",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V00.json",
+      "source_sha256": "30e43f42e1a17d215499104d9c90641f88be398bcdf3738833b19545ac0acf9b",
+      "source_bytes": 390889,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V00",
+        "project_id": "synthetic-project-G06V00",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V01.json",
+      "source_sha256": "620a23e6d8f5f04bf868a9aa22ecaa784d652f61ad5736bef541f4348a6b82e1",
+      "source_bytes": 392090,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V01",
+        "project_id": "synthetic-project-G06V01",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V02.json",
+      "source_sha256": "8ddff41d5d49602c448390a0a8a66d989c1cdfa4db468a10cdce54ef34480e95",
+      "source_bytes": 562184,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V02",
+        "project_id": "synthetic-project-G06V02",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V03.json",
+      "source_sha256": "ec9eacd79353d526952af0f99844b955a16cfd9f6c14116b8d98f88a8689b2ed",
+      "source_bytes": 392385,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V03",
+        "project_id": "synthetic-project-G06V03",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V04.json",
+      "source_sha256": "91663a713e73328d9c54a10623fa4d81fd1bcd7cb83b73d152112ade63bb1325",
+      "source_bytes": 390805,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V04",
+        "project_id": "synthetic-project-G06V04",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V05.json",
+      "source_sha256": "5b2626ef44353de36960c04615647e0a5c07acba118b367f3a0caa235ca1e085",
+      "source_bytes": 392008,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V05",
+        "project_id": "synthetic-project-G06V05",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V06.json",
+      "source_sha256": "852d4c140ad42df7c5aa0bf3144375c24e58fb39a8f5fa782b328b7e4c460752",
+      "source_bytes": 562018,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V06",
+        "project_id": "synthetic-project-G06V06",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G06V07.json",
+      "source_sha256": "870f7c176a4df9544a5c19f2a2670156c2db848fcb224715aa0dbf3f6f5b3588",
+      "source_bytes": 392366,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G06V07",
+        "project_id": "synthetic-project-G06V07",
+        "project_family_id": "synthetic-arrangement-family-06",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V00.json",
+      "source_sha256": "7329447d6fc6bd2334d130a0b2f6b1afeb64b811d9dde2bdb1740ad8013319d9",
+      "source_bytes": 390779,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V00",
+        "project_id": "synthetic-project-G07V00",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V01.json",
+      "source_sha256": "a2f7c1df4036a43695a44de83daa978c9d39544b0b6e009930413e1f27f31404",
+      "source_bytes": 391399,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V01",
+        "project_id": "synthetic-project-G07V01",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V02.json",
+      "source_sha256": "2f804ec07dd0384cb15e6952f0d7b369d01a929f47793dc97bb7fcc05770b90b",
+      "source_bytes": 562182,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V02",
+        "project_id": "synthetic-project-G07V02",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V03.json",
+      "source_sha256": "95423b22174888fc864a09900f1bd1229f73470ac99643e304102dcc13f2fb23",
+      "source_bytes": 391732,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V03",
+        "project_id": "synthetic-project-G07V03",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V04.json",
+      "source_sha256": "3a2f3fbdea24fb3489ceeef072d00467a8b6171a0553eca4421bb8340b0626b5",
+      "source_bytes": 390823,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V04",
+        "project_id": "synthetic-project-G07V04",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V05.json",
+      "source_sha256": "02cc9880891f313d49d4d37b755f9696666a61789c13ef9f529f0b54cc7aeed4",
+      "source_bytes": 391326,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V05",
+        "project_id": "synthetic-project-G07V05",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V06.json",
+      "source_sha256": "0d07ec017ae8283a8e62a3d8898c2b82ecf698337387ccf8188327bdace809e3",
+      "source_bytes": 562030,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V06",
+        "project_id": "synthetic-project-G07V06",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G07V07.json",
+      "source_sha256": "faaf3b46c86c835779410102809601f4182a212fc27d2bbb955842f28b4cd6c6",
+      "source_bytes": 391791,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G07V07",
+        "project_id": "synthetic-project-G07V07",
+        "project_family_id": "synthetic-arrangement-family-07",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V00.json",
+      "source_sha256": "ee4d100f4120ba6ed328103afbb1330e8fc418d20641ab900b5b7f046914da50",
+      "source_bytes": 390862,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V00",
+        "project_id": "synthetic-project-G08V00",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V01.json",
+      "source_sha256": "4747ed566fe1251b37e3330793ef8e29e9042406e2d005ccfbd92e66e4c588b7",
+      "source_bytes": 391408,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V01",
+        "project_id": "synthetic-project-G08V01",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V02.json",
+      "source_sha256": "eea05086117b80b5ea4dcc58b985f2447cb09c58cbdfff7f31f5994d1ef9f038",
+      "source_bytes": 562189,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V02",
+        "project_id": "synthetic-project-G08V02",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V03.json",
+      "source_sha256": "28a44e974186690ff67c05671bab06e4f88ab2cbff9c3df13daa24ba0b32b08e",
+      "source_bytes": 391790,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V03",
+        "project_id": "synthetic-project-G08V03",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V04.json",
+      "source_sha256": "9fe084dbb5f44345a1a02bed54ecd5d8058a6ac1077f532e44ff6a834b7907c6",
+      "source_bytes": 390834,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V04",
+        "project_id": "synthetic-project-G08V04",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V05.json",
+      "source_sha256": "81ad8f4e079950b9bc841f3ad311f812b9de5ad13717120655dca6db9489eefe",
+      "source_bytes": 391440,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V05",
+        "project_id": "synthetic-project-G08V05",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V06.json",
+      "source_sha256": "9dd72b9ce9ac96f9b7dddd09c123166919ac56690465ec1c5a10ab7e5ebe32ca",
+      "source_bytes": 562232,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V06",
+        "project_id": "synthetic-project-G08V06",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G08V07.json",
+      "source_sha256": "4cf7dc118982e35039578ccfe180d43d26b63078bbd148dfbb1f0c1b2c535ff1",
+      "source_bytes": 391780,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G08V07",
+        "project_id": "synthetic-project-G08V07",
+        "project_family_id": "synthetic-arrangement-family-08",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V00.json",
+      "source_sha256": "f361a9c61f3702a716a4f2b61d95e016840055e21ec9f8c6aaad97ee1e63ffdd",
+      "source_bytes": 390878,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V00",
+        "project_id": "synthetic-project-G09V00",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V01.json",
+      "source_sha256": "132ecf360d5d8c094118e5d70902660ad6cd9433999c04039d2485d8c0e05e71",
+      "source_bytes": 392093,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V01",
+        "project_id": "synthetic-project-G09V01",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V02.json",
+      "source_sha256": "92617e44dfe5e358fdf43ba72fe74388ef418c5adfe217d88e764bcaabf2e8a6",
+      "source_bytes": 562079,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V02",
+        "project_id": "synthetic-project-G09V02",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V03.json",
+      "source_sha256": "b6a60bb2ffa2f9cea6e0eff808bff116db70a2518c54080ffa44df0b84af174a",
+      "source_bytes": 392395,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V03",
+        "project_id": "synthetic-project-G09V03",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V04.json",
+      "source_sha256": "30f282cf01621cdc2ee209d8c2e41406e672f50855bf58bd8e5af58f82ffa59c",
+      "source_bytes": 390794,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V04",
+        "project_id": "synthetic-project-G09V04",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V05.json",
+      "source_sha256": "d5fbe5209cf6d99c0cc52b52c8039502beb42d6c85c7d6fad0941707698d9e06",
+      "source_bytes": 392001,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V05",
+        "project_id": "synthetic-project-G09V05",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V06.json",
+      "source_sha256": "5a10598b26896f5a319373e87b837f39ac726529594cae410499da296e0c084c",
+      "source_bytes": 562047,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V06",
+        "project_id": "synthetic-project-G09V06",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G09V07.json",
+      "source_sha256": "658d40ff4dbdd76c175f9cf0c0f7c15aa3a265e183775b72c3ea42fcd9719de2",
+      "source_bytes": 392450,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G09V07",
+        "project_id": "synthetic-project-G09V07",
+        "project_family_id": "synthetic-arrangement-family-09",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V00.json",
+      "source_sha256": "9dccc90dfe9e164233a9aa6dd6b7f1d07cba7b5c8e405a17bf30e54058ac2563",
+      "source_bytes": 390886,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V00",
+        "project_id": "synthetic-project-G10V00",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V01.json",
+      "source_sha256": "b54c3c66cd8052d7a9c4eb56b9a1609d56b80ff1c9edb47fa9ee1508cdd7d448",
+      "source_bytes": 391399,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V01",
+        "project_id": "synthetic-project-G10V01",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V02.json",
+      "source_sha256": "e3da8d028441c5d5c0c3d4335496fdece06d631f20ceaca8d7ea9ac9997e73b8",
+      "source_bytes": 562158,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V02",
+        "project_id": "synthetic-project-G10V02",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V03.json",
+      "source_sha256": "c235cae265566e8c3ffe1a3b3cd805599178cef6fc28256d0bd99f70008d893a",
+      "source_bytes": 391774,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V03",
+        "project_id": "synthetic-project-G10V03",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V04.json",
+      "source_sha256": "3b745f73f260f49115859eeba5026378b66cd5b288cab275b7108d3cbfa4736a",
+      "source_bytes": 390808,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V04",
+        "project_id": "synthetic-project-G10V04",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V05.json",
+      "source_sha256": "764065c82e210c38baf4cff8e8c627909bccb616a4269c2eb1d50bd782634b82",
+      "source_bytes": 391323,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V05",
+        "project_id": "synthetic-project-G10V05",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V06.json",
+      "source_sha256": "483da80bbfad3497890f8a680bded1f90041e64bed47cd437fd3e7601999784a",
+      "source_bytes": 562160,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V06",
+        "project_id": "synthetic-project-G10V06",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G10V07.json",
+      "source_sha256": "e650a27c1029966f28c26a26b17f7856824959c29862106a50cc3582e022b37f",
+      "source_bytes": 391782,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G10V07",
+        "project_id": "synthetic-project-G10V07",
+        "project_family_id": "synthetic-arrangement-family-10",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V00.json",
+      "source_sha256": "3b1cda52304825b16dde464cb566663dc6dc8bff76a1ee42de65ff60ea7fd063",
+      "source_bytes": 390856,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V00",
+        "project_id": "synthetic-project-G11V00",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V01.json",
+      "source_sha256": "5e11ce4776d3da9db15fb4906dcda90eb9c3f6bd2ccbf21b6653aaf2ad73e7ea",
+      "source_bytes": 391417,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V01",
+        "project_id": "synthetic-project-G11V01",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V02.json",
+      "source_sha256": "e513979c76825f27b0c86fe371c9bde8cd4a736b7ffb3e91751f1227c114d6af",
+      "source_bytes": 562217,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V02",
+        "project_id": "synthetic-project-G11V02",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V03.json",
+      "source_sha256": "143fbfeace1ea377735dac7cdaf7aeb960e541759c4352f6a70307a32ab5a4d0",
+      "source_bytes": 391735,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V03",
+        "project_id": "synthetic-project-G11V03",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V04.json",
+      "source_sha256": "0e7bc170493a550002f9ab61876aa1d4b5666d5c7469058c6fb6655a407fda8d",
+      "source_bytes": 390877,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V04",
+        "project_id": "synthetic-project-G11V04",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V05.json",
+      "source_sha256": "56a6920fcab2eb6dbf8741f32c2420153c1b1f910899e2143a3a9b4955293b46",
+      "source_bytes": 391441,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V05",
+        "project_id": "synthetic-project-G11V05",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V06.json",
+      "source_sha256": "5b36fb0b690680719e48cc403c5dcf15fb13f78beca49921f4ce1299541de147",
+      "source_bytes": 562234,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V06",
+        "project_id": "synthetic-project-G11V06",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 6
+    },
+    {
+      "source": "kumi-synthetic-v1-G11V07.json",
+      "source_sha256": "a879ec4feea7d2fc74473e0848d4e869183d1b6f14452958aa7873b02369f829",
+      "source_bytes": 391815,
+      "identity": {
+        "episode_id": "kumi-synthetic-v1-G11V07",
+        "project_id": "synthetic-project-G11V07",
+        "project_family_id": "synthetic-arrangement-family-11",
+        "split": "test",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 4
+    }
+  ],
+  "limitations": [
+    "Verification is execution against Kumi's synthetic bridge, not Ableton Live or audio verification.",
+    "Scripted teacher actions are oracle demonstrations, not independently measured model successes.",
+    "Token lengths, prompt masks and musical quality require separate checks.",
+    "Four scripted templates share one layout; seed-group splits do not establish unseen-template or unseen-layout generalization."
+  ],
+  "privacy_transformation": {
+    "episode_content_changed": 0,
+    "replacements_by_kind": {
+      "temporary_project_root": 0,
+      "home_root": 0
+    },
+    "raw_bytes_preserved_when_unchanged": true,
+    "machine_paths_replaced_with_stable_synthetic_project_paths": false
+  }
+}

@@ -1,0 +1,172 @@
+--- a/mlx_lm/tool_parsers/qwen3_coder.py
++++ b/mlx_lm/tool_parsers/qwen3_coder.py
+@@ -1,4 +1,6 @@
+ # Copyright © 2025 Apple Inc.
++# Modified by KumiLLM contributors in 2026: added conservative schema-aware
++# scalar conversion for anyOf, oneOf, and type-array unions.
+ 
+ """
+ Modified from:
+@@ -7,6 +9,7 @@
+ 
+ import ast
+ import json
++import math
+ from typing import Any, Optional
+ 
+ import regex as re
+@@ -18,6 +21,137 @@
+ _string_types = {"string", "str", "text", "varchar", "char", "enum"}
+ _bool_types = {"boolean", "bool", "binary"}
+ _obj_types = {"object", "array", "arr"}
++
++
++def _scalar_schema_match(value: Any, schema: Any) -> Optional[bool]:
++    """Match the scalar schema fragment needed to disambiguate XML text.
++
++    Unknown assertions return None, so an uncertain conversion leaves the
++    original text for the caller's full schema validator. This is deliberately
++    not a replacement for JSON Schema validation.
++    """
++    if isinstance(schema, bool):
++        return schema
++    if not isinstance(schema, dict):
++        return None
++    known = {
++        "type", "const", "enum", "anyOf", "oneOf", "allOf", "not",
++        "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum",
++        "minLength", "maxLength", "pattern", "title", "description",
++        "default", "examples", "$comment", "$schema", "$id",
++        "deprecated", "readOnly", "writeOnly",
++    }
++    uncertain = bool(set(schema) - known)
++    actual_type = (
++        "null" if value is None else
++        "boolean" if isinstance(value, bool) else
++        "integer" if isinstance(value, int) else
++        "number" if isinstance(value, float) else
++        "string" if isinstance(value, str) else None
++    )
++    if actual_type is None:
++        return None
++    if isinstance(value, float) and not math.isfinite(value):
++        return False
++    if "type" in schema:
++        types = schema["type"]
++        types = types if isinstance(types, list) else [types]
++        if not all(isinstance(t, str) and t in {"null", "boolean", "integer", "number", "string", "array", "object"} for t in types):
++            return None
++        matches = actual_type in types or (
++            actual_type == "integer" and "number" in types
++        ) or (
++            actual_type == "number" and value.is_integer() and "integer" in types
++        )
++        if not matches:
++            return False
++    def equal(candidate: Any) -> bool:
++        # JSON Schema distinguishes booleans from numbers, unlike Python ==.
++        if isinstance(value, bool) != isinstance(candidate, bool):
++            return False
++        return value == candidate
++    if "const" in schema and not equal(schema["const"]):
++        return False
++    if "enum" in schema:
++        if not isinstance(schema["enum"], list):
++            return None
++        if not any(equal(candidate) for candidate in schema["enum"]):
++            return False
++    if actual_type in {"integer", "number"}:
++        for key, compare in (
++            ("minimum", lambda bound: value >= bound),
++            ("maximum", lambda bound: value <= bound),
++            ("exclusiveMinimum", lambda bound: value > bound),
++            ("exclusiveMaximum", lambda bound: value < bound),
++        ):
++            if key in schema:
++                bound = schema[key]
++                if isinstance(bound, bool) or not isinstance(bound, (int, float)) or (isinstance(bound, float) and not math.isfinite(bound)):
++                    return None
++                if not compare(bound):
++                    return False
++    if actual_type == "string":
++        for key, compare in (
++            ("minLength", lambda limit: len(value) >= limit),
++            ("maxLength", lambda limit: len(value) <= limit),
++        ):
++            if key in schema:
++                limit = schema[key]
++                if isinstance(limit, bool) or not isinstance(limit, int) or limit < 0:
++                    return None
++                if not compare(limit):
++                    return False
++        if "pattern" in schema:
++            try:
++                if re.search(schema["pattern"], value) is None:
++                    return False
++            except (TypeError, re.error):
++                return None
++    for keyword in ("anyOf", "oneOf", "allOf"):
++        if keyword not in schema:
++            continue
++        branches = schema[keyword]
++        if not isinstance(branches, list) or not branches:
++            return None
++        matches = [_scalar_schema_match(value, branch) for branch in branches]
++        if keyword == "anyOf":
++            result = True if True in matches else None if None in matches else False
++        elif keyword == "allOf":
++            result = False if False in matches else None if None in matches else True
++        else:
++            count = matches.count(True)
++            result = False if count > 1 else None if None in matches else count == 1
++        if result is False:
++            return False
++        uncertain |= result is None
++    if "not" in schema:
++        result = _scalar_schema_match(value, schema["not"])
++        if result is True:
++            return False
++        uncertain |= result is None
++    return None if uncertain else True
++
++
++def _convert_union_param_value(param_value: str, schema: dict) -> Any:
++    """Decode unambiguous JSON scalars without guessing between string types."""
++    def reject_constant(_: str) -> None:
++        raise ValueError("NaN and Infinity are not JSON values")
++    try:
++        value = json.loads(param_value, parse_constant=reject_constant)
++    except (ValueError, TypeError):
++        return param_value
++    # Preserve the existing container decoding, including downstream validation.
++    if isinstance(value, (dict, list)):
++        return value
++    # A bare NaN/Infinity is not JSON null and must not become None.
++    if value is None and param_value.strip() != "null":
++        return param_value
++    if isinstance(value, str):
++        return param_value
++    # If the raw string itself is allowed (or uncertain), coercion is ambiguous.
++    if _scalar_schema_match(param_value, schema) is not False:
++        return param_value
++    return value if _scalar_schema_match(value, schema) is True else param_value
+ 
+ 
+ def _get_arguments_config(func_name: str, tools: Optional[Any]) -> dict:
+@@ -36,10 +170,15 @@
+ 
+ def _convert_param_value(param_value: str, param_name: str, param_config: dict) -> Any:
+     """Convert parameter value based on its type in the schema."""
++    param = param_config.get(param_name, False)
++    if isinstance(param, dict) and (
++        "anyOf" in param or "oneOf" in param or isinstance(param.get("type"), list)
++    ):
++        return _convert_union_param_value(param_value, param)
+     if param_value.lower() == "null":
+         return None
+ 
+-    if not (param := param_config.get(param_name, False)):
++    if not param:
+         return param_value
+ 
+     if "type" in param:

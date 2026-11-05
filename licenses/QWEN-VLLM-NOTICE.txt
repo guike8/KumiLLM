@@ -1,0 +1,22 @@
+Qwen3-Coder tool parser ancestry
+
+SPDX-License-Identifier: Apache-2.0
+SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+
+Source identified by the MLX-LM parser:
+https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/main/qwen3coder_tool_parser.py
+
+The upstream Qwen parser carries the SPDX license and copyright declarations
+above. The MLX-LM adaptation retains its Apple copyright header and source
+link. Its file header reads: Copyright © 2025 Apple Inc.
+
+KumiLLM modifications:
+Schema-aware scalar matching and XML argument conversion were changed to
+support anyOf, oneOf and type-array unions. Unambiguously numeric values keep
+their number type; ambiguous string branches and the -inf sentinel stay text.
+Invalid or uncertain conversions stay text for downstream validation. Focused
+regression checks and a reversible, version/hash-guarded installer were added.
+
+The full Apache License, Version 2.0 is in QWEN-VLLM-APACHE-2.0.txt.
+The MLX-LM MIT license is in MLX-LM-MIT.txt. These notices are informational
+and do not replace or modify either license.

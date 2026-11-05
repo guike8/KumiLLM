@@ -1,0 +1,181 @@
+{
+  "format_version": 1,
+  "repository": "guike8/KumiLLM",
+  "scope": "executed_synthetic_kumi",
+  "accepted_episodes": 96,
+  "assistant_target_records": 432,
+  "public_artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 124,
+      "sha256": "60a2ceff3e5ef0f8b7af4322a1205e1df80af4903068a1b5c4e5b80e5841ca8d"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 281,
+      "sha256": "681ec6b9ac7311fee741c18aa61da7cc0f5697b8a13dec8209677a6c93c13e3d"
+    },
+    {
+      "path": "DATASET_CARD.md",
+      "bytes": 5613,
+      "sha256": "3d6dfca4cda44b85665eda4d1309051160efb37b278d0d1078004c7d99807a78"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1618,
+      "sha256": "748879ca2b57952eafd088151621cca7c1fd1f481c7857ce3e47eca140306104"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5793,
+      "sha256": "edbd7c469d727df8e20084e2a046bb069ce2d327dcd98c510fd1bf29d2c3a3b2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4345,
+      "sha256": "1cfc14595d7a88f7b5b90e3af6470d470261b83650fbf3bbba853c07761ea91b"
+    },
+    {
+      "path": "data/v1/LICENSE.txt",
+      "bytes": 1217,
+      "sha256": "f6a4bf820a492313c9d4e100e16bd474cd5cf06c0fba27c1035238acb4af75cb"
+    },
+    {
+      "path": "data/v1/manifest.json",
+      "bytes": 54256,
+      "sha256": "cd62e2b129a958bcb2f85db65286233d49ba96c370ae836fce836f9904433e08"
+    },
+    {
+      "path": "data/v1/raw-evidence.tar.gz",
+      "bytes": 11233670,
+      "sha256": "4398879bdfd8e2ffdbfe752f49d4f85180ab19a5f10569fb4416346655df0980"
+    },
+    {
+      "path": "data/v1/test.jsonl",
+      "bytes": 5876704,
+      "sha256": "148ce83b5ed2a13c6b78b2825bded376719960f7abfcddc61a858a131c1d49b4"
+    },
+    {
+      "path": "data/v1/train.jsonl",
+      "bytes": 23511724,
+      "sha256": "fb5c79b9578f390a30be619f25b2de09fce86164532e6632ddb832daed54454a"
+    },
+    {
+      "path": "data/v1/valid.jsonl",
+      "bytes": 5878723,
+      "sha256": "8a421333a70b8c9886e5b7cddef2f6699bce05a911625b9897750cd85a527eae"
+    },
+    {
+      "path": "licenses/Kumi-MIT.txt",
+      "bytes": 1217,
+      "sha256": "f6a4bf820a492313c9d4e100e16bd474cd5cf06c0fba27c1035238acb4af75cb"
+    },
+    {
+      "path": "licenses/MLX-LM-MIT.txt",
+      "bytes": 1066,
+      "sha256": "ccfab7ccb2ea306f71531c8ca77bb55507606cd90768b1e32b8b52ab5b48cf01"
+    },
+    {
+      "path": "licenses/QWEN-VLLM-APACHE-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/QWEN-VLLM-NOTICE.txt",
+      "bytes": 1084,
+      "sha256": "cc4a26515205490b7b88657fd02158793421cb23fff8161b51ff5701292ff7dd"
+    },
+    {
+      "path": "licenses/SOURCES.json",
+      "bytes": 1214,
+      "sha256": "ae03cb4aa7df1dfa8c7e7d0f0cac42d2ab39478a91b77ec97b6364fb410b09b5"
+    },
+    {
+      "path": "patches/kumi-verified-collection.patch",
+      "bytes": 48843,
+      "sha256": "4f77b8555dbd87610bf208b52b5b1370afed557b856896b91c81dc14bc4716f9"
+    },
+    {
+      "path": "patches/mlx-qwen-union-parser.patch",
+      "bytes": 6982,
+      "sha256": "ffb3f2f599af871f8722618515f4abb7b39515654ca0aa808e885335d00b3512"
+    },
+    {
+      "path": "provenance/base-model-baseline.json",
+      "bytes": 6140,
+      "sha256": "91e5ebd1153512bf7fb9fbcd2549c805e3d254d12259691d984d54546ab26a3c"
+    },
+    {
+      "path": "provenance/dataset-source.json",
+      "bytes": 40237,
+      "sha256": "471dcb7495f971da1d65fdf78cae86d603b8f5996364741bb6f50cfd80f32410"
+    },
+    {
+      "path": "provenance/verification.json",
+      "bytes": 4255,
+      "sha256": "ce46a80ddf37352a0999ade82c7836f6ea168e87e79acd3677e2462f58256e93"
+    },
+    {
+      "path": "scripts/check_tokenization.py",
+      "bytes": 6116,
+      "sha256": "183f75c75a25bb1948697d7f50a4e9a4312943cc650b9daa90ed1bab90cda455"
+    },
+    {
+      "path": "scripts/normalize_episodes.py",
+      "bytes": 21741,
+      "sha256": "b97da48c85a086f6a56f7a3ad6fe6f4e06c1e125f14006cd29fb4d350a8b973b"
+    },
+    {
+      "path": "scripts/parser-fix/README.md",
+      "bytes": 2795,
+      "sha256": "d6ebebfaaa8a4293729ba88e9414ed4fa52a90be9afa828af711d6d0adbd92ae"
+    },
+    {
+      "path": "scripts/parser-fix/install_parser_fix.py",
+      "bytes": 6330,
+      "sha256": "8fcb319a7617862ec863e6f9cd0503ccccb3372a76085d4bb48dee04443bc6a7"
+    },
+    {
+      "path": "scripts/parser-fix/qwen3_coder.original.py",
+      "bytes": 4323,
+      "sha256": "d1029aae22ed475e9d7c09d29c37e74dca8df52b0fb046f000f2e3f9b83a6583"
+    },
+    {
+      "path": "scripts/parser-fix/qwen3_coder.py",
+      "bytes": 10243,
+      "sha256": "5921b9378739903e18133c5237ef8866bd922fb0fb3e0725c0372e7ad6752488"
+    },
+    {
+      "path": "scripts/parser-fix/test_installer_guards.py",
+      "bytes": 9378,
+      "sha256": "78e139d5c15500e0e636c83a11727097d83d7ec5dddb61cb660f2aa97c46162b"
+    },
+    {
+      "path": "scripts/parser-fix/test_parser_fix.py",
+      "bytes": 5983,
+      "sha256": "700234892357d5b066d13ec011480ed1a8f1ca2e89d902c517c338134b4d2b8c"
+    },
+    {
+      "path": "scripts/test_normalize_episodes.py",
+      "bytes": 11774,
+      "sha256": "79c2a7765d7ee8892cbc373c8a6abeedb44522c974b3086be39dce314ed23db4"
+    },
+    {
+      "path": "scripts/test_validate_dataset.py",
+      "bytes": 4764,
+      "sha256": "ee707ef208107003518a2a93d0ad0472839b8f2d147504a27de12968970694cc"
+    },
+    {
+      "path": "scripts/validate_dataset.py",
+      "bytes": 10184,
+      "sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b"
+    }
+  ],
+  "excluded_local_paths": [
+    "data/v1/raw/"
+  ],
+  "privacy_scan": "passed",
+  "public_tools_regressions_passed": 49,
+  "dataset_hashes_identical_to_verified_studio_outputs": true,
+  "raw_sources_unchanged": true
+}

@@ -1,0 +1,935 @@
+{
+  "format_version": 1,
+  "scope": "executed_synthetic_kumi",
+  "teacher": "scripted_oracle_v1",
+  "real_live_verified": false,
+  "audio_quality_verified": false,
+  "upstream_repository": "https://github.com/user1303836/kumi",
+  "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+  "original_archive_sha256": "d0067a9d9ae580d0e55b5ac5dcec87631f1c863b7b42467436a74d1b19fb485b",
+  "original_manifest_sha256": "158b2f8f8a5c5c5205a9e62e677073073981516cfef7a83a079560ed5ff9f73c",
+  "original_output_sha256": {
+    "train.jsonl": "fb5c79b9578f390a30be619f25b2de09fce86164532e6632ddb832daed54454a",
+    "valid.jsonl": "8a421333a70b8c9886e5b7cddef2f6699bce05a911625b9897750cd85a527eae",
+    "test.jsonl": "148ce83b5ed2a13c6b78b2825bded376719960f7abfcddc61a858a131c1d49b4"
+  },
+  "public_output_sha256": {
+    "train.jsonl": "fb5c79b9578f390a30be619f25b2de09fce86164532e6632ddb832daed54454a",
+    "valid.jsonl": "8a421333a70b8c9886e5b7cddef2f6699bce05a911625b9897750cd85a527eae",
+    "test.jsonl": "148ce83b5ed2a13c6b78b2825bded376719960f7abfcddc61a858a131c1d49b4"
+  },
+  "source_episode_count": 96,
+  "accepted_episode_count": 96,
+  "assistant_target_count": 432,
+  "records_by_split": {
+    "train": 288,
+    "valid": 72,
+    "test": 72
+  },
+  "privacy_transformation": {
+    "episode_content_changed": 0,
+    "replacements_by_kind": {
+      "temporary_project_root": 0,
+      "home_root": 0
+    },
+    "raw_bytes_preserved_when_unchanged": true,
+    "machine_paths_replaced_with_stable_synthetic_project_paths": false
+  },
+  "source_hash_verification": "All original raw source sizes/hashes and normalized output hashes matched before transformation.",
+  "content_change_note": "No raw episode string content required changes.",
+  "normalizer_sha256": "5de596ef63d7e448feefd01ce9fa355a0654151e52a1fab1bc9710fd02d07c7f",
+  "validator_sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+  "sanitizer_sha256": "69dd780e1eee854d95c48fc0100cbdece1aeea4ee66322c89a3ed35044adf1e0",
+  "episodes": [
+    {
+      "episode_id": "kumi-synthetic-v1-G00V00",
+      "source": "kumi-synthetic-v1-G00V00.json",
+      "original_sha256": "11eaefded449c269f78fd1c0f1a71a7f304cfed01b4fca1281e00fcbd098d059",
+      "original_bytes": 390810,
+      "public_sha256": "11eaefded449c269f78fd1c0f1a71a7f304cfed01b4fca1281e00fcbd098d059",
+      "public_bytes": 390810,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V01",
+      "source": "kumi-synthetic-v1-G00V01.json",
+      "original_sha256": "4320df686c27ca1f58513e457a0ba8bacfc27bc7f09557b3eb32e08433bb892f",
+      "original_bytes": 392074,
+      "public_sha256": "4320df686c27ca1f58513e457a0ba8bacfc27bc7f09557b3eb32e08433bb892f",
+      "public_bytes": 392074,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V02",
+      "source": "kumi-synthetic-v1-G00V02.json",
+      "original_sha256": "056887ff1862014d7f877062a1cbe2028298589ca7ac5adf54af04ea45a02b72",
+      "original_bytes": 562195,
+      "public_sha256": "056887ff1862014d7f877062a1cbe2028298589ca7ac5adf54af04ea45a02b72",
+      "public_bytes": 562195,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V03",
+      "source": "kumi-synthetic-v1-G00V03.json",
+      "original_sha256": "c9bd904379865b7fc7e2f1d888bafde956ffa67178de0bdd2b5e7cab72a01425",
+      "original_bytes": 392448,
+      "public_sha256": "c9bd904379865b7fc7e2f1d888bafde956ffa67178de0bdd2b5e7cab72a01425",
+      "public_bytes": 392448,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V04",
+      "source": "kumi-synthetic-v1-G00V04.json",
+      "original_sha256": "9c6923c05aa939201fc00371352da03390ec8f18e3abb5e1bd47fea0b0639957",
+      "original_bytes": 390867,
+      "public_sha256": "9c6923c05aa939201fc00371352da03390ec8f18e3abb5e1bd47fea0b0639957",
+      "public_bytes": 390867,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V05",
+      "source": "kumi-synthetic-v1-G00V05.json",
+      "original_sha256": "dc1a19626228f25408290143d43fd25071f2a21b3d08c8b8f2d9917c39a5d7d3",
+      "original_bytes": 391992,
+      "public_sha256": "dc1a19626228f25408290143d43fd25071f2a21b3d08c8b8f2d9917c39a5d7d3",
+      "public_bytes": 391992,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V06",
+      "source": "kumi-synthetic-v1-G00V06.json",
+      "original_sha256": "804d9aa260d396825d78f247a31f94c60d74bf7d24f9a3d813d541c4baf35c34",
+      "original_bytes": 562040,
+      "public_sha256": "804d9aa260d396825d78f247a31f94c60d74bf7d24f9a3d813d541c4baf35c34",
+      "public_bytes": 562040,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G00V07",
+      "source": "kumi-synthetic-v1-G00V07.json",
+      "original_sha256": "6614a9b978ba02ef7913f200ce411ff21c582d10e67697c5263a21f45df8057f",
+      "original_bytes": 392394,
+      "public_sha256": "6614a9b978ba02ef7913f200ce411ff21c582d10e67697c5263a21f45df8057f",
+      "public_bytes": 392394,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V00",
+      "source": "kumi-synthetic-v1-G01V00.json",
+      "original_sha256": "9a10ef254ce0158e855ddd5afe13a2641046020a863b3328a800947c55b0b29d",
+      "original_bytes": 390805,
+      "public_sha256": "9a10ef254ce0158e855ddd5afe13a2641046020a863b3328a800947c55b0b29d",
+      "public_bytes": 390805,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V01",
+      "source": "kumi-synthetic-v1-G01V01.json",
+      "original_sha256": "c8a1de3f7e5b1989793daf4f0d8affa2812e36c5e88d454cb1dcea4c0763fc4e",
+      "original_bytes": 391319,
+      "public_sha256": "c8a1de3f7e5b1989793daf4f0d8affa2812e36c5e88d454cb1dcea4c0763fc4e",
+      "public_bytes": 391319,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V02",
+      "source": "kumi-synthetic-v1-G01V02.json",
+      "original_sha256": "6fda956690f3d9a7cd5c487b49ab3f56a78a7d4c7ac9e906b1e2de8341eb532c",
+      "original_bytes": 562058,
+      "public_sha256": "6fda956690f3d9a7cd5c487b49ab3f56a78a7d4c7ac9e906b1e2de8341eb532c",
+      "public_bytes": 562058,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V03",
+      "source": "kumi-synthetic-v1-G01V03.json",
+      "original_sha256": "d2fa05d1f9eb79719f599a9729d1907578a8e97ba82d29d82d15cca43fa2ce4c",
+      "original_bytes": 391770,
+      "public_sha256": "d2fa05d1f9eb79719f599a9729d1907578a8e97ba82d29d82d15cca43fa2ce4c",
+      "public_bytes": 391770,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V04",
+      "source": "kumi-synthetic-v1-G01V04.json",
+      "original_sha256": "556cda67042698f8ed0c44f442a56612c8177ae95ef37a50ea8335f700ebcba5",
+      "original_bytes": 390860,
+      "public_sha256": "556cda67042698f8ed0c44f442a56612c8177ae95ef37a50ea8335f700ebcba5",
+      "public_bytes": 390860,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V05",
+      "source": "kumi-synthetic-v1-G01V05.json",
+      "original_sha256": "d5f9c688c3bd7ab4e35cde174f5cc3bf08001ab35dd9bc242ec8a94863b0bff6",
+      "original_bytes": 391383,
+      "public_sha256": "d5f9c688c3bd7ab4e35cde174f5cc3bf08001ab35dd9bc242ec8a94863b0bff6",
+      "public_bytes": 391383,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V06",
+      "source": "kumi-synthetic-v1-G01V06.json",
+      "original_sha256": "674bc010e34c23836860af29ddbd05802f8e2cfd571cd481598fda571d972521",
+      "original_bytes": 562188,
+      "public_sha256": "674bc010e34c23836860af29ddbd05802f8e2cfd571cd481598fda571d972521",
+      "public_bytes": 562188,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G01V07",
+      "source": "kumi-synthetic-v1-G01V07.json",
+      "original_sha256": "a5f0b6e73f701bdca6d4bc9a1dbce474d088d6ce06a03b93eea40e9204266820",
+      "original_bytes": 391694,
+      "public_sha256": "a5f0b6e73f701bdca6d4bc9a1dbce474d088d6ce06a03b93eea40e9204266820",
+      "public_bytes": 391694,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V00",
+      "source": "kumi-synthetic-v1-G02V00.json",
+      "original_sha256": "46c9d535a8e740a62de11ab2480587a72b2cd6ba4bcabf661882d1028c36eecb",
+      "original_bytes": 390788,
+      "public_sha256": "46c9d535a8e740a62de11ab2480587a72b2cd6ba4bcabf661882d1028c36eecb",
+      "public_bytes": 390788,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V01",
+      "source": "kumi-synthetic-v1-G02V01.json",
+      "original_sha256": "a26f5b4983906bf6c09dbefda3f5c15cb6fa4bbacebc92d4be8cdc5d736767cb",
+      "original_bytes": 391305,
+      "public_sha256": "a26f5b4983906bf6c09dbefda3f5c15cb6fa4bbacebc92d4be8cdc5d736767cb",
+      "public_bytes": 391305,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V02",
+      "source": "kumi-synthetic-v1-G02V02.json",
+      "original_sha256": "7eb0b8e50502947171b0e7d7eaa7173fa244b25bcd24ebf72fe2e57f3d21b550",
+      "original_bytes": 562132,
+      "public_sha256": "7eb0b8e50502947171b0e7d7eaa7173fa244b25bcd24ebf72fe2e57f3d21b550",
+      "public_bytes": 562132,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V03",
+      "source": "kumi-synthetic-v1-G02V03.json",
+      "original_sha256": "b27242f19f42489c66f97473f8a59b2e26c21e023e857ec89c5d76d255348235",
+      "original_bytes": 391796,
+      "public_sha256": "b27242f19f42489c66f97473f8a59b2e26c21e023e857ec89c5d76d255348235",
+      "public_bytes": 391796,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V04",
+      "source": "kumi-synthetic-v1-G02V04.json",
+      "original_sha256": "959b70767f4e7ae633bce1ce28bb752b7f89bd6e7f880e490b8b95784c177a36",
+      "original_bytes": 390882,
+      "public_sha256": "959b70767f4e7ae633bce1ce28bb752b7f89bd6e7f880e490b8b95784c177a36",
+      "public_bytes": 390882,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V05",
+      "source": "kumi-synthetic-v1-G02V05.json",
+      "original_sha256": "cec54f28bb9f7d7bd0e8bbd0f2c5cded39036d05ad0fe4b45b77987f07042606",
+      "original_bytes": 391422,
+      "public_sha256": "cec54f28bb9f7d7bd0e8bbd0f2c5cded39036d05ad0fe4b45b77987f07042606",
+      "public_bytes": 391422,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V06",
+      "source": "kumi-synthetic-v1-G02V06.json",
+      "original_sha256": "03ec4adba680d24f9af03ec4c075c80b6a8bcbfc0f6b77734942955f1d191323",
+      "original_bytes": 562050,
+      "public_sha256": "03ec4adba680d24f9af03ec4c075c80b6a8bcbfc0f6b77734942955f1d191323",
+      "public_bytes": 562050,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G02V07",
+      "source": "kumi-synthetic-v1-G02V07.json",
+      "original_sha256": "9c262365a1bbb24122c53e9992f39b78d21d22fcc97ee696a4062c0284af8b61",
+      "original_bytes": 391822,
+      "public_sha256": "9c262365a1bbb24122c53e9992f39b78d21d22fcc97ee696a4062c0284af8b61",
+      "public_bytes": 391822,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V00",
+      "source": "kumi-synthetic-v1-G03V00.json",
+      "original_sha256": "ee3c42f338185663012afd450aaa01a892f1131ba575e20477c0193fb65fcd28",
+      "original_bytes": 390892,
+      "public_sha256": "ee3c42f338185663012afd450aaa01a892f1131ba575e20477c0193fb65fcd28",
+      "public_bytes": 390892,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V01",
+      "source": "kumi-synthetic-v1-G03V01.json",
+      "original_sha256": "aa56a53442897053abb1b75bd3329351f2bbac905033c1c5148b23f67c0dbc55",
+      "original_bytes": 392091,
+      "public_sha256": "aa56a53442897053abb1b75bd3329351f2bbac905033c1c5148b23f67c0dbc55",
+      "public_bytes": 392091,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V02",
+      "source": "kumi-synthetic-v1-G03V02.json",
+      "original_sha256": "eb21cd2d84cf35f5239de0b422931a00e01969c656e1e59031b937e46cd68555",
+      "original_bytes": 562247,
+      "public_sha256": "eb21cd2d84cf35f5239de0b422931a00e01969c656e1e59031b937e46cd68555",
+      "public_bytes": 562247,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V03",
+      "source": "kumi-synthetic-v1-G03V03.json",
+      "original_sha256": "366cb3be496a10b6c1c1ca3b2de4954f6de0756c1d49aec86c7ea10f1a36cd02",
+      "original_bytes": 392453,
+      "public_sha256": "366cb3be496a10b6c1c1ca3b2de4954f6de0756c1d49aec86c7ea10f1a36cd02",
+      "public_bytes": 392453,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V04",
+      "source": "kumi-synthetic-v1-G03V04.json",
+      "original_sha256": "5b72d95ee5a117a6fe2ca4cd0b263b704d94236e6e6f6d99143aec3bcfbbb628",
+      "original_bytes": 390803,
+      "public_sha256": "5b72d95ee5a117a6fe2ca4cd0b263b704d94236e6e6f6d99143aec3bcfbbb628",
+      "public_bytes": 390803,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V05",
+      "source": "kumi-synthetic-v1-G03V05.json",
+      "original_sha256": "86b08f22b2fedbc235926e8cf2eca6b62a3b5a132f789ffcad86c7a32aa05b45",
+      "original_bytes": 392003,
+      "public_sha256": "86b08f22b2fedbc235926e8cf2eca6b62a3b5a132f789ffcad86c7a32aa05b45",
+      "public_bytes": 392003,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V06",
+      "source": "kumi-synthetic-v1-G03V06.json",
+      "original_sha256": "0e89a93d494e9cf439c3c11a9cdaa327eb9f8394404b8fd11b0b3cd35507fbd8",
+      "original_bytes": 562091,
+      "public_sha256": "0e89a93d494e9cf439c3c11a9cdaa327eb9f8394404b8fd11b0b3cd35507fbd8",
+      "public_bytes": 562091,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G03V07",
+      "source": "kumi-synthetic-v1-G03V07.json",
+      "original_sha256": "4db8c01aead56549e409e939aeb085af67e095bb5e0f8b74575c932c9d51c796",
+      "original_bytes": 392361,
+      "public_sha256": "4db8c01aead56549e409e939aeb085af67e095bb5e0f8b74575c932c9d51c796",
+      "public_bytes": 392361,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V00",
+      "source": "kumi-synthetic-v1-G04V00.json",
+      "original_sha256": "5bdf366075a8df5d3c3f13afbebfe1d4b113e8cd01a2acf35d6d54dcd5905be4",
+      "original_bytes": 390802,
+      "public_sha256": "5bdf366075a8df5d3c3f13afbebfe1d4b113e8cd01a2acf35d6d54dcd5905be4",
+      "public_bytes": 390802,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V01",
+      "source": "kumi-synthetic-v1-G04V01.json",
+      "original_sha256": "a4ea7b9a6aacacf028f1e9e373a7035d173aedb8f66224055622356c07f71306",
+      "original_bytes": 391326,
+      "public_sha256": "a4ea7b9a6aacacf028f1e9e373a7035d173aedb8f66224055622356c07f71306",
+      "public_bytes": 391326,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V02",
+      "source": "kumi-synthetic-v1-G04V02.json",
+      "original_sha256": "c4c030ca03297ff522d144638f4344ae39c7787a1a38a2da9e5132b002219832",
+      "original_bytes": 562133,
+      "public_sha256": "c4c030ca03297ff522d144638f4344ae39c7787a1a38a2da9e5132b002219832",
+      "public_bytes": 562133,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V03",
+      "source": "kumi-synthetic-v1-G04V03.json",
+      "original_sha256": "5865635484f061d5fe5efb8e02c40b9bc43a3e6a2bb568ff809fd0af75db880e",
+      "original_bytes": 391789,
+      "public_sha256": "5865635484f061d5fe5efb8e02c40b9bc43a3e6a2bb568ff809fd0af75db880e",
+      "public_bytes": 391789,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V04",
+      "source": "kumi-synthetic-v1-G04V04.json",
+      "original_sha256": "7b7d88dfb15d059643a36328fb89302e481ce43f07ecac6be9371a41e66a9706",
+      "original_bytes": 390865,
+      "public_sha256": "7b7d88dfb15d059643a36328fb89302e481ce43f07ecac6be9371a41e66a9706",
+      "public_bytes": 390865,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V05",
+      "source": "kumi-synthetic-v1-G04V05.json",
+      "original_sha256": "71ee27bd4f749dd8ecd912a2eead6ef78292f7d7cb5c318c1ede1207a2deeaeb",
+      "original_bytes": 391397,
+      "public_sha256": "71ee27bd4f749dd8ecd912a2eead6ef78292f7d7cb5c318c1ede1207a2deeaeb",
+      "public_bytes": 391397,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V06",
+      "source": "kumi-synthetic-v1-G04V06.json",
+      "original_sha256": "980b8eb8ec097924bdba4937ae72723acbb15d9c51c8dbf38976e9b7c26ef837",
+      "original_bytes": 561981,
+      "public_sha256": "980b8eb8ec097924bdba4937ae72723acbb15d9c51c8dbf38976e9b7c26ef837",
+      "public_bytes": 561981,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G04V07",
+      "source": "kumi-synthetic-v1-G04V07.json",
+      "original_sha256": "25133f14aeacfa608ee4e12e55fe3967baa2f732d43bbe48bc87122abd1caa12",
+      "original_bytes": 391704,
+      "public_sha256": "25133f14aeacfa608ee4e12e55fe3967baa2f732d43bbe48bc87122abd1caa12",
+      "public_bytes": 391704,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V00",
+      "source": "kumi-synthetic-v1-G05V00.json",
+      "original_sha256": "ede0596a583de4cee82221c2bc0086f742fb7c54ea54d67ac274f3752f39c660",
+      "original_bytes": 390783,
+      "public_sha256": "ede0596a583de4cee82221c2bc0086f742fb7c54ea54d67ac274f3752f39c660",
+      "public_bytes": 390783,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V01",
+      "source": "kumi-synthetic-v1-G05V01.json",
+      "original_sha256": "c654ce789c4dda76ddce0622a5eaac31dfae0245b02e0ea9f9a63485e7f7ead4",
+      "original_bytes": 391394,
+      "public_sha256": "c654ce789c4dda76ddce0622a5eaac31dfae0245b02e0ea9f9a63485e7f7ead4",
+      "public_bytes": 391394,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V02",
+      "source": "kumi-synthetic-v1-G05V02.json",
+      "original_sha256": "5437442f4ee9df40bccc36bac6270dc63423c419858097201eb55c69e3aa88c8",
+      "original_bytes": 562191,
+      "public_sha256": "5437442f4ee9df40bccc36bac6270dc63423c419858097201eb55c69e3aa88c8",
+      "public_bytes": 562191,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V03",
+      "source": "kumi-synthetic-v1-G05V03.json",
+      "original_sha256": "9a841eee6ca571a3f14f4473e6bf96d6ee95c80388f8cbd5eb85cf4d1a7e6146",
+      "original_bytes": 391752,
+      "public_sha256": "9a841eee6ca571a3f14f4473e6bf96d6ee95c80388f8cbd5eb85cf4d1a7e6146",
+      "public_bytes": 391752,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V04",
+      "source": "kumi-synthetic-v1-G05V04.json",
+      "original_sha256": "d94029f2d1c9ee644edada13d42ccf68e5c6d2182a87a8651129196893f377f2",
+      "original_bytes": 390850,
+      "public_sha256": "d94029f2d1c9ee644edada13d42ccf68e5c6d2182a87a8651129196893f377f2",
+      "public_bytes": 390850,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V05",
+      "source": "kumi-synthetic-v1-G05V05.json",
+      "original_sha256": "4d34ad2f08871141a7743e81e827a332f598266a6ba2de84b22ce1e3e0dd4060",
+      "original_bytes": 391349,
+      "public_sha256": "4d34ad2f08871141a7743e81e827a332f598266a6ba2de84b22ce1e3e0dd4060",
+      "public_bytes": 391349,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V06",
+      "source": "kumi-synthetic-v1-G05V06.json",
+      "original_sha256": "4578b96ee9a2cc4831d269ce65cad66dc205fbb57ef3495a25001e025b4c3521",
+      "original_bytes": 562250,
+      "public_sha256": "4578b96ee9a2cc4831d269ce65cad66dc205fbb57ef3495a25001e025b4c3521",
+      "public_bytes": 562250,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G05V07",
+      "source": "kumi-synthetic-v1-G05V07.json",
+      "original_sha256": "a7ed246236a27b68273ec35aa9c36c778419c385429b98202a58c38da4c8161d",
+      "original_bytes": 391795,
+      "public_sha256": "a7ed246236a27b68273ec35aa9c36c778419c385429b98202a58c38da4c8161d",
+      "public_bytes": 391795,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V00",
+      "source": "kumi-synthetic-v1-G06V00.json",
+      "original_sha256": "30e43f42e1a17d215499104d9c90641f88be398bcdf3738833b19545ac0acf9b",
+      "original_bytes": 390889,
+      "public_sha256": "30e43f42e1a17d215499104d9c90641f88be398bcdf3738833b19545ac0acf9b",
+      "public_bytes": 390889,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V01",
+      "source": "kumi-synthetic-v1-G06V01.json",
+      "original_sha256": "620a23e6d8f5f04bf868a9aa22ecaa784d652f61ad5736bef541f4348a6b82e1",
+      "original_bytes": 392090,
+      "public_sha256": "620a23e6d8f5f04bf868a9aa22ecaa784d652f61ad5736bef541f4348a6b82e1",
+      "public_bytes": 392090,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V02",
+      "source": "kumi-synthetic-v1-G06V02.json",
+      "original_sha256": "8ddff41d5d49602c448390a0a8a66d989c1cdfa4db468a10cdce54ef34480e95",
+      "original_bytes": 562184,
+      "public_sha256": "8ddff41d5d49602c448390a0a8a66d989c1cdfa4db468a10cdce54ef34480e95",
+      "public_bytes": 562184,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V03",
+      "source": "kumi-synthetic-v1-G06V03.json",
+      "original_sha256": "ec9eacd79353d526952af0f99844b955a16cfd9f6c14116b8d98f88a8689b2ed",
+      "original_bytes": 392385,
+      "public_sha256": "ec9eacd79353d526952af0f99844b955a16cfd9f6c14116b8d98f88a8689b2ed",
+      "public_bytes": 392385,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V04",
+      "source": "kumi-synthetic-v1-G06V04.json",
+      "original_sha256": "91663a713e73328d9c54a10623fa4d81fd1bcd7cb83b73d152112ade63bb1325",
+      "original_bytes": 390805,
+      "public_sha256": "91663a713e73328d9c54a10623fa4d81fd1bcd7cb83b73d152112ade63bb1325",
+      "public_bytes": 390805,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V05",
+      "source": "kumi-synthetic-v1-G06V05.json",
+      "original_sha256": "5b2626ef44353de36960c04615647e0a5c07acba118b367f3a0caa235ca1e085",
+      "original_bytes": 392008,
+      "public_sha256": "5b2626ef44353de36960c04615647e0a5c07acba118b367f3a0caa235ca1e085",
+      "public_bytes": 392008,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V06",
+      "source": "kumi-synthetic-v1-G06V06.json",
+      "original_sha256": "852d4c140ad42df7c5aa0bf3144375c24e58fb39a8f5fa782b328b7e4c460752",
+      "original_bytes": 562018,
+      "public_sha256": "852d4c140ad42df7c5aa0bf3144375c24e58fb39a8f5fa782b328b7e4c460752",
+      "public_bytes": 562018,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G06V07",
+      "source": "kumi-synthetic-v1-G06V07.json",
+      "original_sha256": "870f7c176a4df9544a5c19f2a2670156c2db848fcb224715aa0dbf3f6f5b3588",
+      "original_bytes": 392366,
+      "public_sha256": "870f7c176a4df9544a5c19f2a2670156c2db848fcb224715aa0dbf3f6f5b3588",
+      "public_bytes": 392366,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V00",
+      "source": "kumi-synthetic-v1-G07V00.json",
+      "original_sha256": "7329447d6fc6bd2334d130a0b2f6b1afeb64b811d9dde2bdb1740ad8013319d9",
+      "original_bytes": 390779,
+      "public_sha256": "7329447d6fc6bd2334d130a0b2f6b1afeb64b811d9dde2bdb1740ad8013319d9",
+      "public_bytes": 390779,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V01",
+      "source": "kumi-synthetic-v1-G07V01.json",
+      "original_sha256": "a2f7c1df4036a43695a44de83daa978c9d39544b0b6e009930413e1f27f31404",
+      "original_bytes": 391399,
+      "public_sha256": "a2f7c1df4036a43695a44de83daa978c9d39544b0b6e009930413e1f27f31404",
+      "public_bytes": 391399,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V02",
+      "source": "kumi-synthetic-v1-G07V02.json",
+      "original_sha256": "2f804ec07dd0384cb15e6952f0d7b369d01a929f47793dc97bb7fcc05770b90b",
+      "original_bytes": 562182,
+      "public_sha256": "2f804ec07dd0384cb15e6952f0d7b369d01a929f47793dc97bb7fcc05770b90b",
+      "public_bytes": 562182,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V03",
+      "source": "kumi-synthetic-v1-G07V03.json",
+      "original_sha256": "95423b22174888fc864a09900f1bd1229f73470ac99643e304102dcc13f2fb23",
+      "original_bytes": 391732,
+      "public_sha256": "95423b22174888fc864a09900f1bd1229f73470ac99643e304102dcc13f2fb23",
+      "public_bytes": 391732,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V04",
+      "source": "kumi-synthetic-v1-G07V04.json",
+      "original_sha256": "3a2f3fbdea24fb3489ceeef072d00467a8b6171a0553eca4421bb8340b0626b5",
+      "original_bytes": 390823,
+      "public_sha256": "3a2f3fbdea24fb3489ceeef072d00467a8b6171a0553eca4421bb8340b0626b5",
+      "public_bytes": 390823,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V05",
+      "source": "kumi-synthetic-v1-G07V05.json",
+      "original_sha256": "02cc9880891f313d49d4d37b755f9696666a61789c13ef9f529f0b54cc7aeed4",
+      "original_bytes": 391326,
+      "public_sha256": "02cc9880891f313d49d4d37b755f9696666a61789c13ef9f529f0b54cc7aeed4",
+      "public_bytes": 391326,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V06",
+      "source": "kumi-synthetic-v1-G07V06.json",
+      "original_sha256": "0d07ec017ae8283a8e62a3d8898c2b82ecf698337387ccf8188327bdace809e3",
+      "original_bytes": 562030,
+      "public_sha256": "0d07ec017ae8283a8e62a3d8898c2b82ecf698337387ccf8188327bdace809e3",
+      "public_bytes": 562030,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G07V07",
+      "source": "kumi-synthetic-v1-G07V07.json",
+      "original_sha256": "faaf3b46c86c835779410102809601f4182a212fc27d2bbb955842f28b4cd6c6",
+      "original_bytes": 391791,
+      "public_sha256": "faaf3b46c86c835779410102809601f4182a212fc27d2bbb955842f28b4cd6c6",
+      "public_bytes": 391791,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V00",
+      "source": "kumi-synthetic-v1-G08V00.json",
+      "original_sha256": "ee4d100f4120ba6ed328103afbb1330e8fc418d20641ab900b5b7f046914da50",
+      "original_bytes": 390862,
+      "public_sha256": "ee4d100f4120ba6ed328103afbb1330e8fc418d20641ab900b5b7f046914da50",
+      "public_bytes": 390862,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V01",
+      "source": "kumi-synthetic-v1-G08V01.json",
+      "original_sha256": "4747ed566fe1251b37e3330793ef8e29e9042406e2d005ccfbd92e66e4c588b7",
+      "original_bytes": 391408,
+      "public_sha256": "4747ed566fe1251b37e3330793ef8e29e9042406e2d005ccfbd92e66e4c588b7",
+      "public_bytes": 391408,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V02",
+      "source": "kumi-synthetic-v1-G08V02.json",
+      "original_sha256": "eea05086117b80b5ea4dcc58b985f2447cb09c58cbdfff7f31f5994d1ef9f038",
+      "original_bytes": 562189,
+      "public_sha256": "eea05086117b80b5ea4dcc58b985f2447cb09c58cbdfff7f31f5994d1ef9f038",
+      "public_bytes": 562189,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V03",
+      "source": "kumi-synthetic-v1-G08V03.json",
+      "original_sha256": "28a44e974186690ff67c05671bab06e4f88ab2cbff9c3df13daa24ba0b32b08e",
+      "original_bytes": 391790,
+      "public_sha256": "28a44e974186690ff67c05671bab06e4f88ab2cbff9c3df13daa24ba0b32b08e",
+      "public_bytes": 391790,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V04",
+      "source": "kumi-synthetic-v1-G08V04.json",
+      "original_sha256": "9fe084dbb5f44345a1a02bed54ecd5d8058a6ac1077f532e44ff6a834b7907c6",
+      "original_bytes": 390834,
+      "public_sha256": "9fe084dbb5f44345a1a02bed54ecd5d8058a6ac1077f532e44ff6a834b7907c6",
+      "public_bytes": 390834,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V05",
+      "source": "kumi-synthetic-v1-G08V05.json",
+      "original_sha256": "81ad8f4e079950b9bc841f3ad311f812b9de5ad13717120655dca6db9489eefe",
+      "original_bytes": 391440,
+      "public_sha256": "81ad8f4e079950b9bc841f3ad311f812b9de5ad13717120655dca6db9489eefe",
+      "public_bytes": 391440,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V06",
+      "source": "kumi-synthetic-v1-G08V06.json",
+      "original_sha256": "9dd72b9ce9ac96f9b7dddd09c123166919ac56690465ec1c5a10ab7e5ebe32ca",
+      "original_bytes": 562232,
+      "public_sha256": "9dd72b9ce9ac96f9b7dddd09c123166919ac56690465ec1c5a10ab7e5ebe32ca",
+      "public_bytes": 562232,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G08V07",
+      "source": "kumi-synthetic-v1-G08V07.json",
+      "original_sha256": "4cf7dc118982e35039578ccfe180d43d26b63078bbd148dfbb1f0c1b2c535ff1",
+      "original_bytes": 391780,
+      "public_sha256": "4cf7dc118982e35039578ccfe180d43d26b63078bbd148dfbb1f0c1b2c535ff1",
+      "public_bytes": 391780,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V00",
+      "source": "kumi-synthetic-v1-G09V00.json",
+      "original_sha256": "f361a9c61f3702a716a4f2b61d95e016840055e21ec9f8c6aaad97ee1e63ffdd",
+      "original_bytes": 390878,
+      "public_sha256": "f361a9c61f3702a716a4f2b61d95e016840055e21ec9f8c6aaad97ee1e63ffdd",
+      "public_bytes": 390878,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V01",
+      "source": "kumi-synthetic-v1-G09V01.json",
+      "original_sha256": "132ecf360d5d8c094118e5d70902660ad6cd9433999c04039d2485d8c0e05e71",
+      "original_bytes": 392093,
+      "public_sha256": "132ecf360d5d8c094118e5d70902660ad6cd9433999c04039d2485d8c0e05e71",
+      "public_bytes": 392093,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V02",
+      "source": "kumi-synthetic-v1-G09V02.json",
+      "original_sha256": "92617e44dfe5e358fdf43ba72fe74388ef418c5adfe217d88e764bcaabf2e8a6",
+      "original_bytes": 562079,
+      "public_sha256": "92617e44dfe5e358fdf43ba72fe74388ef418c5adfe217d88e764bcaabf2e8a6",
+      "public_bytes": 562079,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V03",
+      "source": "kumi-synthetic-v1-G09V03.json",
+      "original_sha256": "b6a60bb2ffa2f9cea6e0eff808bff116db70a2518c54080ffa44df0b84af174a",
+      "original_bytes": 392395,
+      "public_sha256": "b6a60bb2ffa2f9cea6e0eff808bff116db70a2518c54080ffa44df0b84af174a",
+      "public_bytes": 392395,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V04",
+      "source": "kumi-synthetic-v1-G09V04.json",
+      "original_sha256": "30f282cf01621cdc2ee209d8c2e41406e672f50855bf58bd8e5af58f82ffa59c",
+      "original_bytes": 390794,
+      "public_sha256": "30f282cf01621cdc2ee209d8c2e41406e672f50855bf58bd8e5af58f82ffa59c",
+      "public_bytes": 390794,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V05",
+      "source": "kumi-synthetic-v1-G09V05.json",
+      "original_sha256": "d5fbe5209cf6d99c0cc52b52c8039502beb42d6c85c7d6fad0941707698d9e06",
+      "original_bytes": 392001,
+      "public_sha256": "d5fbe5209cf6d99c0cc52b52c8039502beb42d6c85c7d6fad0941707698d9e06",
+      "public_bytes": 392001,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V06",
+      "source": "kumi-synthetic-v1-G09V06.json",
+      "original_sha256": "5a10598b26896f5a319373e87b837f39ac726529594cae410499da296e0c084c",
+      "original_bytes": 562047,
+      "public_sha256": "5a10598b26896f5a319373e87b837f39ac726529594cae410499da296e0c084c",
+      "public_bytes": 562047,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G09V07",
+      "source": "kumi-synthetic-v1-G09V07.json",
+      "original_sha256": "658d40ff4dbdd76c175f9cf0c0f7c15aa3a265e183775b72c3ea42fcd9719de2",
+      "original_bytes": 392450,
+      "public_sha256": "658d40ff4dbdd76c175f9cf0c0f7c15aa3a265e183775b72c3ea42fcd9719de2",
+      "public_bytes": 392450,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V00",
+      "source": "kumi-synthetic-v1-G10V00.json",
+      "original_sha256": "9dccc90dfe9e164233a9aa6dd6b7f1d07cba7b5c8e405a17bf30e54058ac2563",
+      "original_bytes": 390886,
+      "public_sha256": "9dccc90dfe9e164233a9aa6dd6b7f1d07cba7b5c8e405a17bf30e54058ac2563",
+      "public_bytes": 390886,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V01",
+      "source": "kumi-synthetic-v1-G10V01.json",
+      "original_sha256": "b54c3c66cd8052d7a9c4eb56b9a1609d56b80ff1c9edb47fa9ee1508cdd7d448",
+      "original_bytes": 391399,
+      "public_sha256": "b54c3c66cd8052d7a9c4eb56b9a1609d56b80ff1c9edb47fa9ee1508cdd7d448",
+      "public_bytes": 391399,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V02",
+      "source": "kumi-synthetic-v1-G10V02.json",
+      "original_sha256": "e3da8d028441c5d5c0c3d4335496fdece06d631f20ceaca8d7ea9ac9997e73b8",
+      "original_bytes": 562158,
+      "public_sha256": "e3da8d028441c5d5c0c3d4335496fdece06d631f20ceaca8d7ea9ac9997e73b8",
+      "public_bytes": 562158,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V03",
+      "source": "kumi-synthetic-v1-G10V03.json",
+      "original_sha256": "c235cae265566e8c3ffe1a3b3cd805599178cef6fc28256d0bd99f70008d893a",
+      "original_bytes": 391774,
+      "public_sha256": "c235cae265566e8c3ffe1a3b3cd805599178cef6fc28256d0bd99f70008d893a",
+      "public_bytes": 391774,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V04",
+      "source": "kumi-synthetic-v1-G10V04.json",
+      "original_sha256": "3b745f73f260f49115859eeba5026378b66cd5b288cab275b7108d3cbfa4736a",
+      "original_bytes": 390808,
+      "public_sha256": "3b745f73f260f49115859eeba5026378b66cd5b288cab275b7108d3cbfa4736a",
+      "public_bytes": 390808,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V05",
+      "source": "kumi-synthetic-v1-G10V05.json",
+      "original_sha256": "764065c82e210c38baf4cff8e8c627909bccb616a4269c2eb1d50bd782634b82",
+      "original_bytes": 391323,
+      "public_sha256": "764065c82e210c38baf4cff8e8c627909bccb616a4269c2eb1d50bd782634b82",
+      "public_bytes": 391323,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V06",
+      "source": "kumi-synthetic-v1-G10V06.json",
+      "original_sha256": "483da80bbfad3497890f8a680bded1f90041e64bed47cd437fd3e7601999784a",
+      "original_bytes": 562160,
+      "public_sha256": "483da80bbfad3497890f8a680bded1f90041e64bed47cd437fd3e7601999784a",
+      "public_bytes": 562160,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G10V07",
+      "source": "kumi-synthetic-v1-G10V07.json",
+      "original_sha256": "e650a27c1029966f28c26a26b17f7856824959c29862106a50cc3582e022b37f",
+      "original_bytes": 391782,
+      "public_sha256": "e650a27c1029966f28c26a26b17f7856824959c29862106a50cc3582e022b37f",
+      "public_bytes": 391782,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V00",
+      "source": "kumi-synthetic-v1-G11V00.json",
+      "original_sha256": "3b1cda52304825b16dde464cb566663dc6dc8bff76a1ee42de65ff60ea7fd063",
+      "original_bytes": 390856,
+      "public_sha256": "3b1cda52304825b16dde464cb566663dc6dc8bff76a1ee42de65ff60ea7fd063",
+      "public_bytes": 390856,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V01",
+      "source": "kumi-synthetic-v1-G11V01.json",
+      "original_sha256": "5e11ce4776d3da9db15fb4906dcda90eb9c3f6bd2ccbf21b6653aaf2ad73e7ea",
+      "original_bytes": 391417,
+      "public_sha256": "5e11ce4776d3da9db15fb4906dcda90eb9c3f6bd2ccbf21b6653aaf2ad73e7ea",
+      "public_bytes": 391417,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V02",
+      "source": "kumi-synthetic-v1-G11V02.json",
+      "original_sha256": "e513979c76825f27b0c86fe371c9bde8cd4a736b7ffb3e91751f1227c114d6af",
+      "original_bytes": 562217,
+      "public_sha256": "e513979c76825f27b0c86fe371c9bde8cd4a736b7ffb3e91751f1227c114d6af",
+      "public_bytes": 562217,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V03",
+      "source": "kumi-synthetic-v1-G11V03.json",
+      "original_sha256": "143fbfeace1ea377735dac7cdaf7aeb960e541759c4352f6a70307a32ab5a4d0",
+      "original_bytes": 391735,
+      "public_sha256": "143fbfeace1ea377735dac7cdaf7aeb960e541759c4352f6a70307a32ab5a4d0",
+      "public_bytes": 391735,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V04",
+      "source": "kumi-synthetic-v1-G11V04.json",
+      "original_sha256": "0e7bc170493a550002f9ab61876aa1d4b5666d5c7469058c6fb6655a407fda8d",
+      "original_bytes": 390877,
+      "public_sha256": "0e7bc170493a550002f9ab61876aa1d4b5666d5c7469058c6fb6655a407fda8d",
+      "public_bytes": 390877,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V05",
+      "source": "kumi-synthetic-v1-G11V05.json",
+      "original_sha256": "56a6920fcab2eb6dbf8741f32c2420153c1b1f910899e2143a3a9b4955293b46",
+      "original_bytes": 391441,
+      "public_sha256": "56a6920fcab2eb6dbf8741f32c2420153c1b1f910899e2143a3a9b4955293b46",
+      "public_bytes": 391441,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V06",
+      "source": "kumi-synthetic-v1-G11V06.json",
+      "original_sha256": "5b36fb0b690680719e48cc403c5dcf15fb13f78beca49921f4ce1299541de147",
+      "original_bytes": 562234,
+      "public_sha256": "5b36fb0b690680719e48cc403c5dcf15fb13f78beca49921f4ce1299541de147",
+      "public_bytes": 562234,
+      "content_transformed": false
+    },
+    {
+      "episode_id": "kumi-synthetic-v1-G11V07",
+      "source": "kumi-synthetic-v1-G11V07.json",
+      "original_sha256": "a879ec4feea7d2fc74473e0848d4e869183d1b6f14452958aa7873b02369f829",
+      "original_bytes": 391815,
+      "public_sha256": "a879ec4feea7d2fc74473e0848d4e869183d1b6f14452958aa7873b02369f829",
+      "public_bytes": 391815,
+      "content_transformed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "records": {
+      "train": 288,
+      "valid": 72,
+      "test": 72
+    },
+    "error_count": 0,
+    "same_split_exact_duplicates": 0,
+    "records_without_group_metadata": 0
+  },
+  "raw_evidence_archive": {
+    "bytes": 11233670,
+    "sha256": "4398879bdfd8e2ffdbfe752f49d4f85180ab19a5f10569fb4416346655df0980",
+    "regular_files": 97,
+    "members": 98,
+    "metadata_normalized": true,
+    "path": "data/v1/raw-evidence.tar.gz",
+    "json_episodes": 96,
+    "contains_kumi_mit_license": true
+  },
+  "dataset_license": {
+    "spdx": "MIT",
+    "notice_file": "data/v1/LICENSE.txt",
+    "raw_archive_notice": "raw/LICENSE.txt"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "scope": "executed_synthetic_kumi",
+  "teacher": "scripted_oracle_v1",
+  "real_live_verified": false,
+  "audio_quality_verified": false,
+  "task_training_started": false,
+  "accepted_episodes": 96,
+  "quarantined_episodes": 0,
+  "records_by_split": {
+    "train": 288,
+    "valid": 72,
+    "test": 72
+  },
+  "structure_validation": {
+    "ok": true,
+    "records": {
+      "train": 288,
+      "valid": 72,
+      "test": 72
+    },
+    "error_count": 0,
+    "errors": [],
+    "same_split_exact_duplicates": 0,
+    "records_without_group_metadata": 0,
+    "limitations": [
+      "Token lengths, exact rendered prompt prefixes, and positive target-token masks require the selected tokenizer and are not checked here.",
+      "Semantic success, audio quality, and group leakage without identifiers require independent verification."
+    ]
+  },
+  "tokenizer_validation": {
+    "ok": true,
+    "max_seq_length": 32768,
+    "splits": {
+      "train": {
+        "records": 288,
+        "checked": 288,
+        "tokens": {
+          "full": {
+            "min": 22335,
+            "max": 24941
+          },
+          "prompt": {
+            "min": 22246,
+            "max": 24921
+          },
+          "target": {
+            "min": 20,
+            "max": 116
+          }
+        }
+      },
+      "valid": {
+        "records": 72,
+        "checked": 72,
+        "tokens": {
+          "full": {
+            "min": 22340,
+            "max": 24957
+          },
+          "prompt": {
+            "min": 22251,
+            "max": 24937
+          },
+          "target": {
+            "min": 20,
+            "max": 116
+          }
+        }
+      },
+      "test": {
+        "records": 72,
+        "checked": 72,
+        "tokens": {
+          "full": {
+            "min": 22336,
+            "max": 24944
+          },
+          "prompt": {
+            "min": 22247,
+            "max": 24924
+          },
+          "target": {
+            "min": 20,
+            "max": 116
+          }
+        }
+      }
+    },
+    "error_count": 0,
+    "errors": [],
+    "model": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "model_revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d"
+  },
+  "collection_runtime": {
+    "format_version": 1,
+    "binary_sha256": "bef1e1978a946b7593862944473c7bb7ba43b88d37549cf85c070315b20eb453",
+    "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+    "source_patch_sha256": "4f77b8555dbd87610bf208b52b5b1370afed557b856896b91c81dc14bc4716f9",
+    "build_profile": "ci-release",
+    "architecture": "arm64-macos",
+    "scope": "executed_synthetic_kumi",
+    "teacher": "scripted_oracle_v1",
+    "real_live_verified": false,
+    "audio_quality_verified": false,
+    "simulator_regression_tests_passed": 3,
+    "parser_regression_tests_passed_on_studio": 19,
+    "normalizer_regression_tests_passed": 14,
+    "collection_limit": 96,
+    "limitations": [
+      "Four scripted task templates share one project layout; groups vary names and values.",
+      "Memory examples queue a note for an unsaved Set; saved-project persistence is not verified.",
+      "The fader display is a synthetic fixture law, not measured Live calibration."
+    ]
+  },
+  "tests": {
+    "installed_studio_parser_regressions": 19,
+    "synthetic_simulator_regressions": 3,
+    "studio_admission_regressions": 14,
+    "public_packaging_regressions": 49
+  },
+  "parser_artifacts": {
+    "deployed_parser_sha256": "996f6ccd6530349df74d6e195dee343ebcdfd5d2cce7fca24c4d60d797e4be45",
+    "public_parser_sha256": "5921b9378739903e18133c5237ef8866bd922fb0fb3e0725c0372e7ad6752488",
+    "public_file_change": "Public copy adds the required modification notice; conversion behavior is unchanged."
+  },
+  "public_packaging_hardening": {
+    "backup_path_confinement": "Reject symlinked backup directory components and backup/manifest files before access; retain root, version and SHA guards.",
+    "raw_source_symlinks": "Reject before reading or hashing and omit never-read entries from final source hashing.",
+    "historical_normalizer_hash": "The corpus manifest records its original admission code. The release manifest records the hardened public tool files; dataset contents are unchanged."
+  }
+}
