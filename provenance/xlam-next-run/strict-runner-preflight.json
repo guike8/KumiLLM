@@ -1,0 +1,100 @@
+{
+  "checked_at_unix": 1793922530.697901,
+  "training_started": false,
+  "results": {
+    "baseline": {
+      "stage": "validated_not_started",
+      "variant": "baseline",
+      "loss_contract": "strict_final_target_excluding_padding",
+      "strict_loss_probe": {
+        "ok": true,
+        "actual_target_positions": [
+          [
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "expected_target_positions": [
+          [
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "supervised_token_count": 11,
+        "history_and_padding_have_zero_gradient": true
+      },
+      "process_local_train_alias_bound": true,
+      "training_started": false,
+      "base_weights_loaded": false
+    },
+    "mixed": {
+      "stage": "validated_not_started",
+      "variant": "mixed",
+      "loss_contract": "strict_final_target_excluding_padding",
+      "strict_loss_probe": {
+        "ok": true,
+        "actual_target_positions": [
+          [
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "expected_target_positions": [
+          [
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "supervised_token_count": 11,
+        "history_and_padding_have_zero_gradient": true
+      },
+      "process_local_train_alias_bound": true,
+      "training_started": false,
+      "base_weights_loaded": false
+    }
+  }
+}

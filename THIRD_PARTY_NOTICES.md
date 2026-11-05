@@ -63,4 +63,4 @@ The optional collect_references.py driver uses a separately installed Evidence A
 
 `data/production-source-seeds` contains original scenario prompts, source metadata and download recipes. It does not bundle source articles or audio. Downloaded Open Goldberg and VSCO 2 Community Edition recordings retain their declared CC0 terms; the LibriSpeech recordings retain CC BY 4.0 terms. Per-record source URLs, license links, creator credits and transformations are recorded in the asset manifest. These recording terms are separate from this repository's code license.
 
-The xLAM assessment cites Salesforce's APIGen dataset and public documentation. No xLAM dataset rows are bundled or imported.
+The xLAM preparation cites Salesforce's APIGen dataset and retains its CC BY 4.0 attribution in privately converted records. No xLAM dataset rows are bundled in this public repository; code, source IDs, hashes and review evidence document the private preparation.

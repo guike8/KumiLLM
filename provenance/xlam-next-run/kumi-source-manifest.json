@@ -1,0 +1,56 @@
+{
+  "schema": "kumi-next-run-source-inputs/1",
+  "repository_commit": "ed5a8f6e8be02188abbc7240d5a6c3b1e9cb6e30",
+  "sources": {
+    "train": {
+      "parts": [
+        {
+          "path": "data/v1/train.jsonl",
+          "bytes": 23511724,
+          "sha256": "fb5c79b9578f390a30be619f25b2de09fce86164532e6632ddb832daed54454a",
+          "records": 288
+        },
+        {
+          "path": "data/v2-sol-ultra-pilot/train.jsonl",
+          "bytes": 1606770,
+          "sha256": "315c5ac6d183b0c2369633992ff657cf35567b6337fb9f1b82aeb656de13e5b5",
+          "records": 20
+        },
+        {
+          "path": "data/v3-research-guided/train.jsonl",
+          "bytes": 2152086,
+          "sha256": "ec726e98bb621f3c76fbcde6fe3f6e60c1ba556974493e941b2c2a87d05481eb",
+          "records": 26
+        },
+        {
+          "path": "data/v4-native-audio-candidates/train.jsonl",
+          "bytes": 214144,
+          "sha256": "7c7ddd112403806b82822c116d7d0b1c771436748ca983305f2588220737aac8",
+          "records": 7
+        }
+      ],
+      "records": 341,
+      "sha256": "fbd6cbf1b88b6bd3a520705a16b3d2074247bc5bc804a6446fc1f6b30fcede47"
+    },
+    "valid": {
+      "parts": [
+        {
+          "path": "data/v1/valid.jsonl",
+          "bytes": 5878723,
+          "sha256": "8a421333a70b8c9886e5b7cddef2f6699bce05a911625b9897750cd85a527eae",
+          "records": 72
+        },
+        {
+          "path": "data/v3-research-guided/valid.jsonl",
+          "bytes": 1202212,
+          "sha256": "101a046fd67a6e63f7ca290f7aca7bd491114b838b149622dfb59fa500281692",
+          "records": 14
+        }
+      ],
+      "records": 86,
+      "sha256": "20388a14dcdab8d6f243af70b4ca6d60ad0f3e79e14716bbce7b57453be23119"
+    }
+  },
+  "contains_test_file": false,
+  "requires_strict_future_loss": true
+}

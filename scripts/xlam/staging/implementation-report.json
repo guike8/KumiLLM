@@ -1,0 +1,18 @@
+{
+  "schema": "kumi-xlam-staging-implementation/1",
+  "logic_tests_passed": 11,
+  "syntax_checked": true,
+  "actual_studio_tokenizer_check_performed": false,
+  "training_started": false,
+  "installed_packages_modified": false,
+  "owned_directory_only": true,
+  "implementation_sha256": {
+    "final_target_loss.py": "80076be5bdae50ca3a71d6f0caf268219de957d59907bfc9b48fe43400784d2e",
+    "local_metrics.py": "0d2310672a5a2591229c0ee82996324a11e53defb6570c5ec09679a24c25d91f",
+    "prepare_mixture.py": "00111e643eb3365a76aece49d2e1814c3ad51f7a6ea7db11ff850c09fa5d5bf7",
+    "run_strict.py": "95dfe51ce50cba896803cbfde7bf967dc36c67126d3c4d0789ccc738c0278a89",
+    "test_staging.py": "2746442915d525dcc4923a5fc35ce4b7c51eb9446dd794d19bf42bb797dfdcf5",
+    "validate_dataset.py": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+    "verification_helpers.py": "af51a2962117b8d3a4dcacbad05227ac816b971f4c2f3aa04f459988d07c654e"
+  }
+}

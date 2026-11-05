@@ -48,8 +48,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 611,
-      "sha256": "ee0cb93581ed1e36bc426efbaa8c7615d57e63063c58e923e05e9b1d751d5ba9"
+      "bytes": 724,
+      "sha256": "e09b436f2425d254a85f3c73b5434bdf2c9f870b265c65e036b7000da5642f12"
     },
     {
       "path": "DATASET_CARD.md",
@@ -63,13 +63,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 9391,
-      "sha256": "685fb90768ef141d4f86fc10556ee7537f4c0d0ece9d39568cb1db166a9f8b3d"
+      "bytes": 9769,
+      "sha256": "862853e21a801b66279bcc2d33113ef3204a994c5c63f61885175e6f5de4ec9c"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 5673,
-      "sha256": "f80b7591948161c13f4e785ee83b3fd8153c573cd14760bcb7c25bee20e952df"
+      "bytes": 5811,
+      "sha256": "174030502f3cd2ceabd8cb7571848474f45c82384676d530d7457e9182dfae5b"
     },
     {
       "path": "data/production-source-seeds/.gitignore",
@@ -442,6 +442,56 @@
       "sha256": "66be5acfc716bd9454b0b7222dc4c465a37e4647dcb39600c32883ac594b8ce1"
     },
     {
+      "path": "provenance/xlam-next-run/kumi-source-manifest.json",
+      "bytes": 1791,
+      "sha256": "91d8015de906df8a831726b12340a6ae0d9cb2906113e44ae0e6253904260200"
+    },
+    {
+      "path": "provenance/xlam-next-run/reservoir-manifest.json",
+      "bytes": 8717,
+      "sha256": "c800d2a3dee70d5f7e6b3e363460375f5fc1e5459a4da3d2380f83a1d5bcbda7"
+    },
+    {
+      "path": "provenance/xlam-next-run/semantic-allowlist.json",
+      "bytes": 1821,
+      "sha256": "a9aad4b1de5d11cc1ced748f944e4b2d7bab6eaa672d75003caef461c87b4054"
+    },
+    {
+      "path": "provenance/xlam-next-run/semantic-reviews.json",
+      "bytes": 59372,
+      "sha256": "347fd15ef8b1a6dcce99a9c9c50f55e7f6e96157f6196e5426a53d21d2041eae"
+    },
+    {
+      "path": "provenance/xlam-next-run/semantic-verification.json",
+      "bytes": 418,
+      "sha256": "8545507acd1853c8e5cd8453ef25f4bf36c9476e3a6753b4ac633895cf4e736f"
+    },
+    {
+      "path": "provenance/xlam-next-run/source-audit.json",
+      "bytes": 2554,
+      "sha256": "655f1ba7bb24bfcd04d171336f1601165d5246ecb2c43953df934df0cbc702ad"
+    },
+    {
+      "path": "provenance/xlam-next-run/source-download.json",
+      "bytes": 858,
+      "sha256": "814eb0c65789425db99c4dcc454a85de062c19508cdeec5141702ed2af626908"
+    },
+    {
+      "path": "provenance/xlam-next-run/strict-runner-preflight.json",
+      "bytes": 1977,
+      "sha256": "517c4e645a47d55946390fb6be1a6604d92308c644a68a342ac8827bd618d2c3"
+    },
+    {
+      "path": "provenance/xlam-next-run/studio-stage.json",
+      "bytes": 430447,
+      "sha256": "611664d2a548073c33b5a0396f354971b7525ff18dc95e8f1c6d7dfe19eceb09"
+    },
+    {
+      "path": "provenance/xlam-next-run/summary.json",
+      "bytes": 3096,
+      "sha256": "1d6e6e58637b03d40ac1f97b421d8aca9700604c63c2008be132b23ff13f2ee8"
+    },
+    {
       "path": "scripts/check_tokenization.py",
       "bytes": 6116,
       "sha256": "183f75c75a25bb1948697d7f50a4e9a4312943cc650b9daa90ed1bab90cda455"
@@ -510,6 +560,81 @@
       "path": "scripts/validate_dataset.py",
       "bytes": 10184,
       "sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b"
+    },
+    {
+      "path": "scripts/xlam/README.md",
+      "bytes": 4541,
+      "sha256": "687d909e8df1c6065d558afe9ba9939fed9005dabf052b72f56f159d439179be"
+    },
+    {
+      "path": "scripts/xlam/audit_source.py",
+      "bytes": 3831,
+      "sha256": "ad222f46d26418ec6cd72ca614e7b65f4d5a849e1f61987c0df187974064ea8a"
+    },
+    {
+      "path": "scripts/xlam/download_official.py",
+      "bytes": 6008,
+      "sha256": "e9e4b1208fa661fd7bc6d99e9fe619a8ee59193bd22c19bcb3806ec21497a6fe"
+    },
+    {
+      "path": "scripts/xlam/prepare_xlam.py",
+      "bytes": 29902,
+      "sha256": "6c9fa86347aa940e9a7f1227af503521376b0b25258018cfd05794587c1b5793"
+    },
+    {
+      "path": "scripts/xlam/staging/README.md",
+      "bytes": 4800,
+      "sha256": "a0d63bdffb7c04f3a057045cfff96f4f7bd6d7b4e82b9f4f8d59e599b7035145"
+    },
+    {
+      "path": "scripts/xlam/staging/final_target_loss.py",
+      "bytes": 831,
+      "sha256": "80076be5bdae50ca3a71d6f0caf268219de957d59907bfc9b48fe43400784d2e"
+    },
+    {
+      "path": "scripts/xlam/staging/implementation-report.json",
+      "bytes": 949,
+      "sha256": "4d3a07cb93fc4c5b94294f8b367575aa29531953b0157fb5f85de0ddc2293aaa"
+    },
+    {
+      "path": "scripts/xlam/staging/local_metrics.py",
+      "bytes": 2616,
+      "sha256": "0d2310672a5a2591229c0ee82996324a11e53defb6570c5ec09679a24c25d91f"
+    },
+    {
+      "path": "scripts/xlam/staging/prepare_mixture.py",
+      "bytes": 24764,
+      "sha256": "00111e643eb3365a76aece49d2e1814c3ad51f7a6ea7db11ff850c09fa5d5bf7"
+    },
+    {
+      "path": "scripts/xlam/staging/run_strict.py",
+      "bytes": 7636,
+      "sha256": "95dfe51ce50cba896803cbfde7bf967dc36c67126d3c4d0789ccc738c0278a89"
+    },
+    {
+      "path": "scripts/xlam/staging/test_staging.py",
+      "bytes": 8207,
+      "sha256": "2746442915d525dcc4923a5fc35ce4b7c51eb9446dd794d19bf42bb797dfdcf5"
+    },
+    {
+      "path": "scripts/xlam/staging/validate_dataset.py",
+      "bytes": 10184,
+      "sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b"
+    },
+    {
+      "path": "scripts/xlam/staging/verification_helpers.py",
+      "bytes": 18547,
+      "sha256": "af51a2962117b8d3a4dcacbad05227ac816b971f4c2f3aa04f459988d07c654e"
+    },
+    {
+      "path": "scripts/xlam/test_download_official.py",
+      "bytes": 2262,
+      "sha256": "f82feddfc6cd512c4d0485e4238b12c48d41703667281be9b4d0696b8ba3028f"
+    },
+    {
+      "path": "scripts/xlam/test_prepare_xlam.py",
+      "bytes": 10214,
+      "sha256": "728dd60289cc7ac375575c4ea9312f2d3a4f982b9a096eac7dc035ea7f764436"
     }
   ],
   "excluded_local_paths": [
@@ -552,5 +677,23 @@
     "real_daw_edit_or_audio_quality_verified": false,
     "xlam_rows_imported": 0
   },
-  "production_collection_regressions_passed": 13
+  "production_collection_regressions_passed": 13,
+  "staged_xlam_next_run": {
+    "official_access_granted": true,
+    "source_file_sha256": "4ef5c6f0dc552f2231f93f5853a9ef431e9e806d7aa514d0f6b615606ce576c6",
+    "source_reservoir_records": 160,
+    "xlam_training_records": 29,
+    "mixed_training_records": 370,
+    "primary_kumi_validation_records": 86,
+    "separate_xlam_validation_records": 16,
+    "exact_tokenizer_records_checked": 587,
+    "runtime_parser_pool_targets_checked": 160,
+    "strict_loss_preflight_variants_passed": [
+      "baseline",
+      "mixed"
+    ],
+    "training_started": false,
+    "external_rows_publicly_bundled": 0,
+    "logic_and_downloader_regressions_passed": 33
+  }
 }

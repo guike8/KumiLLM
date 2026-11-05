@@ -1,0 +1,12 @@
+{
+  "schema": "kumi-xlam-semantic-review-integrity/1",
+  "pool_hashes_match": true,
+  "all_allowed_rows_within_original_split_and_source_clean_gate": true,
+  "all_160_reservoir_rows_accounted_for": true,
+  "source_clean_rows_manually_reviewed": 55,
+  "manually_withheld": 6,
+  "allowed_train": 33,
+  "allowed_valid": 16,
+  "three_clear_counterexamples_checked_against_actual_data": true,
+  "locally_executed": false
+}

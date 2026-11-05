@@ -12,7 +12,7 @@ The [production source seeds](data/production-source-seeds/README.md) add nine r
 
 The [native audio candidate batch](data/v4-native-audio-candidates/README.md) contains seven reviewed prefixes across three goals and four authored user turns: three listening calls and four factual responses, including level comparisons and a dynamics followup. All seven pass the exact Studio tokenizer checks at 8,330–9,846 tokens. They require the supplied strict final-target loss contract in a future trainer and remain excluded from v1. These file observations do not demonstrate DAW editing, rendered effects or human preference judgments. The admitted synthetic SFT count remains 492 records. See the [collection status](provenance/production-collection.json).
 
-The [xLAM assessment](provenance/xlam-access-assessment.json) records a potential generic function-calling supplement. Its official data file remains gated to the current account; no xLAM rows have been imported. Any later mixture must be tested against Kumi-specific held-out tasks.
+The [xLAM preparation](scripts/xlam/README.md) now has official dataset access and a checked next-run stage: **341 Kumi + 29 xLAM training records**, 86 Kumi primary validation records and 16 separate xLAM validation records. Both the mixed configuration and a Kumi-only baseline passed validation-only preflight with the explicit strict loss hook. No new training has started. External rows and materialized mixtures stay in the private Studio stage; public code, hashes, selected IDs and review evidence are included. The [earlier access assessment](provenance/xlam-access-assessment.json) remains as dated history. Improvement on Kumi tasks remains untested.
 
 ## More Sol data using the AI scraper (v3)
 

@@ -1,0 +1,1286 @@
+{
+  "schema": "kumi-xlam-semantic-reviews/1",
+  "scope": "Manual semantic consistency review of the supplied query, offered tool descriptions and parameter schemas, and unchanged answer calls. APIs were not re-executed; actual results, backend signatures and downstream task competence are not verified.",
+  "reviews": [
+    {
+      "source_id": 51791,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "d7c228415f41e07bb8ddb21e51555774a2c0b7baedb2b1da3fcdf34921860375"
+    },
+    {
+      "source_id": 15238,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "The supplied boards repeat the same row; the targets instead invent cyclically shifted rows.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "d7fa94ebcb93ca2de5c59609f36ce9c47f861c60a6173c813938e4bc367dc510"
+    },
+    {
+      "source_id": 48423,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "f0e329d0719677fb45a440e887252a4ecca1520a8f1a4cf94aa6fc35c9deef15"
+    },
+    {
+      "source_id": 43729,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Investment amount/rate/years, power test and third-smallest request match all three calls.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "d2561a12aa07386167ee0084cdb2de175feba37510b49a4038eea7f41fb0211e"
+    },
+    {
+      "source_id": 13651,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both number lists and their separate target sums are copied faithfully.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "90f00543ae67a6201a788a0de63591554563068edd9f8c2e86ba727f9671acff"
+    },
+    {
+      "source_id": 37493,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "05d024adfe3afe8dc0ab0a3d89be9cd8c8962a53fffb8dc6bd54726226dd1492"
+    },
+    {
+      "source_id": 46322,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "d32ca89efffb1e842c33e4086bb7637de484dbb2d8474d1157cb85061de0f938"
+    },
+    {
+      "source_id": 34172,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4f37461c3980086938872e62dea546a4b398ccc8eef373283a2f8301c40b4308"
+    },
+    {
+      "source_id": 5879,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "cc6b4cde85dd4c9c8fb0528bbbbcc86367821b036b6357afbb81a0446ad09a57"
+    },
+    {
+      "source_id": 5189,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "40b70cdce1c823453c62afd12b82ca6de230fdec92a800ad4821cc5753afb1ed"
+    },
+    {
+      "source_id": 43175,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4097825ab0706b7687fa6eee7848d9b7394ca500dc302c68e6348f19f120b292"
+    },
+    {
+      "source_id": 11905,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The median input and circle radius match the two requested operations.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "ee40779a5477f3e0f2910e45e5d2a46d66550443eef5735b6e2bab4af401305c"
+    },
+    {
+      "source_id": 12048,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "935e7ac18bc0c4dde4f2ea4868fe9f238871deed2fd078cf48c769978fe48296"
+    },
+    {
+      "source_id": 7086,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "d372d9522b30ae29a847905b73daf92ea5013f87dba861f94cae77ea52669365"
+    },
+    {
+      "source_id": 16651,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "c9b09bdbdae56e21d3fd06ef520ee3fbdecb55ed8f64a8c1f3637d1644d7262b"
+    },
+    {
+      "source_id": 10060,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "681f467683350301d50ee7e156111b6329b45b3f200738c7423df1242e11a518"
+    },
+    {
+      "source_id": 1341,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "fcf1f175a524007d57e43a2206403be1d4796b7aa6b0dbc04ecaa104dd19133a"
+    },
+    {
+      "source_id": 52417,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "fdf1a700e681ed128b6509350e96ab4dd690aa76cd685d0a196fe4a393aff5d8"
+    },
+    {
+      "source_id": 58837,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "The request describes three pairs but supplies three points; the target assumes all pairwise distances without resolving the pairing.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "084c2378994af3a2446957e0b5226fe1219e797072701116f59cd531fc3947d1"
+    },
+    {
+      "source_id": 11759,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The pair-sum function receives the supplied list and target seven.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a5e03218905b6bfab71ce7741e24512d9769dc76709189629a24af227c3d3244"
+    },
+    {
+      "source_id": 37604,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "616f5b9cbe84624387340bf6ee80e26eeb70eeea341a6807f446f3b48fe88fc8"
+    },
+    {
+      "source_id": 23013,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "02372f27aec2f2246a1b080c755511e88f7619bcc8d83d886a5572dc26a3e6ea"
+    },
+    {
+      "source_id": 7600,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Artist overview is the matching operation and preserves the artist identifier supplied by the user.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "5d305e64c9bf5480e0b1434fbf596d293a7f61226ed6cb21f88f5fd96721f004"
+    },
+    {
+      "source_id": 34495,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "06dd3a7ecfd04f596956d8d378462f6c215888fac2e32506e30161778ecf9edb"
+    },
+    {
+      "source_id": 36245,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Triangle base and height match the request with consistent units.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "5e2d96528531dc790139d1742d6d599fb48d5cec2deb7c36ec6caece0e4e10ec"
+    },
+    {
+      "source_id": 14758,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "f25b6a8805400fa45fa585b8fb8aed33e36c7398399c80591f58de0f3d849835"
+    },
+    {
+      "source_id": 49328,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Cosine similarity is the offered vector-similarity operation and both vectors are preserved.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a37a772e89d2e8d38ada2203adb0d1cace9e06a7dc722e475b2ec6faeb0b1e4b"
+    },
+    {
+      "source_id": 12786,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "2129d793bd5774e27765543a1a4cf5e74a7752f34d147e7c3d387324c312a43f"
+    },
+    {
+      "source_id": 59207,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The next-greater-element operation receives exactly the requested empty list.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "7de73ae53aa962b186ae5b882a6709fd0711b94e11ac2c4990070fddbd9ba4c1"
+    },
+    {
+      "source_id": 27424,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "11442bb973b0ab93498923f3c699a38f9cc9f9c646f1e9b9e78e5e979be4c6a1"
+    },
+    {
+      "source_id": 36466,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The longest-word list and password length/special-character setting match the request.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "21bb8f7bbdadd3256f76af95e1585a8b91ad7ab37ae9dab0dbc5bd6fe77e020f"
+    },
+    {
+      "source_id": 55141,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "3bb2e205b7f05034464344c689bc123e797726c818d3a7478a1491b77431df49"
+    },
+    {
+      "source_id": 897,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Two current-weather calls preserve the named cities London and Paris.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "2ae2a2648cb54d6a4dcd02cf134cd0891317e329046f7726f8a70440b6744337"
+    },
+    {
+      "source_id": 59412,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4681dbba284efd201985c733d119974a5d00f6f3db2a7bf30d724f0f77ad70be"
+    },
+    {
+      "source_id": 45041,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "138b4eadef3dc57694e443561f05a6a32244ee549655580c12981a9adceabed1"
+    },
+    {
+      "source_id": 17150,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "9a9055532974ead90e42bee3e0d379417c899c8ab1582dfb64510f39a2f9269f"
+    },
+    {
+      "source_id": 46371,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "ec674ce4085cb04d52ffe0538497b5cb2942b6623e6e77651097c637c7cff229"
+    },
+    {
+      "source_id": 38573,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4bc1af8327144432584cca857751695c373a4d56dc4249a61be2f6773116db91"
+    },
+    {
+      "source_id": 59580,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "All personal-characteristic inputs and the sedentary/maintenance settings match the stated calculation request.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "c88f1e6dc9ea94b2e1cebb5ef0492d4f185345065d4d70ec38fd353ffd6b05d8"
+    },
+    {
+      "source_id": 13627,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "2cf4eab7c77c816cea59994cd88f6c8503b4cbb25c3c49bad44720912eacdfcb"
+    },
+    {
+      "source_id": 57660,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "7f975a4edf45231a4d0bbe69b34fff75e2d3f8062f0b83fc7829c5d5bb35f4a9"
+    },
+    {
+      "source_id": 9494,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "07ec908b816fcd536a37e7716307605d6ae11fdc38fb2b4b88add543d18ac942"
+    },
+    {
+      "source_id": 4321,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "f609803804d1bd28e86cb7a9b6b79a9e979505c4f8d13f0fc40294bd5b5076e1"
+    },
+    {
+      "source_id": 36692,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "ece7df7872518722c5997535f16db3695c21f7926cfd0fe6cddae813ff883186"
+    },
+    {
+      "source_id": 41666,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1ae13a4c92e7167840e75756ec7764f99702fbf112bdeae1b3cd628b135150af"
+    },
+    {
+      "source_id": 40165,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "b25a29d81b0af95c1168a2dba029d3de40e7d985e8d448102a5fc1831f6893c1"
+    },
+    {
+      "source_id": 44814,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both charge signs and the shared fifty-volt value are preserved.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "c20fc861c3413531438152c3c900fe59faf5794d1c1e6fdf1d7908403e71beb8"
+    },
+    {
+      "source_id": 51732,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "8c6aa506e00038aafd0700118eaff8ef244052337adecc9492efbb3301d3759b"
+    },
+    {
+      "source_id": 20682,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "b73c4bb873c1e6cba98fd420525498517c2a305a9a787053f388cbc8afb89f09"
+    },
+    {
+      "source_id": 19654,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The longest-word list and exact parentheses string match both requested operations.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "39c865bb632c2be29b7da2acee24e1806990f042bc6cdd13730dd086d89604d1"
+    },
+    {
+      "source_id": 37896,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1e3239c59f5393f1329a703f21c6117dc1439e1fdd7c52dd98f7ec4916c76f06"
+    },
+    {
+      "source_id": 53133,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "An unfiltered category request maps to the available category-list tool without adding filters.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "caacf27c5667352af5cb3df8f29f1b7f66c8b4be39751ab714f6193ac72ce68f"
+    },
+    {
+      "source_id": 8942,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The arithmetic-mean inputs and exact palindrome phrase match the two requests.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "2badb1324b44b6326d1ae5c97fd67847f272c05359e2aaf59bdd28d97eeed276"
+    },
+    {
+      "source_id": 39117,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "275e374741a46ac4015b0e4d6e91969b7706d7ae94c49537fdbf7e0f20aa505e"
+    },
+    {
+      "source_id": 19502,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "7696ea5d62ba56d61dbf4a63fd74510f35fd2f2b5f8c6074c2f56322843bba0d"
+    },
+    {
+      "source_id": 58476,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1c4508a7283a432a4a7880b6b25b303d6e275a090ea686bdfc1f13de8696e3a5"
+    },
+    {
+      "source_id": 59432,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "c29d2b52b501a4bf2b7a23539e215594d256fbfd279d35fb7cee9b315d1ba899"
+    },
+    {
+      "source_id": 41971,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both athlete IDs and their distinct image versions are faithfully bound to the image tool.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "cb8b85630130ba19e0a31beea9a95252513485965900b74edff042f2337fcca5"
+    },
+    {
+      "source_id": 18915,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "6f1c9ac490647f15b9e87f350c2a3c0bca103f1046f01c787f990d752c920e23"
+    },
+    {
+      "source_id": 27139,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Grade scores/weights and the exact string to reverse match the request.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "4e90576d4dd444261a6bf571c216e0f1b584017c4af14ca14eba7e51910f0ab4"
+    },
+    {
+      "source_id": 49757,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both fully specified Sudoku matrices are preserved in the corresponding validation calls.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a6193024f7ebcd7b6b5a08c3607d4252a0bd7f6022f8cdf43883398620bdbba0"
+    },
+    {
+      "source_id": 54030,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The two reservations preserve room types, rates, date ranges and guest identifiers.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a89b11ebef32043b950dc688dd11ccf1c61e0a39433eb8a434131901a0048888"
+    },
+    {
+      "source_id": 51133,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "562ced60250e7034bd6923e18061aed3b3861405839fd404e1d5f53ce174b498"
+    },
+    {
+      "source_id": 6860,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "d95cf8a6dc2fa9a14f0e659a2b82aa53ac8b906f5eec1831dc85cfa0defb8ea0"
+    },
+    {
+      "source_id": 9661,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "d58c946d340e2acf8bceb962375a99123cf6cc44a40b9e33d77289e2b2246e40"
+    },
+    {
+      "source_id": 36778,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1695b72b91c0b70f3ce96919e5ccab4398a2b7f843a41c04d02260f60a3dc598"
+    },
+    {
+      "source_id": 30446,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The prime-test numbers and peak-search array match all requested calculations.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "9fcafa5238c4e3f79e688875bea029b39a4c858ea23e61855c2bdc41fc6beaf8"
+    },
+    {
+      "source_id": 7455,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4d4683d4ec27de3c1642839d8574041e55cd96a3e6c94170c482ea70285044b2"
+    },
+    {
+      "source_id": 55229,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "9b828fe956a8c9756e3d569d63ba5cba048320c7b9a2c3deb7d4b69c53c8c382"
+    },
+    {
+      "source_id": 35331,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "2918ad32c276c490add9dbf309502e5cafeda000df2a5bdeb6d521577f96217c"
+    },
+    {
+      "source_id": 28965,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "66084b13a9ef849183ee526d81a012980c16eca6cd7dc17e1d5baae8b789ee58"
+    },
+    {
+      "source_id": 1205,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "2c58bf0c6d722beb33b362a166666775cae171851835500cf51b2111c16210f3"
+    },
+    {
+      "source_id": 59967,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "c20333e9d4ae111742b8e42123e9c0b79f10275ed514482842bf87c9ae017f7c"
+    },
+    {
+      "source_id": 51642,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "All five meeting intervals are copied into the minimum-room calculation.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "c98b01f1dc931066a4178ce174b2a06ebff79dc4f812453a4d9e6d84d85f9bc8"
+    },
+    {
+      "source_id": 51041,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "220fa29df69187288e2d249f07ce47ef46cbdf960e702142b8a5773b7d037358"
+    },
+    {
+      "source_id": 43077,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "9704838e844cd65e43a6da5e7ac43cf8d6b99dee887dd440f582d9809f4eabed"
+    },
+    {
+      "source_id": 3361,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Ingredient, quantity and source/destination units match the flour conversion.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "659f645b7a0490dcf9f1124b221aebda6a5e9468fd1bdfd683cba36f1118e2ad"
+    },
+    {
+      "source_id": 3411,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "43489aab9beb80109e584fbfa46c27a16d4e489d813e3704da1d01a23253daf2"
+    },
+    {
+      "source_id": 58186,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The two state-specific gas-price tools match Alabama and Delaware; omitted dates request current data.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "957ab72ccf789c253ed809709ae0c77e189e2e6f7402087ac165480189ad7ce5"
+    },
+    {
+      "source_id": 46445,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "dc8e090141aa3e84f6efcd1e709c3d71f6e4ec6d86a909a976c21bbe34e8a841"
+    },
+    {
+      "source_id": 52617,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "644b7d065d26ed5fa0f1cb3e8135e8ba8fa07428d2178d7178e7dce246e7db66"
+    },
+    {
+      "source_id": 50281,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "9e0cbf5050cfb847082351394fb53435b37364fc9072cee60616b1800b99080b"
+    },
+    {
+      "source_id": 34771,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "692d70fed41f2196dcdbe6a28423d16f787861340421dcac9611f2df7c03fd8d"
+    },
+    {
+      "source_id": 46074,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "The target changes the seventh Sudoku row from .6....28. to .6....2.8, moving a supplied digit.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "82b9581a88e2f3aedf6513362745045530a1764fbbdd1c252e506d20598f32ec"
+    },
+    {
+      "source_id": 59361,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4850b08faaab69e85a1b760b47de7f1e6dca7ada940232f2c628d05ec4247b4a"
+    },
+    {
+      "source_id": 4808,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both triangles preserve their respective base and height values.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "061beefa62fd80154429819e690f340fb59e667f53cfad7352bcd21b0441485b"
+    },
+    {
+      "source_id": 36067,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "23cc7ec671e6ef630c16a5c17f29f043fa0c216680f9d61c6c6c0cfd09416e90"
+    },
+    {
+      "source_id": 38070,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "bc7ceb5441a3e0239021ea292186b5ebe51e3149cfaf4858257359ba83808a1f"
+    },
+    {
+      "source_id": 55940,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The n-dimensional distance function preserves both supplied three-dimensional points.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "d7861c3b9f9f22f82aa906215831ef6f1588b3b609e081aa4b9c65a628597a5e"
+    },
+    {
+      "source_id": 9810,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "9714c4db340452db9037d2b04bc54c082d02cb0d1c55765973018e6359ea4754"
+    },
+    {
+      "source_id": 47303,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "The streaming-source identifier lacks the TMDB media type described by the tool, and UK country-code normalization is unresolved.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "2b786c03aa3a0645dc0506a3bb47784b140ea9ea067600fd7f87161c4f5c2003"
+    },
+    {
+      "source_id": 31182,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "032bfcbf95068e5becd6c0680edbe965ab56fb71a81271f60a563ca880c0529d"
+    },
+    {
+      "source_id": 36666,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "af57ee6bf3075a0d9730e121ecbda886ff398d2d0fde945e867c9f8dc503b076"
+    },
+    {
+      "source_id": 21408,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "ae5a3ce26582b3459b647f31f4567ccb62c1321ee96819394d37092114edc96d"
+    },
+    {
+      "source_id": 19732,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "af8a572fdcba443bb20707c5e045ca47c5bd9a2fe32ef54affdfb0b9fd63e2fa"
+    },
+    {
+      "source_id": 38148,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "f5b992d4f9ab80850f28d9fa243e9f299311ebf9f7c23955eb4646e94f4bb79a"
+    },
+    {
+      "source_id": 29441,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "bba300bc4c557a0b03d9dbdb361251f1f7f85776cd58dfaa36eba4df378809f2"
+    },
+    {
+      "source_id": 52960,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "6bb4970766c411395be281309f1e37ea09c8d540e2baf88e926bff75c8bb1f88"
+    },
+    {
+      "source_id": 48823,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "40d4907ff41e9f7d15434e48e7af4d4b388c065c9012947763c1f0e8c2195d72"
+    },
+    {
+      "source_id": 5776,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "6d3a9ed02f18a34a12b7888fc161e6346501c7441a2c932153cccb567dc01510"
+    },
+    {
+      "source_id": 35747,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4fa29d95212ed99226b5189b25415774b92d8b851499cd1fb5cd18c23a6519c7"
+    },
+    {
+      "source_id": 53651,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "36b8c7961fe3a06f3c223c7e77ecc1f63fe3e9a3f7bc3bcef137e2805304bef4"
+    },
+    {
+      "source_id": 30388,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "9a2195d0c1c78676d385b3d7695c2e2e5316866793543deb7b2049484de9b8f8"
+    },
+    {
+      "source_id": 15867,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The investment amount, six-year term and decimal conversion of 2.5 percent match the request.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "097469af5562f489057ee195c82ed6e6eb952d30fceaad75f113fe199c3bd1db"
+    },
+    {
+      "source_id": 15857,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "3ee0e9c7f43ea0574ebab8641e161fbd211c55ecc53865481bb2d48f7d5a39aa"
+    },
+    {
+      "source_id": 20777,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "2997f13761cac29047e8dd554cf702d9936ad3cf18a45d6fec6ebcb0fd16ff84"
+    },
+    {
+      "source_id": 6719,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "4634bc55fa8da1fedabd6ad6dd49a32e9d5ead9a319a32493d53edc1897c7525"
+    },
+    {
+      "source_id": 39272,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1e5f406f69f0824e521a6eed3e2302b1ab3eefc2912a9895bec1ef597a8e4313"
+    },
+    {
+      "source_id": 44316,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "5faa887ec1c2eb1504e83a6e294c2bfa0d7e92bc22a8624820b7e5cafa85765b"
+    },
+    {
+      "source_id": 1083,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "597a690264d24e4ba46a213765e3b03bc84e3b9bcdd6a3884319abe7a996cbfc"
+    },
+    {
+      "source_id": 611,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "aa8aaed0297e52aebb4ca4ff41292db960b48eb9aaba123966ee0dd7c69fe3f0"
+    },
+    {
+      "source_id": 50237,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "c9bcb737b586a1c88121c95843c6cb979def7b58fa1bf23617489eccdcab07e1"
+    },
+    {
+      "source_id": 52096,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both weighted-grade calls preserve their respective scores and weights.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "d83d665d94393b673813d2ef31b0ec0eb52a55a741f3a5c82695316664d173d2"
+    },
+    {
+      "source_id": 53295,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "343ba1ae47c3cca15cb65a776f0197e80268b1f1aade476b9b18a9078b9b1cfa"
+    },
+    {
+      "source_id": 38283,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "cf9ed79c2d05cc38cb0379034352ab467e512bedc2fe6e6b3a3e35155bd57486"
+    },
+    {
+      "source_id": 28521,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "db886c1a28f870aeb43854b86126c947ff456097894d55aac1ece1a2988cf1c2"
+    },
+    {
+      "source_id": 8582,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both majority-element calls preserve the complete supplied lists.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "42a57f33ae8a5c30856a52a0ae181c275cde913f5147321dda1a0b8a2e8e3beb"
+    },
+    {
+      "source_id": 37697,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The first password uses length fourteen; the second intentionally uses the documented default length and special-character setting.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "b80fc855705aeba957f62665e35225169bd70c28300e5a73b6371bd25e6173d7"
+    },
+    {
+      "source_id": 37119,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Quadratic coefficients three, minus five and two match the stated equation.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a1aafdce3050c25560e237bc323cb63e78b79bd9984854b72082f05bb0c5a2b1"
+    },
+    {
+      "source_id": 53317,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "ec798b4c94ce9d8188254a3a870a665436ccb7a9898327b64a74d01e9092d45d"
+    },
+    {
+      "source_id": 14880,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1c481845f0b1570d915b908b64f94fdf17017dbfdc571605e26cb2d312472fc5"
+    },
+    {
+      "source_id": 7000,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Triangle dimensions and all arithmetic-mean inputs match the two requested calculations.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "1f38a311b9ed558b62ea858dfecaf65a7571f18f4bf34ed524f6f2488f90db8c"
+    },
+    {
+      "source_id": 43756,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "580e138982cec16b4022d07e95b37ea53bf38d6d5ba1d9994c502927620b25eb"
+    },
+    {
+      "source_id": 28585,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "2c0df5a4997fc9131746631bb2070fd5b7854805d395a604d0f54d4b60b93916"
+    },
+    {
+      "source_id": 6272,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "7375cd45157e179e17e82d47cdced574b1e4396b8940f63034680e7a99ab959a"
+    },
+    {
+      "source_id": 21917,
+      "split": "train",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission because an active container or value schema is underspecified.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "db9a3a0b634f0ce92204f7fc214a99c1152108e2719ff0987825037d8b6e2c25"
+    },
+    {
+      "source_id": 59132,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "The two pair-sum calls preserve the shared list and the separately requested targets twelve and ten.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "f520ab3f1b880eeef5b5d8f89daeb7dda1c331aee0e4081e02e668f263b38d4c"
+    },
+    {
+      "source_id": 40748,
+      "split": "train",
+      "decision": "allow",
+      "short_reason": "Both mean calls preserve the two complete number lists.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "3c5cee4baba0f37eec4a56e0e7630281ae7e6a494c98361eb8a22b344479fbce"
+    },
+    {
+      "source_id": 43897,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "8229e1a2260e08d255dca1e28f97a0edd21de5f69af2a4126fd07603af998a18"
+    },
+    {
+      "source_id": 51936,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "1a321dba4e879cdf62bd621f92e25c3194e6e67e1d7bd8dfe9a8065eadf83f08"
+    },
+    {
+      "source_id": 38653,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "The largest-number calls preserve the list and the requested counts two and seven.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "e39e3ff1e21ffbaa0dba9c7b378d4d1b03582e38d78ad37e933436b2433aa5c5"
+    },
+    {
+      "source_id": 58873,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "The largest-number call preserves all ten input values and requests three results.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "aecede6cda8fa00d534edb96e7450f5b27d79540dbf7173e5c87dfe20fa1b831"
+    },
+    {
+      "source_id": 56756,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "The city lookup preserves the supplied country and region codes; no success or failure result is invented.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "69d4c750edf64deba5432ad4b902247352381f864867a3776c99076fabbb5ced"
+    },
+    {
+      "source_id": 42269,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "b2c901ac2effc4ce29c284d63a4f79ec89739c1f9c282e85ccfbe0d499ac071a"
+    },
+    {
+      "source_id": 17034,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "06eb9013686422f3b7af93f3d311c1e9cba4a8785d87762792082a02fc6ad0af"
+    },
+    {
+      "source_id": 59232,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Descending order is explicitly enabled and all signed numeric inputs are preserved.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "7767d5c85f8a31f7f34af1b3b9a2ca2bf9538cfe5059bbef59448bf857e7a1b4"
+    },
+    {
+      "source_id": 38697,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "a0d6d48a47a76086d9fcc6e0ee3fe1403dae8b39e02e4f759e4766d5d2f0f496"
+    },
+    {
+      "source_id": 48538,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Both property lookups correctly separate the supplied house numbers, street names and ZIP codes.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "8c0a7a9209f312797802a0220d5038c8b557ec8690677ac5c2a0573273c7e8d8"
+    },
+    {
+      "source_id": 27165,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "f2b7ee2d1383115562b27e8fddb8e1c921ecbcdddb77f57b60120d73961f7afa"
+    },
+    {
+      "source_id": 42416,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Working-day increments, signs, countries, dates, start-inclusion flags and configurations match both requests.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "5e548b01a9cce7bc0059ff67d3fef6b4f700917142f54fa1677a78cb3e403ff8"
+    },
+    {
+      "source_id": 31062,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Quarterly compounding is represented by four periods per year with the supplied principal, rate and term.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a649fb0e20d316752b70ced1eaedbf0240f4ae80b92eaa641b37267f76fd4ab4"
+    },
+    {
+      "source_id": 49720,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Descending sorting is explicitly requested for the exact supplied list.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "c30da4d8d58bfd8db25077ce16b2919b5b55485ec47688e7faed4c6bb4158c26"
+    },
+    {
+      "source_id": 25407,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "639cb59f4b5a390bad1fb9f83c9ea2d3dfa24fc3df8a5894e0bb3a1d853600fe"
+    },
+    {
+      "source_id": 47049,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "The standard deck, thirteen clubs and three-card draw map consistently to the offered probability function.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "c8e79397a8d788a2b1e48f8d49d73b4219e0e3f173959571ad226aba6e048f87"
+    },
+    {
+      "source_id": 43421,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "f32ce9690ed31ca04bc72668ce40f2171330a8349faf5399682aaeb7bc84ed15"
+    },
+    {
+      "source_id": 12861,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "5c5cf91df1314ccc352c87e82cfd487ea3b0dc76766ce5840ce401d04ec5fd37"
+    },
+    {
+      "source_id": 10111,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "The latest-standings request uses the matching Serie A endpoint without inventing a season.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "20a18867bbb4356fcf03f58117a5ad1e5a16ce1df249d2c7b07ddd954b61dc2f"
+    },
+    {
+      "source_id": 52925,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "The user cancels the last sorting request, but the target still includes that descending-sort call.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "da3beb37d8ecd38c8a0c40b493ff2699e0253c92c03c6faf93b30e9469d2e040"
+    },
+    {
+      "source_id": 36324,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "The target covers the permutation subrequests but leaves a weather request unresolved with no weather tool or location.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "011a28b7dd9aa15d5d3d6cb62e1d0365017964cc5e1331957ad7589c90457887"
+    },
+    {
+      "source_id": 53967,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "eabd65fbe30920be612a85762554d42657a753ffa5e5dcddfe4738720e7ec10c"
+    },
+    {
+      "source_id": 46143,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Spoken decimal numbers are parsed faithfully and the two requested sort directions are respected.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "20240032327424d08a2356a1aec2e155ac86b135e638f76ea749217477ad1c0b"
+    },
+    {
+      "source_id": 35878,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Both compound-interest calls preserve the principal and term, with correct decimal rates and annual/semiannual frequencies.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "34a97c6df372f0b69419a9d1270e752094e4c93fd18baa2eab4f47386c6ce191"
+    },
+    {
+      "source_id": 43658,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Polygon vertices, the second list and its top-two count match the two requested operations.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "dae69a1780ac1cafda93c9884a3f59bf341b407c339e8a673200085c34339cdd"
+    },
+    {
+      "source_id": 26132,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "11a7d5f8a1c5f83494f99237d605366e159ef6bda9e40c85c740b47e27ae34ac"
+    },
+    {
+      "source_id": 17610,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Both URL-lookup calls preserve the exact supplied URLs and use the matching available tool.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "7547027027682423a0709e81b51be9d72035ae996c8bd1a1f73d97daa5d9db21"
+    },
+    {
+      "source_id": 42782,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "Number words in the list are faithfully represented as integers and the target requests the largest three.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "a6f99e1fe58297837c0f6ab3498ce643a6b5caaf8101637c5d60a55bc8947683"
+    },
+    {
+      "source_id": 6458,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "76a8cad72e99cf9a875f4e24d9eaaa43ea545246d7c5dc6b15a85c2c8bcded71"
+    },
+    {
+      "source_id": 35196,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "53b3e46f9b699b3fee308abc1526920f592101fed19fc862ca7f83f6af298a0b"
+    },
+    {
+      "source_id": 22904,
+      "split": "valid",
+      "decision": "withhold",
+      "short_reason": "Excluded before semantic admission by the additional raw-default type/constraint consistency gate.",
+      "review_type": "source_quality_exclusion",
+      "source_row_canonical_sha256": "d3f9fa91ca173dafb6ca174aadec0e4346719ba670aff507ce9804c51f6787b4"
+    },
+    {
+      "source_id": 11888,
+      "split": "valid",
+      "decision": "allow",
+      "short_reason": "The exact list is sent once for ascending and once for descending sorting as requested.",
+      "review_type": "manual_semantic_consistency_review",
+      "source_row_canonical_sha256": "1b97e10a02e0ae9d86a3bc8f05bea0b455e113d4c9a0519b5eb6b41ca870f516"
+    }
+  ]
+}

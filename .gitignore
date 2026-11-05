@@ -39,3 +39,7 @@ cache/
 # Downloaded recording seeds remain outside public artifacts.
 data/production-source-seeds/audio-cache/
 /data/v4-native-audio-candidates/raw/
+
+# Authorized external source downloads stay private.
+/scripts/xlam/private/
+/scripts/xlam/download-receipt.json

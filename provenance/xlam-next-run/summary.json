@@ -1,0 +1,103 @@
+{
+  "schema": "kumi-xlam-next-run-summary/1",
+  "prepared_at": "2026-11-05T23:53:33.563486+00:00",
+  "stage": "prepared_not_started",
+  "hugging_face_access_granted": true,
+  "source": {
+    "schema": "kumillm-xlam-official-download/1",
+    "dataset_id": "Salesforce/xlam-function-calling-60k",
+    "revision": "26d14ebfe18b1f7b524bd39b404b50af5dc97866",
+    "file": "xlam_function_calling_60k.json",
+    "source_url": "https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k/resolve/26d14ebfe18b1f7b524bd39b404b50af5dc97866/xlam_function_calling_60k.json",
+    "bytes": 96116570,
+    "sha256": "4ef5c6f0dc552f2231f93f5853a9ef431e9e806d7aa514d0f6b615606ce576c6",
+    "upstream_lfs_sha256": "4ef5c6f0dc552f2231f93f5853a9ef431e9e806d7aa514d0f6b615606ce576c6",
+    "upstream_lfs_hash_available": true,
+    "upstream_lfs_hash_verified": true,
+    "download_seconds": 3.9338860511779785,
+    "downloaded_at_unix": 1793921837.5375528,
+    "credential_or_signed_url_stored": false,
+    "license_metadata": "CC-BY-4.0",
+    "access_request_authorized_by_user": true
+  },
+  "studio_stage": "/Users/studio/Projects/kumi-training/staging/kumi-xlam-next-20261105-01",
+  "source_reservoir": {
+    "train": 128,
+    "valid": 32
+  },
+  "semantic_review": {
+    "source_clean_reviewed": 55,
+    "allowed_train": 33,
+    "allowed_valid": 16,
+    "withheld": 6,
+    "apis_reexecuted": false
+  },
+  "final_data": {
+    "kumi_train": 341,
+    "xlam_train": 29,
+    "mixed_train": 370,
+    "primary_kumi_valid": 86,
+    "auxiliary_xlam_valid": 16,
+    "xlam_row_fraction": 0.07837837837837838,
+    "xlam_target_token_fraction": 0.07956837077657881,
+    "selected_xlam_source_ids": [
+      11759,
+      43729,
+      37697,
+      27139,
+      53133,
+      49757,
+      58186,
+      3361,
+      44814,
+      36466,
+      55940,
+      897,
+      19654,
+      52096,
+      15867,
+      8942,
+      7600,
+      59132,
+      11905,
+      41971,
+      49328,
+      7000,
+      51642,
+      40748,
+      30446,
+      4808,
+      59207,
+      8582,
+      13651
+    ],
+    "selected_xlam_target_tokens": 2249,
+    "kumi_target_tokens": 26016
+  },
+  "checks": {
+    "exact_qwen_records_checked": 587,
+    "runtime_parser_targets_checked": 160,
+    "runtime_incompatible_pool_rows_excluded": 6,
+    "strict_loss_probe_passed": true,
+    "strict_runner_preflights_passed": [
+      "baseline",
+      "mixed"
+    ],
+    "protected_test_files_provided": false,
+    "source_api_family_overlap": false
+  },
+  "next_run": {
+    "base_model": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+    "base_revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d",
+    "initialization": "fresh pinned base; v1 adapter not resumed",
+    "microbatches": 384,
+    "optimizer_updates": 48,
+    "max_seq_length": 32768,
+    "loss_contract": "strict_final_target_excluding_padding",
+    "starts_only_with_explicit_start_flag": true
+  },
+  "training_started": false,
+  "v1_modified": false,
+  "model_weights_loaded_by_preparation": false,
+  "scope": "Generic function-call labels; no musical skill or API execution result established."
+}
