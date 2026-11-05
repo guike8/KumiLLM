@@ -1,0 +1,988 @@
+{
+  "format_version": 1,
+  "kind": "reviewed_native_audio_candidates",
+  "record_count": 7,
+  "records": [
+    {
+      "call_id": "req_d32616f3b1ed4021ae3d5ea930a5d098",
+      "call_index": 0,
+      "target_kind": "tool_only",
+      "record_sha256": "27b321fc406c0285911c9545e0e1ab9cb494081e375cad3a31f718ca7ca466a8",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "66ebfa61b398b10568a4987f8ed4465b5fe802c3657e49b0d50923be580e82ba",
+      "target_sha256": "3db2bccb14650e4022e03ecb521f4ae1dac85a379f66d8fe676f5eb3da4b89f3",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [
+        {
+          "tool_call_id": "call_audio_001",
+          "content": {
+            "kumiAudio": 1,
+            "file": "open-goldberg-01-excerpt-30s.wav",
+            "format": "wav",
+            "sampleRate": 44100,
+            "channels": 2,
+            "seconds": 30,
+            "analyzed": {
+              "from": "0:00",
+              "to": "0:30",
+              "focus": "mix"
+            },
+            "loudness": {
+              "integratedLufs": -25.7,
+              "shortTermMaxLufs": -22.5,
+              "rangeLu": 7.9,
+              "truePeakDbtp": -10.1,
+              "samplePeakDbfs": -10.1,
+              "clippedSamples": 0
+            },
+            "balance": {
+              "bands": [
+                {
+                  "name": "sub",
+                  "hz": "20\u201360",
+                  "db": -30.4,
+                  "width": 0.02,
+                  "correlation": 0.95
+                },
+                {
+                  "name": "bass",
+                  "hz": "60\u2013120",
+                  "db": -23.2,
+                  "width": 0.03,
+                  "correlation": 0.94
+                },
+                {
+                  "name": "upper bass",
+                  "hz": "120\u2013250",
+                  "db": -9.7,
+                  "width": 0.26,
+                  "correlation": 0.48
+                },
+                {
+                  "name": "low mids",
+                  "hz": "250\u2013500",
+                  "db": -2.1,
+                  "width": 0.29,
+                  "correlation": 0.44
+                },
+                {
+                  "name": "mids",
+                  "hz": "500\u20131k",
+                  "db": -6,
+                  "width": 0.43,
+                  "correlation": 0.14
+                },
+                {
+                  "name": "upper mids",
+                  "hz": "1000\u20132k",
+                  "db": -17.6,
+                  "width": 0.41,
+                  "correlation": 0.19
+                },
+                {
+                  "name": "presence",
+                  "hz": "2000\u20134k",
+                  "db": -29.9,
+                  "width": 0.51,
+                  "correlation": -0.03
+                },
+                {
+                  "name": "bite",
+                  "hz": "4000\u20136k",
+                  "db": -55.6,
+                  "width": 0.53,
+                  "correlation": -0.07
+                },
+                {
+                  "name": "brilliance",
+                  "hz": "6000\u201310k",
+                  "db": -61.3,
+                  "width": 0.05,
+                  "correlation": 0.91
+                },
+                {
+                  "name": "air",
+                  "hz": "10000\u201320k",
+                  "db": -62.9,
+                  "width": 0.12,
+                  "correlation": 0.76
+                }
+              ],
+              "tiltDbPerOctave": -5,
+              "centroidHz": 444
+            },
+            "stereo": {
+              "correlation": 0.34,
+              "width": 0.27,
+              "lowEndMono": true
+            },
+            "dynamics": {
+              "crestDb": 20.4,
+              "peakToLoudnessDb": 15.6,
+              "onsetsPerSecond": 2.9
+            },
+            "tempo": {
+              "bpm": 129.2,
+              "confidence": 0.07
+            },
+            "key": {
+              "name": "D major",
+              "confidence": 0.54
+            },
+            "overTime": {
+              "every": "1.9 s",
+              "lufs": [
+                -25.4,
+                -22.9,
+                -22.4,
+                -31.8,
+                -30.7,
+                -32.5,
+                -31.3,
+                -28.4,
+                -37.9,
+                -24.4,
+                -24.1,
+                -24.5,
+                -23.7,
+                -30,
+                -28.6,
+                -29.3
+              ]
+            },
+            "spectrogram": {
+              "rows": [
+                {
+                  "band": "air",
+                  "cells": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7"
+                },
+                {
+                  "band": "brilliance",
+                  "cells": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7"
+                },
+                {
+                  "band": "bite",
+                  "cells": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7"
+                },
+                {
+                  "band": "presence",
+                  "cells": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7"
+                },
+                {
+                  "band": "upper mids",
+                  "cells": "333320\u00b7\u00b7\u00b7000\u00b7133323011\u00b7\u00b7"
+                },
+                {
+                  "band": "mids",
+                  "cells": "444444566647068786532544"
+                },
+                {
+                  "band": "low mids",
+                  "cells": "988984323215337757974656"
+                },
+                {
+                  "band": "upper bass",
+                  "cells": "331432544244246665555524"
+                },
+                {
+                  "band": "bass",
+                  "cells": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7230\u00b70\u00b7\u00b7\u00b71\u00b7\u00b720\u00b7\u00b7\u00b7\u00b7\u00b7"
+                },
+                {
+                  "band": "sub",
+                  "cells": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7"
+                }
+              ],
+              "columns": "0:00 to 0:30, 24 steps",
+              "scale": "9 = loudest, each step 3 dB quieter, \u00b7 = silent"
+            }
+          },
+          "source_call_id": "req_6cdc9a1c82d94d19a14e1de2f9421fbc",
+          "request_file": "work/production-data/teacher/req_6cdc9a1c82d94d19a14e1de2f9421fbc.request.json",
+          "content_sha256": "4e2767938a90ab5435770b31753afbd1db6cac58b1134b7b02eb3ee3579b7867",
+          "native_event_files": [
+            "work/production-data/studio-native/file-collection-001/F01-technical-audition/turn-00.events.jsonl"
+          ]
+        }
+      ],
+      "terminal_validation": {}
+    },
+    {
+      "call_id": "req_6cdc9a1c82d94d19a14e1de2f9421fbc",
+      "call_index": 1,
+      "target_kind": "checked_public_response",
+      "record_sha256": "e20e8481df3ab0f4dffbeb2cddc20e1e4b7d33e7e627f67c43caa5b682cd9ab2",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "0f87dde7ef9c8441bd14e895d895fa1749e3946404763900459a79586849b870",
+      "target_sha256": "7f60e7a60e8669e1611532b8fddddaab9e913b4109c50106193e7c81d2fa8a89",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [],
+      "terminal_validation": {
+        "contract_validated": true,
+        "native_response_exact_match": true,
+        "review": {
+          "content_sha256": "223c4a68eb4d691e9789cf56ecd61066be35932b6f1b4c285024d285a66893a8",
+          "all_claims_reviewed": true,
+          "no_subjective_quality_or_audition_claim": true,
+          "fact_groundings": [
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/seconds",
+              "value": 30
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/channels",
+              "value": 2
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/loudness/clippedSamples",
+              "value": 0
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/loudness/samplePeakDbfs",
+              "value": -10.1
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/loudness/truePeakDbtp",
+              "value": -10.1
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/loudness/integratedLufs",
+              "value": -25.7
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/loudness/shortTermMaxLufs",
+              "value": -22.5
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/loudness/rangeLu",
+              "value": 7.9
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/dynamics/crestDb",
+              "value": 20.4
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/dynamics/peakToLoudnessDb",
+              "value": 15.6
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/stereo/correlation",
+              "value": 0.34
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/stereo/width",
+              "value": 0.27
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/stereo/lowEndMono",
+              "value": true
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/overTime/every",
+              "value": "1.9 s"
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/overTime/lufs/8",
+              "value": -37.9
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/balance/bands/6/correlation",
+              "value": -0.03
+            },
+            {
+              "tool_call_id": "call_audio_001",
+              "pointer": "/balance/bands/7/correlation",
+              "value": -0.07
+            }
+          ],
+          "review_notes": "All numeric claims match full30s nativefile analysis. Nonsilence, unclipped samples and level/peak independently checked. Minimum overTime LUFS is -37.9; no brief-silence guarantee or listening judgment asserted. LowEndMono is a tool classification, not a universal phase guarantee. File unchanged confirmed by complete batch status.",
+          "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+        },
+        "review_scope": "hash_pinned_manual_numeric_and_comparative_claim_audit"
+      }
+    },
+    {
+      "call_id": "req_c7f649e043654d2abe75848f2118c654",
+      "call_index": 2,
+      "target_kind": "tool_only",
+      "record_sha256": "667c315e6fd72c9d7c119b0676f8a896cf0cbb99173469592d6e885108bab5ad",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "57fb1973ce3504a91bf248f613c5c851cd56be1df67516456b06f5485d6f7f92",
+      "target_sha256": "c96878d5b0e9ef53751d475c54fbcd8310826749a2dc619af4ee17ec51e5120a",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [
+        {
+          "tool_call_id": "call_audio_002",
+          "content": {
+            "comparison": {
+              "kumiAudioComparison": 1,
+              "mine": "open-goldberg-01-excerpt-30s.wav",
+              "reference": "open-goldberg-02-excerpt-30s.wav",
+              "headlines": [
+                "bite (4000\u20136k Hz) \u221221.3 dB under the reference",
+                "brilliance (6000\u201310k Hz) \u221216.1 dB under the reference",
+                "presence (2000\u20134k Hz) \u22129.5 dB under the reference",
+                "8.7 LU quieter overall (-25.7 vs -17 LUFS)",
+                "upper mids (1000\u20132k Hz) \u22126.1 dB under the reference",
+                "bass (60\u2013120 Hz) \u22124.4 dB under the reference",
+                "air (10000\u201320k Hz) +2.8 dB over the reference",
+                "darker overall (tilt -5 vs -3.6 dB/octave)"
+              ],
+              "loudness": {
+                "mineLufs": -25.7,
+                "referenceLufs": -17,
+                "differenceLu": -8.7,
+                "truePeak": [
+                  -10.1,
+                  -2.8
+                ],
+                "range": [
+                  7.9,
+                  4.5
+                ]
+              },
+              "balance": [
+                {
+                  "band": "sub",
+                  "hz": "20\u201360",
+                  "difference": 2
+                },
+                {
+                  "band": "bass",
+                  "hz": "60\u2013120",
+                  "difference": -4.4
+                },
+                {
+                  "band": "upper bass",
+                  "hz": "120\u2013250",
+                  "difference": -1.4
+                },
+                {
+                  "band": "low mids",
+                  "hz": "250\u2013500",
+                  "difference": 1.9
+                },
+                {
+                  "band": "mids",
+                  "hz": "500\u20131k",
+                  "difference": -1.5
+                },
+                {
+                  "band": "upper mids",
+                  "hz": "1000\u20132k",
+                  "difference": -6.1
+                },
+                {
+                  "band": "presence",
+                  "hz": "2000\u20134k",
+                  "difference": -9.5
+                },
+                {
+                  "band": "bite",
+                  "hz": "4000\u20136k",
+                  "difference": -21.3
+                },
+                {
+                  "band": "brilliance",
+                  "hz": "6000\u201310k",
+                  "difference": -16.1
+                },
+                {
+                  "band": "air",
+                  "hz": "10000\u201320k",
+                  "difference": 2.8
+                }
+              ],
+              "tilt": [
+                -5,
+                -3.6
+              ],
+              "width": [
+                {
+                  "band": "brilliance",
+                  "mine": 0.05,
+                  "reference": 0.39
+                }
+              ],
+              "stereo": {
+                "correlation": [
+                  0.34,
+                  0.29
+                ],
+                "lowEndMono": [
+                  true,
+                  true
+                ]
+              },
+              "dynamics": {
+                "crestDb": [
+                  20.4,
+                  18.7
+                ],
+                "peakToLoudnessDb": [
+                  15.6,
+                  14.2
+                ],
+                "onsetsPerSecond": [
+                  2.9,
+                  3.8
+                ]
+              },
+              "tempo": [
+                129.2,
+                102.1
+              ],
+              "key": [
+                "D major",
+                "D major"
+              ]
+            },
+            "mine": {
+              "loudness": {
+                "integratedLufs": -25.7,
+                "shortTermMaxLufs": -22.5,
+                "rangeLu": 7.9,
+                "truePeakDbtp": -10.1,
+                "samplePeakDbfs": -10.1,
+                "clippedSamples": 0
+              },
+              "tempo": {
+                "bpm": 129.2,
+                "confidence": 0.07
+              },
+              "key": {
+                "name": "D major",
+                "confidence": 0.54
+              }
+            },
+            "reference": {
+              "loudness": {
+                "integratedLufs": -17,
+                "shortTermMaxLufs": -14.7,
+                "rangeLu": 4.5,
+                "truePeakDbtp": -2.8,
+                "samplePeakDbfs": -2.9,
+                "clippedSamples": 0
+              },
+              "tempo": {
+                "bpm": 102.1,
+                "confidence": 0.52
+              },
+              "key": {
+                "name": "D major",
+                "confidence": 1
+              }
+            }
+          },
+          "source_call_id": "req_8467992d6b0e46dbba99ba6ce9a31bbe",
+          "request_file": "work/production-data/teacher/req_8467992d6b0e46dbba99ba6ce9a31bbe.request.json",
+          "content_sha256": "03adad9371b9b2c896452aec3805c87fd48f227722d1b8fec2b892cc32da7a8d",
+          "native_event_files": [
+            "work/production-data/studio-native/file-collection-001/F02-fair-comparison/turn-00.events.jsonl"
+          ]
+        }
+      ],
+      "terminal_validation": {}
+    },
+    {
+      "call_id": "req_5a26ed3c76c14564911cf8f570395297",
+      "call_index": 3,
+      "target_kind": "checked_public_response",
+      "record_sha256": "9760e3fb594471293def509d2bdd5f7c3ea5c9659a70f76d5979e5e0237fb3e8",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "da402fa8e7d0b4c7eef6d0cb3773c1ca956a72ba2bd43234c5557a2a300791fe",
+      "target_sha256": "8b0c1ce15464d6899f1158aece9735d10e0b793211a8aa776d1d4bcad0ef3319",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [],
+      "terminal_validation": {
+        "contract_validated": true,
+        "native_response_exact_match": true,
+        "review": {
+          "content_sha256": "a279653ff524e476ecc2c13b7e7ee4872eba9851ea95b4ea85fa2d666f4aac25",
+          "all_claims_reviewed": true,
+          "no_subjective_quality_or_audition_claim": true,
+          "fact_groundings": [
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/mine/loudness/integratedLufs",
+              "value": -25.7
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/reference/loudness/integratedLufs",
+              "value": -17
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/loudness/differenceLu",
+              "value": -8.7
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/loudness/truePeak",
+              "value": [
+                -10.1,
+                -2.8
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/loudness/range",
+              "value": [
+                7.9,
+                4.5
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/dynamics/crestDb",
+              "value": [
+                20.4,
+                18.7
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/mine/loudness/clippedSamples",
+              "value": 0
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/reference/loudness/clippedSamples",
+              "value": 0
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/stereo/correlation",
+              "value": [
+                0.34,
+                0.29
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/stereo/lowEndMono",
+              "value": [
+                true,
+                true
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/balance/5/difference",
+              "value": -6.1
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/balance/6/difference",
+              "value": -9.5
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/balance/7/difference",
+              "value": -21.3
+            },
+            {
+              "tool_call_id": "call_audio_002",
+              "pointer": "/comparison/balance/8/difference",
+              "value": -16.1
+            }
+          ],
+          "review_notes": "Second-minus-first loudness =8.7LU; -8.7dB playback trim is a proposed starting point, explicitly not applied. Numeric fields and measured comparison direction match. No audible preference or exact perceptual matching guarantee asserted. Spectral comparison is explicitly tool-reported and levelmatched.",
+          "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+        },
+        "review_scope": "hash_pinned_manual_numeric_and_comparative_claim_audit"
+      }
+    },
+    {
+      "call_id": "req_07445a54d98049b8b4fd6464491874fb",
+      "call_index": 7,
+      "target_kind": "tool_only",
+      "record_sha256": "39396d0cb6a8f36282080ab3fbb82b7cc243f12dbd34563f094e7218002a1917",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "0b2e7a88e1250a000d9b4c6611c5f08db4d160afe4d23304f366c21f92537ccf",
+      "target_sha256": "ed3413ea922b03b56bcabcafdc17daf1a4b2910caba3778c8cd39e9964780733",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [
+        {
+          "tool_call_id": "call_audio_004",
+          "content": {
+            "comparison": {
+              "kumiAudioComparison": 1,
+              "mine": "open-goldberg-02-excerpt-30s.wav",
+              "reference": "open-goldberg-03-excerpt-30s.wav",
+              "headlines": [
+                "brilliance (6000\u201310k Hz) +6.6 dB over the reference",
+                "bite (4000\u20136k Hz) +5.5 dB over the reference",
+                "bass (60\u2013120 Hz) +2.7 dB over the reference",
+                "mids (500\u20131k Hz) +1.8 dB over the reference",
+                "presence (2000\u20134k Hz) +1.8 dB over the reference",
+                "low mids (250\u2013500 Hz) \u22121.7 dB under the reference",
+                "upper mids (1000\u20132k Hz) +1.7 dB over the reference",
+                "air (10000\u201320k Hz) +1.7 dB over the reference"
+              ],
+              "loudness": {
+                "mineLufs": -17,
+                "referenceLufs": -17.9,
+                "differenceLu": 0.9,
+                "truePeak": [
+                  -2.8,
+                  -2.4
+                ],
+                "range": [
+                  4.5,
+                  6.7
+                ]
+              },
+              "balance": [
+                {
+                  "band": "sub",
+                  "hz": "20\u201360",
+                  "difference": 1.4
+                },
+                {
+                  "band": "bass",
+                  "hz": "60\u2013120",
+                  "difference": 2.7
+                },
+                {
+                  "band": "upper bass",
+                  "hz": "120\u2013250",
+                  "difference": 1.4
+                },
+                {
+                  "band": "low mids",
+                  "hz": "250\u2013500",
+                  "difference": -1.7
+                },
+                {
+                  "band": "mids",
+                  "hz": "500\u20131k",
+                  "difference": 1.8
+                },
+                {
+                  "band": "upper mids",
+                  "hz": "1000\u20132k",
+                  "difference": 1.7
+                },
+                {
+                  "band": "presence",
+                  "hz": "2000\u20134k",
+                  "difference": 1.8
+                },
+                {
+                  "band": "bite",
+                  "hz": "4000\u20136k",
+                  "difference": 5.5
+                },
+                {
+                  "band": "brilliance",
+                  "hz": "6000\u201310k",
+                  "difference": 6.6
+                },
+                {
+                  "band": "air",
+                  "hz": "10000\u201320k",
+                  "difference": 1.7
+                }
+              ],
+              "tilt": [
+                -3.6,
+                -4
+              ],
+              "width": [],
+              "stereo": {
+                "correlation": [
+                  0.29,
+                  0.35
+                ],
+                "lowEndMono": [
+                  true,
+                  true
+                ]
+              },
+              "dynamics": {
+                "crestDb": [
+                  18.7,
+                  19.8
+                ],
+                "peakToLoudnessDb": [
+                  14.2,
+                  15.5
+                ],
+                "onsetsPerSecond": [
+                  3.8,
+                  4.9
+                ]
+              },
+              "tempo": [
+                102.1,
+                126.9
+              ],
+              "key": [
+                "D major",
+                "D major"
+              ]
+            },
+            "mine": {
+              "loudness": {
+                "integratedLufs": -17,
+                "shortTermMaxLufs": -14.7,
+                "rangeLu": 4.5,
+                "truePeakDbtp": -2.8,
+                "samplePeakDbfs": -2.9,
+                "clippedSamples": 0
+              },
+              "tempo": {
+                "bpm": 102.1,
+                "confidence": 0.52
+              },
+              "key": {
+                "name": "D major",
+                "confidence": 1
+              }
+            },
+            "reference": {
+              "loudness": {
+                "integratedLufs": -17.9,
+                "shortTermMaxLufs": -15,
+                "rangeLu": 6.7,
+                "truePeakDbtp": -2.4,
+                "samplePeakDbfs": -2.4,
+                "clippedSamples": 0
+              },
+              "tempo": {
+                "bpm": 126.9,
+                "confidence": 0.17
+              },
+              "key": {
+                "name": "D major",
+                "confidence": 1
+              }
+            }
+          },
+          "source_call_id": "req_425a24ecad5f4704815b71f1496893d8",
+          "request_file": "work/production-data/teacher/req_425a24ecad5f4704815b71f1496893d8.request.json",
+          "content_sha256": "a81605a9ecc5b71a76dae5737f98ac1e0e7007e56d798e53e6f607e1e9516adf",
+          "native_event_files": [
+            "work/production-data/studio-native/file-collection-001/F03-dynamics-steering/turn-00.events.jsonl"
+          ]
+        }
+      ],
+      "terminal_validation": {}
+    },
+    {
+      "call_id": "req_cb513040341840419cbdd889899cd09f",
+      "call_index": 8,
+      "target_kind": "checked_public_response",
+      "record_sha256": "2c57c63ba653df271fa3a6ba37937e4987fd4fb924ecd4bcf0ea79da6f9e4ce1",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "6d7ac6aea514eae5821c91c933eabf1c22d802f1fe7c798e16e3f1783c6d5da8",
+      "target_sha256": "a5065a66acaa670c1e2a2c548e8935a9c39696c7058d7ab7fe25f9c46af6769c",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [],
+      "terminal_validation": {
+        "contract_validated": true,
+        "native_response_exact_match": true,
+        "review": {
+          "content_sha256": "6f6a66727382d776dc56be7a27edfe7884332b0d6953c21ad09f6734fa142d49",
+          "all_claims_reviewed": true,
+          "no_subjective_quality_or_audition_claim": true,
+          "fact_groundings": [
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/truePeak",
+              "value": [
+                -2.8,
+                -2.4
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/mineLufs",
+              "value": -17
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/referenceLufs",
+              "value": -17.9
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/differenceLu",
+              "value": 0.9
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/range",
+              "value": [
+                4.5,
+                6.7
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/dynamics/crestDb",
+              "value": [
+                18.7,
+                19.8
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/dynamics/peakToLoudnessDb",
+              "value": [
+                14.2,
+                15.5
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/mine/loudness/clippedSamples",
+              "value": 0
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/reference/loudness/clippedSamples",
+              "value": 0
+            }
+          ],
+          "review_notes": "Headroom=0 minus truepeak; B has0.4dB less and0.9LU lower mean. InspectB is conditional advice grounded in higherreportedLRA/crest, not a subjective quality preference or claimcompression needed. -0.9dB trim proposed onA. No audio mutation or audition claimed.",
+          "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+        },
+        "review_scope": "hash_pinned_manual_numeric_and_comparative_claim_audit"
+      }
+    },
+    {
+      "call_id": "req_425a24ecad5f4704815b71f1496893d8",
+      "call_index": 9,
+      "target_kind": "checked_public_response",
+      "record_sha256": "2f58a23f62649b1f7a7c0e71faf603ed05cf4f61ad27413f81994721667fc2e7",
+      "tools_sha256": "afbc526f5c71937c3878b46e1103930bff7c7622a198f182ef2dbbe28b826785",
+      "prefix_sha256": "d61f70a1b3be5799b900c5753b7aba89d757a4035bdbae3228220abbcf247ae4",
+      "target_sha256": "863ff1cacb6d64e98c3ec28081fae1b196fd8d4b6cc6f7c5b2c73117206b5696",
+      "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+      "closure_evidence": [],
+      "terminal_validation": {
+        "contract_validated": true,
+        "native_response_exact_match": true,
+        "review": {
+          "content_sha256": "5f6ebedf4ace6fa340fc66d8b7313a72738af4893119656a63c11fb6aec511f1",
+          "all_claims_reviewed": true,
+          "no_subjective_quality_or_audition_claim": true,
+          "fact_groundings": [
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/truePeak",
+              "value": [
+                -2.8,
+                -2.4
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/mineLufs",
+              "value": -17
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/referenceLufs",
+              "value": -17.9
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/differenceLu",
+              "value": 0.9
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/loudness/range",
+              "value": [
+                4.5,
+                6.7
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/dynamics/crestDb",
+              "value": [
+                18.7,
+                19.8
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/comparison/dynamics/peakToLoudnessDb",
+              "value": [
+                14.2,
+                15.5
+              ]
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/mine/loudness/clippedSamples",
+              "value": 0
+            },
+            {
+              "tool_call_id": "call_audio_004",
+              "pointer": "/reference/loudness/clippedSamples",
+              "value": 0
+            }
+          ],
+          "review_notes": "Actual human followup answered from observedA/B comparison. Every quotednumber matches; loweraverage does notimplylowerpeak. Constant gain preservesrelative dynamics ifitdoesnotclip; compressiondependslisteninggoal. No newprocessing, unheardjudgment or exactexternalmetercalibration claimed.",
+          "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+        },
+        "review_scope": "hash_pinned_manual_numeric_and_comparative_claim_audit"
+      }
+    }
+  ],
+  "withheld": [
+    {
+      "call_id": "req_8d56985052da4062a80b3a1f5278e23b",
+      "reason": "redundant_native_audition_nudge_excluded"
+    },
+    {
+      "call_id": "req_2ef82e74f7c741b8bded94078e1a8531",
+      "reason": "redundant_native_audition_nudge_excluded"
+    },
+    {
+      "call_id": "req_8467992d6b0e46dbba99ba6ce9a31bbe",
+      "reason": "redundant_native_audition_nudge_excluded"
+    }
+  ],
+  "episode_count": 3,
+  "human_turn_count": 4,
+  "source_sha256": "39db4ecea7a22419ecbc444575fc450fa2c36bc200cc2f18398725e9533671ac",
+  "source_requests": 10,
+  "exact_native_schema_capture_missing": 0,
+  "mask_prompt_required": true,
+  "max_seq_length": 32768,
+  "ready_for_training_ingestion": false,
+  "native_event_evidence_required": true,
+  "source_assets_sha256": {
+    "/Users/studio/Projects/kumi-training/labs/production-reaper-20261105/assets/open-goldberg-01-excerpt-30s.wav": "4bc9198578f9e778eaea42ef187b9439af46c72b44cb42d6bd428bdbd125969c",
+    "/Users/studio/Projects/kumi-training/labs/production-reaper-20261105/assets/open-goldberg-02-excerpt-30s.wav": "e30d1596c566a6e68c7c3f3d36048bc0f3feb82ac2068d76d46fa65bc9a7b59f",
+    "/Users/studio/Projects/kumi-training/labs/production-reaper-20261105/assets/open-goldberg-03-excerpt-30s.wav": "79e6df7220dc509981a34305e85371cf2d30dba88a688253a20883759003943a"
+  },
+  "split": "train_only",
+  "real_daw_verified": false,
+  "human_preference_verified": false,
+  "candidate_file_sha256": "7c7ddd112403806b82822c116d7d0b1c771436748ca983305f2588220737aac8",
+  "prompt_provenance": "authored_collection_scenarios_and_scripted_followup"
+}

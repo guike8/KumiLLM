@@ -1,0 +1,901 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-05T23:12:58.420398+00:00",
+  "kumi_mapping_status": "not_yet_mapped_to_kumi",
+  "training_records": 0,
+  "seed_count": 30,
+  "seeds": [
+    {
+      "id": "groove-humanize-hats",
+      "source_ids": [
+        "ableton-grooves"
+      ],
+      "category": "producer_intent",
+      "user_goal": "The hats feel stiff. Give them some movement without making the kick wander.",
+      "fixture_requirements": [
+        "Separated kick and hat MIDI voices with an intentionally rigid rhythm."
+      ],
+      "required_observations": [
+        "Current note timing/velocity and drum-voice membership.",
+        "Baseline and candidate playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Kick events remain unchanged.",
+        "Hat feel is assessed in context rather than by a fixed numeric answer."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "groove-laid-back-snare",
+      "source_ids": [
+        "ableton-grooves"
+      ],
+      "category": "producer_intent",
+      "user_goal": "Can you make the snare sit a little behind the beat while keeping the rest of the loop tight?",
+      "fixture_requirements": [
+        "Drum loop with an identifiable snare voice."
+      ],
+      "required_observations": [
+        "Whether snare is independently editable.",
+        "Timing state and groove assignments."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "If needed, isolate the intended voice before applying clip-wide timing.",
+        "Audition for accidental flams or changed bar length."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "groove-audio-no-change",
+      "source_ids": [
+        "ableton-grooves"
+      ],
+      "category": "recovery",
+      "user_goal": "I applied swing to this audio loop, but nothing changed. Find out why and let me hear it working.",
+      "fixture_requirements": [
+        "Audio clip whose groove-related precondition can be disabled."
+      ],
+      "required_observations": [
+        "Warp state, assigned groove, playing clip range and actual output."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Diagnose observed state before choosing a repair.",
+        "Record the real cause and verify audible/timing change."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "groove-reference-feel",
+      "source_ids": [
+        "ableton-grooves"
+      ],
+      "category": "workflow",
+      "user_goal": "Use the percussion loop's feel to loosen the bass line, but keep the notes and harmony the same.",
+      "fixture_requirements": [
+        "Rights-cleared percussion audio or MIDI reference and bass MIDI clip."
+      ],
+      "required_observations": [
+        "Reference playing range, bass pitches/durations and available groove operations."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Pitches and intended harmonic content remain unchanged.",
+        "Retain a comparison render and document the transfer's limits."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "groove-too-loose",
+      "source_ids": [
+        "ableton-grooves"
+      ],
+      "category": "multi_turn",
+      "user_goal": "Make this drum pattern less robotic.",
+      "fixture_requirements": [
+        "Rigid drum MIDI clip and reset state."
+      ],
+      "required_observations": [
+        "First candidate playback and producer feedback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Revision responds to feedback using observed timing/velocity.",
+        "Unrelated clip properties remain unchanged."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result.",
+      "user_followup": "That's too loose now. Keep some movement in the hats, but bring the main backbeat closer to the original."
+    },
+    {
+      "id": "record-safe-overdub",
+      "source_ids": [
+        "ableton-recording"
+      ],
+      "category": "workflow",
+      "user_goal": "Add a new MIDI part over this loop without losing the take that's already there.",
+      "fixture_requirements": [
+        "Existing MIDI clip, simulated or live MIDI input and preserved starting project."
+      ],
+      "required_observations": [
+        "Selected track, arm state, overdub mode, clip range and current notes."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Existing material survives.",
+        "New material appears in the intended clip and recording ends cleanly."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "record-punch-repair",
+      "source_ids": [
+        "ableton-recording"
+      ],
+      "category": "workflow",
+      "user_goal": "Replace only the bad phrase in this performance and leave the rest of the take alone.",
+      "fixture_requirements": [
+        "Rights-cleared source take with a designated phrase and recordable input."
+      ],
+      "required_observations": [
+        "Producer-defined phrase boundaries, punch settings and outside-region content."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Protected material outside the region is unchanged.",
+        "The replacement has clean transitions after audition."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "record-session-to-song",
+      "source_ids": [
+        "ableton-recording",
+        "ableton-song-structure"
+      ],
+      "category": "workflow",
+      "user_goal": "Capture a performance of these loops into a song arrangement, then save a version I can keep editing.",
+      "fixture_requirements": [
+        "Several clearly named, original Session loops and recording support."
+      ],
+      "required_observations": [
+        "Clip launch behavior, target arrangement and existing material."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Result is editable rather than only an undocumented render.",
+        "Arrangement playback follows the captured performance."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "record-wrong-source",
+      "source_ids": [
+        "ableton-recording",
+        "ableton-routing"
+      ],
+      "category": "clarification_recovery",
+      "user_goal": "The new recording is blank even though I can hear the instrument. Help me record the actual part.",
+      "fixture_requirements": [
+        "Silent-recording fixture with a reproducible source/routing mismatch."
+      ],
+      "required_observations": [
+        "Input/output meters, track type, arm, monitor state and source selection."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Do not guess the external hardware channel from the prompt.",
+        "Verify non-silent recorded material from the intended source."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "route-midi-silent",
+      "source_ids": [
+        "ableton-routing"
+      ],
+      "category": "recovery",
+      "user_goal": "The MIDI notes are there but this track is silent. Get it playing without rewriting the part.",
+      "fixture_requirements": [
+        "MIDI clip with a deterministic missing-instrument or routing fault."
+      ],
+      "required_observations": [
+        "Instrument presence, mute/solo, monitor setting and signal path."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Diagnose the actual fixture fault.",
+        "Preserve notes and demonstrate output."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "route-clip-suppressed",
+      "source_ids": [
+        "ableton-routing"
+      ],
+      "category": "recovery",
+      "user_goal": "This clip used to play. I changed the monitoring and now I only hear the input.",
+      "fixture_requirements": [
+        "Audio track with saved playback and monitoring states."
+      ],
+      "required_observations": [
+        "Monitor mode, armed state, active clip and input signal."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Restore the requested playback behavior.",
+        "Avoid changing recorded audio as a workaround."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "route-parallel-space",
+      "source_ids": [
+        "ableton-routing",
+        "valhalla-reverb-types"
+      ],
+      "category": "workflow",
+      "user_goal": "Give the vocal and snare a shared room so they feel together, while keeping their dry balances easy to control.",
+      "fixture_requirements": [
+        "Original vocal/snare stems, return/bus support and an available room-like reverb."
+      ],
+      "required_observations": [
+        "Available sends/returns, effect wet/dry semantics and baseline balance."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Check send topology and accidental duplicate dry paths.",
+        "Compare the shared ambience in the full mix."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "route-print-instrument",
+      "source_ids": [
+        "ableton-routing",
+        "ableton-recording"
+      ],
+      "category": "workflow",
+      "user_goal": "Print this instrument part to audio and keep the original MIDI available in case I change my mind.",
+      "fixture_requirements": [
+        "Working MIDI instrument track and an empty audio destination."
+      ],
+      "required_observations": [
+        "Source output, destination input, monitoring and record boundaries."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Printed audio is non-silent, aligned and reproducible.",
+        "Original MIDI and instrument remain recoverable."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "route-ambiguous-target",
+      "source_ids": [
+        "ableton-routing"
+      ],
+      "category": "multi_turn_clarification",
+      "user_goal": "Put some space on the lead.",
+      "fixture_requirements": [
+        "Project with two plausibly named lead tracks and an effects bus."
+      ],
+      "required_observations": [
+        "Real track names and available effects."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Ask which lead when state cannot resolve the target.",
+        "Execute only on the resolved track and verify routing."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result.",
+      "user_followup": "I mean the synth lead, not the vocal. Let it share the existing space instead of adding another separate reverb."
+    },
+    {
+      "id": "arrange-loop-to-sketch",
+      "source_ids": [
+        "ableton-song-structure"
+      ],
+      "category": "producer_intent",
+      "user_goal": "This loop is good but it never goes anywhere. Turn it into a short song sketch with a clear opening, lift and ending.",
+      "fixture_requirements": [
+        "Original complementary loops with editable arrangement support."
+      ],
+      "required_observations": [
+        "Clip roles, existing musical boundaries and producer constraints."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Sections create an audible progression.",
+        "No unintended gaps, overlaps or hanging ending."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "arrange-chorus-lift",
+      "source_ids": [
+        "ableton-song-structure"
+      ],
+      "category": "audio_informed_iteration",
+      "user_goal": "The chorus doesn't feel bigger than the verse. Create a lift without just turning up the whole mix.",
+      "fixture_requirements": [
+        "Original verse/chorus arrangement and editable stems."
+      ],
+      "required_observations": [
+        "Section energy, instrumentation, register and before/after renders."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Record which available arrangement dimensions changed.",
+        "Check loudness-matched comparisons so volume alone does not decide success."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "arrange-less-busy",
+      "source_ids": [
+        "ableton-song-structure"
+      ],
+      "category": "multi_turn",
+      "user_goal": "Build this into a fuller arrangement.",
+      "fixture_requirements": [
+        "Original multi-layer loop with reversible section edits."
+      ],
+      "required_observations": [
+        "Current arrangement and first-pass playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Revision preserves the melody while reducing competing layers.",
+        "Capture changed section boundaries and playback."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result.",
+      "user_followup": "The middle is too busy. Let the melody breathe there, but keep the final section energetic."
+    },
+    {
+      "id": "arrange-transition",
+      "source_ids": [
+        "ableton-song-structure",
+        "valhalla-reverb-types"
+      ],
+      "category": "workflow",
+      "user_goal": "The jump into the next section feels abrupt. Make the transition feel intentional while preserving the groove.",
+      "fixture_requirements": [
+        "Two original adjacent sections and editable clips/effects."
+      ],
+      "required_observations": [
+        "Boundary timing, current tail behavior and producer style."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "No unintended silence, clipping or rhythmic displacement.",
+        "Compare the transition in context and document the audible observation."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "reverb-intimate-vocal",
+      "source_ids": [
+        "valhalla-reverb-types"
+      ],
+      "category": "producer_intent",
+      "user_goal": "The vocal feels disconnected from the track. Give it a sense of space but keep it close and understandable.",
+      "fixture_requirements": [
+        "Original dry vocal and backing; available controllable reverb."
+      ],
+      "required_observations": [
+        "Vocal intelligibility, reverb controls, dry/wet routing and full-mix playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Compare intimacy and intelligibility with level-matched playback.",
+        "Do not prescribe one universal preset or numeric setting."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "reverb-metallic-vocal",
+      "source_ids": [
+        "valhalla-diffusion"
+      ],
+      "category": "audio_informed_recovery",
+      "user_goal": "The reverb sounds metallic when the singer holds a note. Find a smoother option without making the vocal disappear.",
+      "fixture_requirements": [
+        "Original sustained vocal and a reverb with exposed diffusion or alternate algorithms."
+      ],
+      "required_observations": [
+        "Tail character, available controls and actual before/after playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Treat diffusion as a documented hypothesis, not a universal diagnosis.",
+        "Check metallic coloration and sibilant grain separately."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "reverb-drums-vocals-different",
+      "source_ids": [
+        "valhalla-diffusion",
+        "valhalla-reverb-types"
+      ],
+      "category": "grounded_knowledge",
+      "user_goal": "This reverb worked on the drums but sounds odd on the vocal. Explain what to test and help me compare alternatives.",
+      "fixture_requirements": [
+        "Original drum and vocal clips, same initial algorithm and playback support."
+      ],
+      "required_observations": [
+        "Actual algorithm/control names and listening notes for each source."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Ground explanation in retrieved behavior and current plugin capabilities.",
+        "Test candidates; do not claim an unheard result."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "reverb-long-tail-revision",
+      "source_ids": [
+        "valhalla-reverb-types"
+      ],
+      "category": "multi_turn",
+      "user_goal": "Make this synth feel huge and atmospheric.",
+      "fixture_requirements": [
+        "Original synth part plus a denser following section."
+      ],
+      "required_observations": [
+        "Baseline, first candidate and section-transition playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Revise the tail in response to the next section's masking.",
+        "Preserve the desired spacious moment where feasible."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result.",
+      "user_followup": "I like the space, but its tail is washing over the next phrase. Keep the atmosphere and make that transition clearer."
+    },
+    {
+      "id": "reverb-reference-transfer",
+      "source_ids": [
+        "llm2fx-demo",
+        "valhalla-reverb-types"
+      ],
+      "category": "audio_informed_iteration",
+      "user_goal": "Use this reference's sense of space as inspiration for my guitar, without changing the guitar performance.",
+      "fixture_requirements": [
+        "Separately rights-cleared reference and original guitar; documented listening observations."
+      ],
+      "required_observations": [
+        "Reference/source content differs; tail, width and density observations."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Treat reference matching as perceptual style transfer, not recovery of unique exact settings.",
+        "Preserve note timing/content and retain comparative renders."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "reverb-unavailable-plugin",
+      "source_ids": [
+        "valhalla-reverb-types"
+      ],
+      "category": "recovery",
+      "user_goal": "Use a plate-style space on this part. The plugin I normally use isn't installed here.",
+      "fixture_requirements": [
+        "Original instrument part, available-device inventory and at least one viable alternative or explicit unsupported state."
+      ],
+      "required_observations": [
+        "Actual installed algorithms and routing support."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Select based on available behavior or report the missing capability.",
+        "Do not invent plugin names, parameters or successful installation."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "percussion-preserve-attack",
+      "source_ids": [
+        "vsco-publisher",
+        "ableton-routing"
+      ],
+      "category": "audio_informed_iteration",
+      "user_goal": "The drum's tail is crowding the next hit. Make the rhythm clearer while keeping the weight of the attack.",
+      "fixture_requirements": [
+        "License-cleared vsco-bass-drum sample assembled into an original repeated pattern with documented spacing."
+      ],
+      "required_observations": [
+        "Actual transient/tail envelope, output levels and before/after renders."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Observe tail overlap before choosing the edit.",
+        "Compare attack preservation and tail overlap separately; do not let simple loudness differences decide success."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "percussion-tame-roll",
+      "source_ids": [
+        "vsco-publisher"
+      ],
+      "category": "producer_intent",
+      "user_goal": "Keep the tambourine's movement, but make it less distracting behind the voice.",
+      "fixture_requirements": [
+        "License-cleared tambourine roll and speech clip in a deliberately documented balance."
+      ],
+      "required_observations": [
+        "Spectral balance, phrase timing, voice clarity and actual playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Preserve audible rhythmic movement.",
+        "Check the vocal in context after any processing rather than trusting a parameter change alone."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "speech-clarity-under-music",
+      "source_ids": [
+        "librispeech-release",
+        "ableton-routing"
+      ],
+      "category": "workflow",
+      "user_goal": "Help this spoken line stay understandable over the music without making every pause unnaturally loud.",
+      "fixture_requirements": [
+        "Acquired LibriSpeech training clip mixed with a separately rights-cleared instrumental fixture."
+      ],
+      "required_observations": [
+        "Voice/music routing, actual level envelope, phrase boundaries and perceived intelligibility."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Retain the source voice and a reproducible before/after project.",
+        "Check gaps and breaths as well as loud words; no invented transcript or unheard quality claim."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "flute-add-space",
+      "source_ids": [
+        "vsco-publisher",
+        "valhalla-reverb-types"
+      ],
+      "category": "producer_intent",
+      "user_goal": "Give the flute a little depth, but keep its entrance clear and its pitch easy to follow.",
+      "fixture_requirements": [
+        "Acquired sustained flute sample; inspect its existing room sound first."
+      ],
+      "required_observations": [
+        "Available space algorithms, attack, existing tail and candidate playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Do not assume the source is anechoic.",
+        "Judge added depth and onset clarity independently with comparable playback levels."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "cello-voice-balance",
+      "source_ids": [
+        "vsco-publisher",
+        "librispeech-release"
+      ],
+      "category": "workflow",
+      "user_goal": "Build a sparse bed from the plucked cello and keep the narration in front of it.",
+      "fixture_requirements": [
+        "Acquired pizzicato cello and speech clips; an original, documented arrangement of the cello sample."
+      ],
+      "required_observations": [
+        "Actual arrangement timing, voice pauses and level/routing state."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Preserve narration timing and content.",
+        "Ensure the bed is an authored arrangement, not falsely described as an existing multitrack recording."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result."
+    },
+    {
+      "id": "speech-space-feedback",
+      "source_ids": [
+        "librispeech-release",
+        "valhalla-reverb-types"
+      ],
+      "category": "multi_turn",
+      "user_goal": "Put this voice in a small shared space with the instrument.",
+      "fixture_requirements": [
+        "Acquired speech and flute clips, with a known initial routing state."
+      ],
+      "required_observations": [
+        "Real send/return topology and first-pass playback."
+      ],
+      "acceptance_checks": [
+        "Resolve entities against the real fixture and inspect state before editing.",
+        "Map the intent into supported Kumi operations; record unsupported capability explicitly.",
+        "Capture actual tool calls, responses, before/after state and a reproducible reset.",
+        "Check preservation constraints and save or export only after state verification.",
+        "For sound judgments retain before/after renders plus honest measured or human observations; text-only model input uses those observations.",
+        "Revise in response to audible feedback while retaining a reversible source.",
+        "Compare dry voice clarity and shared-space impression separately."
+      ],
+      "status": "original_authored_seed_not_executed",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "ready_for_training": false,
+      "assistant_answer": null,
+      "verified_tool_trajectory": null,
+      "provenance_note": "Original scenario informed by cited documentation; no verbatim tutorial body, supplied numerical answer or claimed Kumi result.",
+      "user_followup": "It feels farther away than I wanted. Keep them connected, but bring the voice back up front."
+    }
+  ],
+  "execution_gate": "Not SFT examples. Require actual Kumi translation, observable execution, independent outcome checks, and provenance before promotion.",
+  "reasoning_policy": "Only public short action plans/explanations are eligible; no private chain-of-thought annotations are requested or imported.",
+  "publication_scope": "Metadata/scenarios only; audio binaries and raw source bodies are not included."
+}

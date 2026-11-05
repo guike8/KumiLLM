@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "recording_count": 9,
+  "working_file_count": 9,
+  "total_reference_audio_bytes": 34051666,
+  "download_budget_bytes": 100000000,
+  "observed_original_download_and_archive_prefix_bytes": 11028604,
+  "reference_decoder": "FFmpeg 9.0.2",
+  "publication_scope": "Manifest only. No audio binaries accompany this file.",
+  "archive_rule": "Only the named train-clean-100 members may be extracted. Abort after 8,000,000 source bytes or after all requested members are found. Never download the full archive.",
+  "licenses": [
+    {
+      "id": "open-goldberg-official",
+      "url": "https://opengoldbergvariations.org/",
+      "status": "success",
+      "source_hash": "19fb7a263f283a5bbd5bca57c0481fe0bdcd2dca3c10a338633220fc20a2b3dc",
+      "retrieved_at": "2026-11-05T23:02:11.292538Z",
+      "warnings": []
+    },
+    {
+      "id": "open-goldberg-archive",
+      "url": "https://archive.org/details/The_Open_Goldberg_Variations-11823",
+      "status": "success",
+      "source_hash": "810531032aab32c0ef26f1ce860ba18b8df27b1a66913bf077f5f030d1c1541f",
+      "retrieved_at": "2026-11-05T23:02:12.162231Z",
+      "warnings": []
+    },
+    {
+      "id": "vsco-publisher",
+      "title": "VSCO 2 Community Edition recording license",
+      "url": "https://versilian-studios.com/vsco-community/",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "2e29d96f3fe4dcf7c0da6b93a559e1edd45bff065a88d734f2ea8d09d1425143",
+      "retrieved_at": "2026-11-05T23:10:52.862898Z",
+      "text_characters": 10916,
+      "warnings": [
+        "conflict:language: structured and visible source values disagree"
+      ],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory"
+    },
+    {
+      "id": "vsco-license",
+      "title": "VSCO 2 CE repository CC0 dedication",
+      "url": "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "09734cab75542e030dc8e7b436ab804c8e45d3b319b69772c81231ad012df39c",
+      "retrieved_at": "2026-11-05T23:10:53.831756Z",
+      "text_characters": 7196,
+      "warnings": [],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory"
+    },
+    {
+      "id": "vsco-credits",
+      "title": "VSCO 2 CE recording credits",
+      "url": "https://github.com/sgossner/VSCO-2-CE/blob/master/README.md",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "0403efa5b10555f19b14aead0502ef1324152e9a23c1e64b8a1ba84119e39ec7",
+      "retrieved_at": "2026-11-05T23:10:54.466252Z",
+      "text_characters": 1102,
+      "warnings": [],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory"
+    },
+    {
+      "id": "librispeech-release",
+      "title": "OpenSLR LibriSpeech CC BY 4.0 release",
+      "url": "https://www.openslr.org/12/",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "6a88067d023d9cc79faefce70c857c669bd8325df9c3ebedd6fc1e853ae5a307",
+      "retrieved_at": "2026-11-05T23:10:55.011742Z",
+      "text_characters": 1649,
+      "warnings": [],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory"
+    }
+  ],
+  "assets": [
+    {
+      "id": "open-goldberg-01",
+      "source_group": "open_goldberg_2012_kimiko_ishizaka",
+      "kind": "actual_stereo_acoustic_piano_recording",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://archive.org/details/The_Open_Goldberg_Variations-11823",
+        "https://opengoldbergvariations.org/",
+        "https://archive.org/metadata/The_Open_Goldberg_Variations-11823"
+      ],
+      "attribution": "J.S. Bach, Goldberg Variations BWV 988; performed by Kimiko Ishizaka on a Bösendorfer 290 Imperial at Teldex Studio, Berlin; recording produced by Anne-Marie Sylvestre; Open Goldberg Variations, 2012. CC0 1.0.",
+      "original": {
+        "path": "assets/Kimiko_Ishizaka_-_01_-_Aria.ogg",
+        "url": "https://archive.org/download/The_Open_Goldberg_Variations-11823/Kimiko_Ishizaka_-_01_-_Aria.ogg",
+        "bytes": 2966785,
+        "sha256": "2f04b203350bdf91848a2984d8a998eb2e00a06172660d2bd8e50024e4acae0f",
+        "retrieval": "direct"
+      },
+      "working": {
+        "path": "assets/open-goldberg-01-excerpt-30s.wav",
+        "bytes": 5292078,
+        "sha256": "4bc9198578f9e778eaea42ef187b9439af46c72b44cb42d6bd428bdbd125969c",
+        "pcm_sha256": "cf376a582910b2869760510fcdf3a9895b4279f58eac49adc0c22eaf50279804",
+        "duration_seconds": 30.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-ss",
+          "10",
+          "-i",
+          "{original}",
+          "-t",
+          "30",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Full piano performance recording, not dry isolated multitracks.",
+        "Lossy Ogg source; decoded WAV does not recover lost information.",
+        "All three excerpts belong to one album/performer; keep this source group together when splitting.",
+        "No Kumi edit, REAPER render or listener judgment is claimed by this acquisition."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "open-goldberg-02",
+      "source_group": "open_goldberg_2012_kimiko_ishizaka",
+      "kind": "actual_stereo_acoustic_piano_recording",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://archive.org/details/The_Open_Goldberg_Variations-11823",
+        "https://opengoldbergvariations.org/",
+        "https://archive.org/metadata/The_Open_Goldberg_Variations-11823"
+      ],
+      "attribution": "J.S. Bach, Goldberg Variations BWV 988; performed by Kimiko Ishizaka on a Bösendorfer 290 Imperial at Teldex Studio, Berlin; recording produced by Anne-Marie Sylvestre; Open Goldberg Variations, 2012. CC0 1.0.",
+      "original": {
+        "path": "assets/Kimiko_Ishizaka_-_02_-_Variatio_1_a_1_Clav.ogg",
+        "url": "https://archive.org/download/The_Open_Goldberg_Variations-11823/Kimiko_Ishizaka_-_02_-_Variatio_1_a_1_Clav.ogg",
+        "bytes": 1140564,
+        "sha256": "6f590045aa61c026b13ed577bc601fb28300a71b5b1b3b8685624118b24e8fe8",
+        "retrieval": "direct"
+      },
+      "working": {
+        "path": "assets/open-goldberg-02-excerpt-30s.wav",
+        "bytes": 5292078,
+        "sha256": "e30d1596c566a6e68c7c3f3d36048bc0f3feb82ac2068d76d46fa65bc9a7b59f",
+        "pcm_sha256": "7ffbba861a3cf08f4bd47e16dfad4d98eab6da2909b7d7bf259e12c984f297a8",
+        "duration_seconds": 30.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-ss",
+          "10",
+          "-i",
+          "{original}",
+          "-t",
+          "30",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Full piano performance recording, not dry isolated multitracks.",
+        "Lossy Ogg source; decoded WAV does not recover lost information.",
+        "All three excerpts belong to one album/performer; keep this source group together when splitting.",
+        "No Kumi edit, REAPER render or listener judgment is claimed by this acquisition."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "open-goldberg-03",
+      "source_group": "open_goldberg_2012_kimiko_ishizaka",
+      "kind": "actual_stereo_acoustic_piano_recording",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://archive.org/details/The_Open_Goldberg_Variations-11823",
+        "https://opengoldbergvariations.org/",
+        "https://archive.org/metadata/The_Open_Goldberg_Variations-11823"
+      ],
+      "attribution": "J.S. Bach, Goldberg Variations BWV 988; performed by Kimiko Ishizaka on a Bösendorfer 290 Imperial at Teldex Studio, Berlin; recording produced by Anne-Marie Sylvestre; Open Goldberg Variations, 2012. CC0 1.0.",
+      "original": {
+        "path": "assets/Kimiko_Ishizaka_-_21_-_Variatio_20_a_2_Clav.ogg",
+        "url": "https://archive.org/download/The_Open_Goldberg_Variations-11823/Kimiko_Ishizaka_-_21_-_Variatio_20_a_2_Clav.ogg",
+        "bytes": 1208575,
+        "sha256": "796bbad833768a34e8fe446040cba8345a97acac9fc32c0dd479647b34de2595",
+        "retrieval": "direct"
+      },
+      "working": {
+        "path": "assets/open-goldberg-03-excerpt-30s.wav",
+        "bytes": 5292078,
+        "sha256": "79e6df7220dc509981a34305e85371cf2d30dba88a688253a20883759003943a",
+        "pcm_sha256": "dd0ab16dac14c4e1b49016b4bedfdf474c81cd5080ceefe18a87b5b95586f558",
+        "duration_seconds": 30.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-ss",
+          "10",
+          "-i",
+          "{original}",
+          "-t",
+          "30",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Full piano performance recording, not dry isolated multitracks.",
+        "Lossy Ogg source; decoded WAV does not recover lost information.",
+        "All three excerpts belong to one album/performer; keep this source group together when splitting.",
+        "No Kumi edit, REAPER render or listener judgment is claimed by this acquisition."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "vsco-bass-drum",
+      "source_group": "vsco2ce_sam_gossner_simon_dalzell",
+      "kind": "orchestral_bass_drum_hit",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://versilian-studios.com/vsco-community/",
+        "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE"
+      ],
+      "attribution": "VSCO 2 Community Edition, Versilian Studios; recorded by Sam Gossner and Simon Dalzell; sample cutting by Elan Hickler / Soundemote. CC0 1.0.",
+      "original": {
+        "path": "assets/vsco-bass-drum-original.wav",
+        "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Percussion/BDrumNewhit_v3_rr1_Sum.wav",
+        "bytes": 367124,
+        "sha256": "a2d8829e8b2b59e8afb12fa396b01758827059339c2a84ad066d17b36c82d1ff",
+        "retrieval": "direct",
+        "upstream_revision": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+        "git_blob_sha1": "5f068b40b13f887c170d574b916dd21927f545ca"
+      },
+      "working": {
+        "path": "assets/vsco-bass-drum-pcm16.wav",
+        "bytes": 367158,
+        "sha256": "c32cbe7ec80d468c7789ac665ad76e3642113a2a9c6150b4cf1313f1ae56540b",
+        "pcm_sha256": "8a250aa2770e234d479a6bdac45b0016eb3f04862a545e85de5abecee86e0607",
+        "duration_seconds": 2.080952,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-i",
+          "{original}",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Single instrument sample, not a full performance stem.",
+        "Room sound may be present; no claim of anechoic recording.",
+        "All VSCO samples share one library/recording project; keep source group together for splits."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "vsco-tambourine-roll",
+      "source_group": "vsco2ce_sam_gossner_simon_dalzell",
+      "kind": "tambourine_roll",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://versilian-studios.com/vsco-community/",
+        "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE"
+      ],
+      "attribution": "VSCO 2 Community Edition, Versilian Studios; recorded by Sam Gossner and Simon Dalzell; sample cutting by Elan Hickler / Soundemote. CC0 1.0.",
+      "original": {
+        "path": "assets/vsco-tambourine-roll-original.wav",
+        "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Miscellania%20Raw/Misc%202/tamb2_rollFast.wav",
+        "bytes": 1236946,
+        "sha256": "a40cdab5c897a7ebd48a62e858ef38adc05cda185d92eefbb5d1391d7279a998",
+        "retrieval": "direct",
+        "upstream_revision": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+        "git_blob_sha1": "55e05bf954cdad3780c4d45d90bb57fd17e3f4c1"
+      },
+      "working": {
+        "path": "assets/vsco-tambourine-roll-pcm16.wav",
+        "bytes": 824678,
+        "sha256": "d900f69a2c8f7a5c56b45f2d957aa3551e8778f4bac03e1ea20d50f11caa08dd",
+        "pcm_sha256": "0c55e4469d36e1b950caee6e98d7f58a542715154a440222329ca6fbc571faaf",
+        "duration_seconds": 4.674603,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-i",
+          "{original}",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Single instrument sample, not a full performance stem.",
+        "Room sound may be present; no claim of anechoic recording.",
+        "All VSCO samples share one library/recording project; keep source group together for splits."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "vsco-flute",
+      "source_group": "vsco2ce_sam_gossner_simon_dalzell",
+      "kind": "sustained_flute_note",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://versilian-studios.com/vsco-community/",
+        "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE"
+      ],
+      "attribution": "VSCO 2 Community Edition, Versilian Studios; recorded by Sam Gossner and Simon Dalzell; sample cutting by Elan Hickler / Soundemote. CC0 1.0.",
+      "original": {
+        "path": "assets/vsco-flute-original.wav",
+        "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Woodwinds/Flute/susNV/LDFlute_susNV_A3_v1_1.wav",
+        "bytes": 2706216,
+        "sha256": "6fc8d707afddfaaf3003551b95a83b52f514adbe488bfea1c8c5250080a07278",
+        "retrieval": "direct",
+        "upstream_revision": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+        "git_blob_sha1": "b690a4d0006b73699176dd2fab82a9249966e33b"
+      },
+      "working": {
+        "path": "assets/vsco-flute-pcm16.wav",
+        "bytes": 1803904,
+        "sha256": "957ca12b73a12bc16473a3ac532bff3c287720f4f957528ea20c0af14e027c07",
+        "pcm_sha256": "19eec08c7ce5b843fb1f748c311684573b828824f593843e69c9eb7bc7779928",
+        "duration_seconds": 10.225102,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-i",
+          "{original}",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Single instrument sample, not a full performance stem.",
+        "Room sound may be present; no claim of anechoic recording.",
+        "All VSCO samples share one library/recording project; keep source group together for splits."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "vsco-cello-pizz",
+      "source_group": "vsco2ce_sam_gossner_simon_dalzell",
+      "kind": "pizzicato_cello_section_note",
+      "recording_license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_urls": [
+        "https://versilian-studios.com/vsco-community/",
+        "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE"
+      ],
+      "attribution": "VSCO 2 Community Edition, Versilian Studios; recorded by Sam Gossner and Simon Dalzell; sample cutting by Elan Hickler / Soundemote. CC0 1.0.",
+      "original": {
+        "path": "assets/vsco-cello-pizz-original.wav",
+        "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Cello%20Section/pizzT/pizzT_A2_v1_RR1.wav",
+        "bytes": 763418,
+        "sha256": "3ef328e9c07e58797bb65831edef89b1fc946013a736826b6e380776c91b1f83",
+        "retrieval": "direct",
+        "upstream_revision": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+        "git_blob_sha1": "3e1fec71b531697030215d70a51889260324a225"
+      },
+      "working": {
+        "path": "assets/vsco-cello-pizz-pcm16.wav",
+        "bytes": 508994,
+        "sha256": "a1639370ce5454d20473af4724307042ee14adbee8515bdedf687e74b860474b",
+        "pcm_sha256": "7f3e0a65f968357fb8b5d59bc599278d4964ca4083f197d0e7e5f090b4f1953e",
+        "duration_seconds": 2.885011,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-i",
+          "{original}",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Single instrument sample, not a full performance stem.",
+        "Room sound may be present; no claim of anechoic recording.",
+        "All VSCO samples share one library/recording project; keep source group together for splits."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "librispeech-374-180298-0021",
+      "source_group": "librispeech_speaker_374",
+      "kind": "read_speech_unaccompanied_voice",
+      "recording_license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_urls": [
+        "https://www.openslr.org/12/"
+      ],
+      "attribution": "LibriSpeech ASR corpus, Vassil Panayotov, Guoguo Chen, Daniel Povey and Sanjeev Khudanpur, 2015; source LibriVox audiobook recording read by kumarei, Camille, Chapter 16. CC BY 4.0.",
+      "original": {
+        "path": "assets/librispeech-374-180298-0021-original.flac",
+        "url": "https://openslr.trmal.net/resources/12/train-clean-100.tar.gz",
+        "bytes": 228475,
+        "sha256": "bfe48337ddc6d02363098b2f970d33b722c51afe926593f04d0906336e651131",
+        "retrieval": "bounded_tar_gz_member",
+        "archive_member": "LibriSpeech/train-clean-100/374/180298/374-180298-0021.flac",
+        "archive_stream_limit_bytes": 8000000,
+        "range_request": "bytes=0-7999999",
+        "archive_full_download_forbidden": true
+      },
+      "working": {
+        "path": "assets/librispeech-374-180298-0021-pcm16.wav",
+        "bytes": 2287106,
+        "sha256": "12db2287bd5140f0c13f4a0b11c4a572ecfb81ca6af1272e837d414ea45e909b",
+        "pcm_sha256": "c8df61dd5412b3241adce2bd65df44cb6939b801cb462b2a2c0e1d45b3791602",
+        "duration_seconds": 12.965011,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-i",
+          "{original}",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Read speech, not a sung studio vocal.",
+        "Segmented audiobook source may contain room/noise/codec artifacts.",
+        "Selected from train-clean-100 only; no public evaluation split imported.",
+        "Keep all clips from this speaker/source audiobook group together when splitting."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    },
+    {
+      "id": "librispeech-374-180298-0038",
+      "source_group": "librispeech_speaker_374",
+      "kind": "read_speech_unaccompanied_voice",
+      "recording_license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_urls": [
+        "https://www.openslr.org/12/"
+      ],
+      "attribution": "LibriSpeech ASR corpus, Vassil Panayotov, Guoguo Chen, Daniel Povey and Sanjeev Khudanpur, 2015; source LibriVox audiobook recording read by kumarei, Camille, Chapter 16. CC BY 4.0.",
+      "original": {
+        "path": "assets/librispeech-374-180298-0038-original.flac",
+        "url": "https://openslr.trmal.net/resources/12/train-clean-100.tar.gz",
+        "bytes": 152231,
+        "sha256": "8e9fc47eef6836bb361a57e7b06355d2b11127591188bef2a26187263f00052f",
+        "retrieval": "bounded_tar_gz_member",
+        "archive_member": "LibriSpeech/train-clean-100/374/180298/374-180298-0038.flac",
+        "archive_stream_limit_bytes": 8000000,
+        "range_request": "bytes=0-7999999",
+        "archive_full_download_forbidden": true
+      },
+      "working": {
+        "path": "assets/librispeech-374-180298-0038-pcm16.wav",
+        "bytes": 1613258,
+        "sha256": "a46a28b7efb5e21b87f83724e418b2b591de9099204df479c8095b1437301d24",
+        "pcm_sha256": "2384f37d736ca63cb085631aed66103f479713278874f86f4061a90ca857e517",
+        "duration_seconds": 9.145011,
+        "sample_rate": 44100,
+        "channels": 2,
+        "sample_width_bytes": 2,
+        "derive_argv": [
+          "ffmpeg",
+          "-v",
+          "error",
+          "-y",
+          "-i",
+          "{original}",
+          "-ar",
+          "44100",
+          "-ac",
+          "2",
+          "-c:a",
+          "pcm_s16le",
+          "{working}"
+        ],
+        "container_hash_note": "Whole-WAV hash describes the collected FFmpeg 9.0.2 output. Container metadata can vary by FFmpeg version; PCM hash separately identifies decoded sample data."
+      },
+      "limitations": [
+        "Read speech, not a sung studio vocal.",
+        "Segmented audiobook source may contain room/noise/codec artifacts.",
+        "Selected from train-clean-100 only; no public evaluation split imported.",
+        "Keep all clips from this speaker/source audiobook group together when splitting."
+      ],
+      "ready_for_training": false,
+      "kumi_mapping_status": "not_yet_mapped_to_kumi"
+    }
+  ]
+}

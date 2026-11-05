@@ -1,0 +1,24 @@
+{
+  "source_bytes_read": 991764,
+  "assets": [
+    {
+      "id": "vsco-bass-drum",
+      "original_hash_verified": true,
+      "pcm_hash_verified": true,
+      "working_container_hash_matches_reference": true
+    },
+    {
+      "id": "librispeech-374-180298-0021",
+      "original_hash_verified": true,
+      "pcm_hash_verified": true,
+      "working_container_hash_matches_reference": true
+    },
+    {
+      "id": "librispeech-374-180298-0038",
+      "original_hash_verified": true,
+      "pcm_hash_verified": true,
+      "working_container_hash_matches_reference": true
+    }
+  ],
+  "test_scope": "Live smoke: one direct CC0 percussion sample and both bounded-archive CC BY speech clips; originals and PCM verified. Temporary audio cache removed after test."
+}

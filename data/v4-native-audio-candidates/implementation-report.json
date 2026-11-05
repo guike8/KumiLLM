@@ -1,0 +1,20 @@
+{
+  "schema": "native-audio-admission-checks/1",
+  "unit_tests_passed": 9,
+  "structural_validation_records": 7,
+  "structural_validation_ok": true,
+  "candidate_file_sha256": "7c7ddd112403806b82822c116d7d0b1c771436748ca983305f2588220737aac8",
+  "episode_count": 3,
+  "human_turn_count": 4,
+  "withheld_native_nudge_outputs": 3,
+  "ready_for_current_trainer": false,
+  "implementation_sha256": {
+    "verification_helpers.py": "af51a2962117b8d3a4dcacbad05227ac816b971f4c2f3aa04f459988d07c654e",
+    "test_admission.py": "3f8cabf9192d0bc237f8fe0bb2b47272aa527cedfcb48dda1bf58e0c85e32c99",
+    "verify_tokenization.py": "e9a878889123b09c564180e578cfbb8ff621ba8c43ee275850934d99e9153628",
+    "admit_native_audio.py": "62722e5f9bf8c93cd7ec08cd95c5d612befe6138538dfb8ef0cc2f34eaeff364",
+    "check_audio.py": "8a1d01c1dc73939447db8ecf4710ebe08f88125a5f5b9d09af61c2be41d9cd88",
+    "final_target_loss.py": "80076be5bdae50ca3a71d6f0caf268219de957d59907bfc9b48fe43400784d2e"
+  },
+  "independent_audio_check_sha256": "0a198470f28ecf49c3703024e229136d17174c3f55abc29d2cc4ac9e3f5929a2"
+}

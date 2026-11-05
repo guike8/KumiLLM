@@ -58,3 +58,9 @@ Exact license-source URLs and file hashes are recorded in [licenses/SOURCES.json
 ## Reference collection
 
 The optional collect_references.py driver uses a separately installed Evidence AI Scraper. Scraper implementation files and third-party source article bodies are not bundled. Public reference metadata contains original URLs, hashes, titles and extraction statistics; private snapshots remain reference evidence. The repository MIT license does not replace the terms of linked websites or separately installed dependencies. The collected documentation is not copied into supervised targets.
+
+## Production source seeds
+
+`data/production-source-seeds` contains original scenario prompts, source metadata and download recipes. It does not bundle source articles or audio. Downloaded Open Goldberg and VSCO 2 Community Edition recordings retain their declared CC0 terms; the LibriSpeech recordings retain CC BY 4.0 terms. Per-record source URLs, license links, creator credits and transformations are recorded in the asset manifest. These recording terms are separate from this repository's code license.
+
+The xLAM assessment cites Salesforce's APIGen dataset and public documentation. No xLAM dataset rows are bundled or imported.

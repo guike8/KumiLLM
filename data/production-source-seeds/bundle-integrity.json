@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "files": {
+    ".gitignore": "7ff862a91c4076d87e56a342039181df80e370020eb981bc450a3bb3fea9b4cb",
+    "README.md": "cff6e45916cc94ea2dc74e3b5f48471f02215eeae46400b3a69ba0df5520517f",
+    "acquisition-report.json": "0de4c3ac04ac0bd6376551d8cedfaf5f7cc12a73962430e93a02475bbe76fc91",
+    "asset-download-manifest.json": "6d5369c947fd4efb90f1e7163d581c80d35e7684281ffac31f6db19993b42a6f",
+    "downloader-live-check.json": "af9c496321f033fb517bdc013fbd1c7e1a2583e7a772a935722e2ec825ebcb21",
+    "fetch_assets.py": "62eea921da85f1995c55bca4fe40fc7ef166d002935a91a25c0e7e7b4d7067a0",
+    "reusable-assets.json": "718cdce6c5c42c7cddbd999223538e3f5d7d7cc1eb9c2374ea04c70559003869",
+    "source-catalog.json": "1b84c53b09b5ea75b51d4d3aa96b272a6b14230fa18be710e3171327136a8f22",
+    "task-seeds.json": "6978196843b914717d840b2ff22e82dc40951ce58a71d77051027f067ebf18c9",
+    "test_fetch_assets.py": "d218e245fb83ecc33b5939c336d90213c5866da52a538df60a3f4ddbb5bc700c"
+  },
+  "validation": {
+    "private_machine_path_scan": "passed",
+    "audio_or_raw_snapshot_files_included": false,
+    "offline_downloader_tests": 4,
+    "live_downloader_subset_assets": 3,
+    "live_downloader_original_and_pcm_hash_checks": "passed",
+    "verified_kumi_training_trajectories_in_this_source_bundle": 0
+  }
+}

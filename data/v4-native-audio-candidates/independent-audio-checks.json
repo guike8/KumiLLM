@@ -1,0 +1,38 @@
+[
+  {
+    "file": "open-goldberg-01-excerpt-30s.wav",
+    "sha256": "4bc9198578f9e778eaea42ef187b9439af46c72b44cb42d6bd428bdbd125969c",
+    "source_unchanged": true,
+    "ffmpeg_summary": "Summary:\n\n  Integrated loudness:\n    I:         -25.7 LUFS\n    Threshold: -36.3 LUFS\n\n  Loudness range:\n    LRA:         8.4 LU\n    Threshold: -46.3 LUFS\n    LRA low:   -31.6 LUFS\n    LRA high:  -23.2 LUFS\n\n  True peak:\n    Peak:      -10.1 dBFS",
+    "independent_sample_peak_dbfs": -10.138698546565264,
+    "independent_rms_dbfs": -28.732947607865643,
+    "independent_crest_db": 18.594249061300378,
+    "full_scale_sample_count": 0,
+    "sample_count": 2646000,
+    "non_silent": true
+  },
+  {
+    "file": "open-goldberg-02-excerpt-30s.wav",
+    "sha256": "e30d1596c566a6e68c7c3f3d36048bc0f3feb82ac2068d76d46fa65bc9a7b59f",
+    "source_unchanged": true,
+    "ffmpeg_summary": "Summary:\n\n  Integrated loudness:\n    I:         -17.0 LUFS\n    Threshold: -27.1 LUFS\n\n  Loudness range:\n    LRA:         4.6 LU\n    Threshold: -37.0 LUFS\n    LRA low:   -19.7 LUFS\n    LRA high:  -15.1 LUFS\n\n  True peak:\n    Peak:       -2.8 dBFS",
+    "independent_sample_peak_dbfs": -2.8518628484897834,
+    "independent_rms_dbfs": -19.623863547111362,
+    "independent_crest_db": 16.772000698621582,
+    "full_scale_sample_count": 0,
+    "sample_count": 2646000,
+    "non_silent": true
+  },
+  {
+    "file": "open-goldberg-03-excerpt-30s.wav",
+    "sha256": "79e6df7220dc509981a34305e85371cf2d30dba88a688253a20883759003943a",
+    "source_unchanged": true,
+    "ffmpeg_summary": "Summary:\n\n  Integrated loudness:\n    I:         -17.9 LUFS\n    Threshold: -28.0 LUFS\n\n  Loudness range:\n    LRA:         7.0 LU\n    Threshold: -37.8 LUFS\n    LRA low:   -22.0 LUFS\n    LRA high:  -15.0 LUFS\n\n  True peak:\n    Peak:       -2.4 dBFS",
+    "independent_sample_peak_dbfs": -2.404917911957366,
+    "independent_rms_dbfs": -20.47187608643018,
+    "independent_crest_db": 18.066958174472813,
+    "full_scale_sample_count": 0,
+    "sample_count": 2646000,
+    "non_silent": true
+  }
+]

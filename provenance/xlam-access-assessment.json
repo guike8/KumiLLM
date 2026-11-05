@@ -1,0 +1,71 @@
+{
+  "schema": "kumi-external-dataset-audit/1",
+  "audited_at": "2026-11-05T23:15:00.057745+00:00",
+  "dataset_id": "Salesforce/xlam-function-calling-60k",
+  "official_url": "https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k",
+  "revision": "26d14ebfe18b1f7b524bd39b404b50af5dc97866",
+  "last_modified": "2025-01-24T19:25:58.000Z",
+  "license_metadata": "cc-by-4.0",
+  "license_review_scope": "Public card/API metadata only. Public card also says research purposes and refers to Salesforce acceptable-use policies. Actual gated acknowledgement terms were not accepted or modified.",
+  "access": {
+    "gated": "auto",
+    "anonymous_head_status": 401,
+    "existing_saved_auth_head_status": 403,
+    "existing_auth_error_code": "GatedRepo",
+    "local_dataset_cache_found": false,
+    "new_terms_accepted": false,
+    "credentials_published_or_saved": false,
+    "full_corpus_downloaded": false,
+    "downloaded_dataset_body_bytes": 0,
+    "actual_rows_audited": 0
+  },
+  "repository_inventory": {
+    "data_file": "xlam_function_calling_60k.json",
+    "data_file_bytes": 96116570,
+    "public_config_splits": [
+      "train"
+    ],
+    "separate_validation_test_files_listed": false,
+    "root_license_file_listed": false
+  },
+  "documented_format": {
+    "basis": "Public dataset card and its documentation example, not privately accessed dataset rows.",
+    "fields": [
+      "query",
+      "tools",
+      "answers"
+    ],
+    "tools_and_answers_serialized_as_json_strings": true,
+    "tool_parameters": "parameter-name to definition mapping; required is per parameter; example types include int and list",
+    "answers": "array of function names and argument objects",
+    "execution_result_or_multi_turn_trace_in_documented_schema": false
+  },
+  "conversion_requirements": [
+    "Decode serialized tools and answers with strict JSON, reject duplicate keys and nonfinite numbers; retain query text.",
+    "Build each function parameters schema as type object with properties and top-level required; do not pass the parameter-name map straight to the Qwen tool template.",
+    "Explicitly map documented primitive type aliases such as int to integer and float to number. list maps to array but requires separate review of element/item constraints. Reject unsupported or ambiguous nested types instead of inventing constraints.",
+    "Keep assistant tool-call arguments as objects for the checked Qwen template, not JSON strings. Use one assistant target containing all answer calls with deterministic unique IDs.",
+    "Do not fabricate tool results or convert parallel answer calls into a claimed sequential executed trajectory. Source execution verification is an upstream claim, not locally reproduced Kumi evidence.",
+    "Check function naming constraints and preserve a reversible alias map if a runtime needs aliases; do not rename unrelated APIs into Kumi operations.",
+    "Create API/function-family and near-duplicate-aware train/validation groups; repository exposes train only.",
+    "Verify exact local Qwen template rendering, argument types, sequence length, final-target masking and padding loss before any training.",
+    "Keep attribution, APIGen citation, pinned revision, source IDs, data hashes and transformation version with every converted record."
+  ],
+  "recommended_role": "Candidate generic function-selection/argument-binding auxiliary corpus. Test a small token-budgeted mixture against Kumi-only training rather than letting all 60000 generic examples dominate the current 492 Kumi records.",
+  "not_evidence_of": [
+    "musical intent resolution",
+    "audio quality or preference judgments",
+    "real DAW editing",
+    "stateful multi-turn recovery",
+    "Kumi task competence",
+    "post-training improvement over Sol Ultra"
+  ],
+  "release_readiness": "Not imported or ready for training. Actual source rows remain gated to the current account.",
+  "primary_sources": [
+    "https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k",
+    "https://huggingface.co/api/datasets/Salesforce/xlam-function-calling-60k",
+    "https://huggingface.co/api/datasets/Salesforce/xlam-function-calling-60k/tree/main?recursive=false&expand=false",
+    "https://apigen-pipeline.github.io/",
+    "https://arxiv.org/abs/2406.18518"
+  ]
+}

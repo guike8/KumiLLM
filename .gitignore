@@ -35,3 +35,7 @@ cache/
 /data/v3-research-guided/raw/
 /data/v3-research-guided/collections/
 /data/v3-research-guided/reference_manifest.json
+
+# Downloaded recording seeds remain outside public artifacts.
+data/production-source-seeds/audio-cache/
+/data/v4-native-audio-candidates/raw/

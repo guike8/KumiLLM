@@ -1,10 +1,18 @@
 # KumiLLM
 
-Synthetic tool-use demonstrations and collection tools for training a local language model to control [Kumi](https://github.com/user1303836/kumi).
+Training demonstrations, source catalogs and collection tools for a local language model that controls [Kumi](https://github.com/user1303836/kumi).
 
 The first release contains **96 executed synthetic episodes and 432 assistant-target examples**. A scripted teacher calls Kumi's real kernel and tool engine against a corrected synthetic Ableton bridge. Admission requires successful tool results, requested final state, preservation of unrelated state, and fresh readback.
 
-This is a bootstrap corpus. It does not contain real Ableton sessions, audio evaluations, trained model weights, or a claim of production reliability.
+The original synthetic corpora provide a bootstrap. They do not establish real DAW performance, audio quality or production reliability. No trained model weights are bundled.
+
+## Broader production collection
+
+The [production source seeds](data/production-source-seeds/README.md) add nine rights-cleared recordings across piano, percussion, flute, cello and speech, with license evidence, attribution, hashes and a bounded downloader. Thirty original task scenarios cover musical intent, listening, full workflows, clarification and recovery. Audio stays in the private Studio collection; this repository contains reproducible manifests and recipes. These seeds are not verified Kumi demonstrations.
+
+The [native audio candidate batch](data/v4-native-audio-candidates/README.md) contains seven reviewed prefixes across three goals and four authored user turns: three listening calls and four factual responses, including level comparisons and a dynamics followup. All seven pass the exact Studio tokenizer checks at 8,330–9,846 tokens. They require the supplied strict final-target loss contract in a future trainer and remain excluded from v1. These file observations do not demonstrate DAW editing, rendered effects or human preference judgments. The admitted synthetic SFT count remains 492 records. See the [collection status](provenance/production-collection.json).
+
+The [xLAM assessment](provenance/xlam-access-assessment.json) records a potential generic function-calling supplement. Its official data file remains gated to the current account; no xLAM rows have been imported. Any later mixture must be tested against Kumi-specific held-out tasks.
 
 ## More Sol data using the AI scraper (v3)
 

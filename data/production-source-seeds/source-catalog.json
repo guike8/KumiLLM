@@ -1,0 +1,524 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-05T23:12:58.420398+00:00",
+  "scope": "non_API_production_reference_sources",
+  "kumi_mapping_status": "not_yet_mapped_to_kumi",
+  "sources": [
+    {
+      "id": "ableton-grooves",
+      "title": "Using Grooves",
+      "url": "https://www.ableton.com/en/live-manual/12/using-grooves/",
+      "category": "workflow",
+      "status": "partial",
+      "text_characters": 28531,
+      "text_blocks": 1733,
+      "source_hash": "167acfeee0a5adcc8d342fbf8728218f6214682922b2f21c6b4a755553224c19",
+      "retrieved_at": "2026-11-05T22:58:17.245928Z",
+      "final_url": "https://www.ableton.com/en/live-manual/12/using-grooves/",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "semantic_extraction_unavailable: configure an explicitly probed HF provider/model",
+        "incomplete_source: links exceeded deterministic extraction limits",
+        "incomplete_source: source substring search exceeded deterministic extraction limits"
+      ],
+      "error": null,
+      "use": "Feel, timing, groove extraction, non-destructive audition and commit workflows.",
+      "facts": [
+        "Audio grooves require Warp enabled.",
+        "Committing a groove changes clip timing data.",
+        "A groove can be extracted from the playing portion of a clip."
+      ],
+      "coverage": "Literal text collected; some links and source substring checks exceeded deterministic limits. No audio examples retrieved.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_applicable_no_code_imported",
+        "data": "not_applicable_no_dataset_imported",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "ableton-recording",
+      "title": "Recording New Clips",
+      "url": "https://www.ableton.com/en/live-manual/12/recording-new-clips/",
+      "category": "workflow",
+      "status": "partial",
+      "text_characters": 40519,
+      "text_blocks": 1836,
+      "source_hash": "37af51e85e5edc24b25d8b648707e943e76e2a7035c52ffdd81ed02002f2b319",
+      "retrieved_at": "2026-11-05T22:58:18.623009Z",
+      "final_url": "https://www.ableton.com/en/live-manual/12/recording-new-clips/",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "semantic_extraction_unavailable: configure an explicitly probed HF provider/model",
+        "incomplete_source: source substring search exceeded deterministic extraction limits",
+        "incomplete_source: links exceeded deterministic extraction limits"
+      ],
+      "error": null,
+      "use": "Input inspection, arming, overdub, punch recording and Session-versus-Arrangement decisions.",
+      "facts": [
+        "Track input selection determines the recorded source.",
+        "Track arming and monitoring affect the recording workflow.",
+        "Punch controls can protect material outside the intended recording region."
+      ],
+      "coverage": "Literal chapter text collected with incomplete link/source-search coverage. No recording performed.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_applicable_no_code_imported",
+        "data": "not_applicable_no_dataset_imported",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "ableton-routing",
+      "title": "Routing and I/O",
+      "url": "https://www.ableton.com/en/live-manual/12/routing-and-i-o/",
+      "category": "workflow_troubleshooting",
+      "status": "partial",
+      "text_characters": 52279,
+      "text_blocks": 1914,
+      "source_hash": "a34a260fe6e014e3926b1d4282259b8fc774165565b0439ae8bfee599ea19df0",
+      "retrieved_at": "2026-11-05T22:58:20.700546Z",
+      "final_url": "https://www.ableton.com/en/live-manual/12/routing-and-i-o/",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "semantic_extraction_unavailable: configure an explicitly probed HF provider/model",
+        "incomplete_source: source substring search exceeded deterministic extraction limits",
+        "incomplete_source: links exceeded deterministic extraction limits"
+      ],
+      "error": null,
+      "use": "No-sound diagnosis, resampling, input/output routing and monitoring recovery.",
+      "facts": [
+        "Routing selects track sources and destinations.",
+        "Monitor In can suppress clip playback.",
+        "MIDI tracks without an instrument do not themselves produce an audio signal."
+      ],
+      "coverage": "Literal chapter text collected with incomplete link coverage. No signal path executed.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_applicable_no_code_imported",
+        "data": "not_applicable_no_dataset_imported",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "ableton-song-structure",
+      "title": "Play with song structures",
+      "url": "https://learningmusic.ableton.com/song-structure/song-structure.html",
+      "category": "producer_intent",
+      "status": "success",
+      "text_characters": 1805,
+      "text_blocks": 109,
+      "source_hash": "8e5510bf79d597711e55c549303d01ab5d275be47fd42efd43aea30ceefaa1c0",
+      "retrieved_at": "2026-11-05T22:58:22.723426Z",
+      "final_url": "https://learningmusic.ableton.com/song-structure/song-structure.html",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [],
+      "error": null,
+      "use": "Turn short musical patterns into contrasted sections and a coherent arrangement.",
+      "facts": [
+        "Arrangement combines smaller patterns into song sections and a full song.",
+        "Song structure describes the combination of sections."
+      ],
+      "coverage": "Static lesson text only. Interactive sound combinations and browser playback were not captured.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_applicable_no_code_imported",
+        "data": "not_applicable_no_dataset_imported",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "valhalla-reverb-types",
+      "title": "Effect-O-Pedia: Reverb Types",
+      "url": "https://valhalladsp.com/2018/05/14/effect-o-pedia-reverb-types/",
+      "category": "plugin_behavior",
+      "status": "success",
+      "text_characters": 8134,
+      "text_blocks": 79,
+      "source_hash": "735b14546401a3f1a212e79e2584d8fad79092f51de3ab6f46d4492c661c26c9",
+      "retrieved_at": "2026-11-05T22:58:27.865243Z",
+      "final_url": "https://valhalladsp.com/2018/05/14/effect-o-pedia-reverb-types/",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "conflict:title: structured and visible source values disagree",
+        "conflict:language: structured and visible source values disagree",
+        "conflict:published_at: structured and visible source values disagree"
+      ],
+      "error": null,
+      "use": "Choose and compare reverberation character against a producer's goal.",
+      "facts": [
+        "Reverb type names are useful heuristics rather than universal guarantees.",
+        "The article groups algorithms into acoustic, mechanical and unnatural families."
+      ],
+      "coverage": "Article text collected; metadata conflicts remain in the scraper warnings. No plugin presets or binaries downloaded.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_applicable_no_code_imported",
+        "data": "not_applicable_no_dataset_imported",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "valhalla-diffusion",
+      "title": "Diffusion, vocals, and real rooms",
+      "url": "https://valhalladsp.com/2010/06/07/diffusion-vocals-and-real-rooms/",
+      "category": "plugin_behavior",
+      "status": "success",
+      "text_characters": 3754,
+      "text_blocks": 38,
+      "source_hash": "ff5a71cc93d5ab94e3b2d50bf438a7edc748c2ce7e4ab10729bc3657b137154b",
+      "retrieved_at": "2026-11-05T22:58:31.629873Z",
+      "final_url": "https://valhalladsp.com/2010/06/07/diffusion-vocals-and-real-rooms/",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "conflict:title: structured and visible source values disagree",
+        "conflict:language: structured and visible source values disagree",
+        "conflict:published_at: structured and visible source values disagree"
+      ],
+      "error": null,
+      "use": "Diagnose metallic vocal reverb and compare tradeoffs by listening.",
+      "facts": [
+        "Some allpass-based diffusion structures can sound metallic on periodic vocal material.",
+        "Reducing diffusion may trade metallic coloration for a grainier tail."
+      ],
+      "coverage": "Article text collected. This describes particular design behavior; not every reverb exposes the same controls.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_applicable_no_code_imported",
+        "data": "not_applicable_no_dataset_imported",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "rime-repository",
+      "title": "RIME official repository",
+      "url": "https://github.com/sahaslab/RIME",
+      "category": "research_framework",
+      "status": "partial",
+      "text_characters": 31457,
+      "text_blocks": 968,
+      "source_hash": "e0c499848ace6a00656b5307fe56e5db29716b1dad64bdadc8dc31c06cb5755a",
+      "retrieved_at": "2026-11-05T22:58:32.696942Z",
+      "final_url": "https://github.com/sahaslab/RIME",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "semantic_extraction_unavailable: configure an explicitly probed HF provider/model",
+        "incomplete_source: unverifiable table cells exceeded deterministic extraction limits"
+      ],
+      "error": null,
+      "use": "Reference for separating symbolic edit plans, prompts, rendering and acceptance checks.",
+      "facts": [
+        "Symbolic plan generation is separate from audio rendering.",
+        "The repository defaults reference MTG-Jamendo metadata.",
+        "Generated plans are not by themselves evidence of executed audio outcomes."
+      ],
+      "coverage": "Repository landing page/README only; no recursive clone, dataset import or code execution. Some table cells were omitted.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_established_from_root_listing_or_README; no code imported",
+        "data": "not_established; MTG-Jamendo audio requires separate per-track review",
+        "paper": "CC BY 4.0 on arXiv paper only; paper not part of scraped batch",
+        "paper_license_does_not_license_code_or_data": true
+      },
+      "related_primary_urls": [
+        "https://arxiv.org/html/2607.19605v3"
+      ]
+    },
+    {
+      "id": "mixagent-repository",
+      "title": "Agentic Music Post-Production official repository",
+      "url": "https://github.com/SonyResearch/Agentic_Music_Post-Production",
+      "category": "dataset_lead",
+      "status": "success",
+      "text_characters": 238,
+      "text_blocks": 16,
+      "source_hash": "9d3003403ff378802335e483cf7e574df1084424e58d3729ea416b23100d6b23",
+      "retrieved_at": "2026-11-05T22:58:33.402042Z",
+      "final_url": "https://github.com/SonyResearch/Agentic_Music_Post-Production",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [],
+      "error": null,
+      "use": "Watch release availability before considering MixCritic examples.",
+      "facts": [
+        "The official repository landing page is empty at acquisition time."
+      ],
+      "coverage": "Empty-repository notice collected; no code, dataset or training rows were available there.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "unavailable_empty_repository",
+        "data": "unavailable_empty_repository",
+        "paper": "CC BY 4.0 on arXiv paper only; does not license a future dataset",
+        "paper_license_does_not_license_code_or_data": true
+      },
+      "related_primary_urls": [
+        "https://arxiv.org/html/2610.29093v1"
+      ]
+    },
+    {
+      "id": "llm2fx-demo",
+      "title": "LLM2Fx-Tools official demo",
+      "url": "https://seungheondoh.github.io/llm2fx-tools-demo/",
+      "category": "dataset_lead",
+      "status": "success",
+      "text_characters": 463,
+      "text_blocks": 25,
+      "source_hash": "e2876cacd8e77db162f304df95cfe1744385e1c6cfde4026c07e124d6b3a903c",
+      "retrieved_at": "2026-11-05T22:58:33.618410Z",
+      "final_url": "https://seungheondoh.github.io/llm2fx-tools-demo/",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [],
+      "error": null,
+      "use": "Research lead for effect-chain reverse engineering and reference-style transfer.",
+      "facts": [
+        "The official demo contains reverse-engineering, style-transfer and generation sections."
+      ],
+      "coverage": "Only 463 characters of literal static text were extracted. Dynamic examples/audio and a released corpus were not acquired. Scraper contract success is not full dataset coverage.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "not_established_no_release_acquired",
+        "data": "LP-Fx release/license not established; base MedleyDB has independent restrictions",
+        "paper": "CC BY-NC-SA 4.0 on arXiv paper only",
+        "paper_license_does_not_license_code_or_data": true
+      },
+      "related_primary_urls": [
+        "https://arxiv.org/html/2512.01559v2"
+      ],
+      "annotation_policy": "Do not import private chain-of-thought. Evaluate only publicly released instructions, short public plans, tool actions and permitted audio metadata after a separate license audit."
+    },
+    {
+      "id": "medleydb-downloads",
+      "title": "MedleyDB licensing and downloads",
+      "url": "https://medleydb.weebly.com/downloads.html",
+      "category": "audio_dataset_lead",
+      "status": "success",
+      "text_characters": 3132,
+      "text_blocks": 59,
+      "source_hash": "ba4a75b619792d42bdff15876aeb2dc1ab78ab2d07803931897b3d9b550458b6",
+      "retrieved_at": "2026-11-05T22:58:33.975039Z",
+      "final_url": "https://medleydb.weebly.com/downloads.html",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [],
+      "error": null,
+      "use": "Potential multitrack source for realistic mixing, with research-use restrictions.",
+      "facts": [
+        "The page identifies the audio dataset as CC BY-NC-SA 4.0.",
+        "Full dataset downloads require an access request.",
+        "The authors request consent before redistribution."
+      ],
+      "coverage": "Licensing/download page collected only; no sample archive or full audio downloaded.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "separate repository not imported or licensed by this audio-page audit",
+        "data": "CC BY-NC-SA 4.0; non-commercial research; redistribution consent requested by authors; full download access-gated",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "fsd50k-release",
+      "title": "FSD50K official release",
+      "url": "https://zenodo.org/records/4060432",
+      "category": "audio_dataset_lead",
+      "status": "partial",
+      "text_characters": 16092,
+      "text_blocks": 376,
+      "source_hash": "6f9859fadc1e5cf56b7a67f050819c9ed42ade9f7e08224cbcd64856255afbd6",
+      "retrieved_at": "2026-11-05T22:58:35.651893Z",
+      "final_url": "https://zenodo.org/records/4060432",
+      "retrieval_method": "direct_http",
+      "schema_version": "page_v1",
+      "provider": null,
+      "model": null,
+      "missing_fields": [],
+      "warnings": [
+        "semantic_extraction_unavailable: configure an explicitly probed HF provider/model",
+        "incomplete_source: unverifiable table cells exceeded deterministic extraction limits"
+      ],
+      "error": null,
+      "use": "Potential isolated instrument/sound clips, subject to per-clip license filtering.",
+      "facts": [
+        "Dataset-level CC BY 4.0 does not replace the licenses of individual clips.",
+        "The release contains CC0, CC BY, CC BY-NC and CC Sampling+ clips.",
+        "Per-clip metadata is needed for attribution and reuse filtering."
+      ],
+      "coverage": "Release description, license information and file links only. No archives, labels or audio downloaded; page extraction is partial.",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "reference_only_not_an_accepted_training_trajectory",
+      "body_visibility": "private_gitignored_reference_material",
+      "license": {
+        "page_text": "No blanket training/redistribution permission established; do not publish or train on verbatim page bodies.",
+        "code": "separate baseline repository not imported or licensed by this dataset-page audit",
+        "data": "Dataset curation CC BY 4.0; each clip independently CC0/CC BY/CC BY-NC/CC Sampling+. Do not treat all clips as permissive.",
+        "paper": "not_applicable_no_paper_imported",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "vsco-publisher",
+      "title": "VSCO 2 Community Edition recording license",
+      "url": "https://versilian-studios.com/vsco-community/",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "2e29d96f3fe4dcf7c0da6b93a559e1edd45bff065a88d734f2ea8d09d1425143",
+      "retrieved_at": "2026-11-05T23:10:52.862898Z",
+      "text_characters": 10916,
+      "warnings": [
+        "conflict:language: structured and visible source values disagree"
+      ],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory",
+      "use": "Recording-level license/provenance evidence for the individually downloaded audio seeds.",
+      "coverage": "Literal page text collected through the AI scraper; no full sample library or speech corpus downloaded.",
+      "license": {
+        "recordings": "CC0-1.0",
+        "page_text": "Retained privately as license evidence; no verbatim tutorial training import.",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "vsco-license",
+      "title": "VSCO 2 CE repository CC0 dedication",
+      "url": "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "09734cab75542e030dc8e7b436ab804c8e45d3b319b69772c81231ad012df39c",
+      "retrieved_at": "2026-11-05T23:10:53.831756Z",
+      "text_characters": 7196,
+      "warnings": [],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory",
+      "use": "Recording-level license/provenance evidence for the individually downloaded audio seeds.",
+      "coverage": "Literal page text collected through the AI scraper; no full sample library or speech corpus downloaded.",
+      "license": {
+        "recordings": "CC0-1.0",
+        "page_text": "Retained privately as license evidence; no verbatim tutorial training import.",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "vsco-credits",
+      "title": "VSCO 2 CE recording credits",
+      "url": "https://github.com/sgossner/VSCO-2-CE/blob/master/README.md",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "0403efa5b10555f19b14aead0502ef1324152e9a23c1e64b8a1ba84119e39ec7",
+      "retrieved_at": "2026-11-05T23:10:54.466252Z",
+      "text_characters": 1102,
+      "warnings": [],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory",
+      "use": "Recording-level license/provenance evidence for the individually downloaded audio seeds.",
+      "coverage": "Literal page text collected through the AI scraper; no full sample library or speech corpus downloaded.",
+      "license": {
+        "recordings": "CC0-1.0",
+        "page_text": "Retained privately as license evidence; no verbatim tutorial training import.",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    },
+    {
+      "id": "librispeech-release",
+      "title": "OpenSLR LibriSpeech CC BY 4.0 release",
+      "url": "https://www.openslr.org/12/",
+      "category": "recording_license_and_provenance",
+      "status": "success",
+      "source_hash": "6a88067d023d9cc79faefce70c857c669bd8325df9c3ebedd6fc1e853ae5a307",
+      "retrieved_at": "2026-11-05T23:10:55.011742Z",
+      "text_characters": 1649,
+      "warnings": [],
+      "missing_fields": [],
+      "body_visibility": "private_gitignored_reference_material",
+      "kumi_mapping_status": "not_yet_mapped_to_kumi",
+      "training_eligibility": "recording_license_evidence_not_training_trajectory",
+      "use": "Recording-level license/provenance evidence for the individually downloaded audio seeds.",
+      "coverage": "Literal page text collected through the AI scraper; no full sample library or speech corpus downloaded.",
+      "license": {
+        "recordings": "CC-BY-4.0",
+        "page_text": "Retained privately as license evidence; no verbatim tutorial training import.",
+        "paper_license_does_not_license_code_or_data": true
+      }
+    }
+  ],
+  "publication_scope": "Metadata/scenarios only; audio binaries and raw source bodies are not included."
+}

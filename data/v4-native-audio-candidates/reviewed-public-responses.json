@@ -1,0 +1,322 @@
+{
+  "req_6cdc9a1c82d94d19a14e1de2f9421fbc": {
+    "content_sha256": "223c4a68eb4d691e9789cf56ecd61066be35932b6f1b4c285024d285a66893a8",
+    "all_claims_reviewed": true,
+    "no_subjective_quality_or_audition_claim": true,
+    "fact_groundings": [
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/seconds",
+        "value": 30
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/channels",
+        "value": 2
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/loudness/clippedSamples",
+        "value": 0
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/loudness/samplePeakDbfs",
+        "value": -10.1
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/loudness/truePeakDbtp",
+        "value": -10.1
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/loudness/integratedLufs",
+        "value": -25.7
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/loudness/shortTermMaxLufs",
+        "value": -22.5
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/loudness/rangeLu",
+        "value": 7.9
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/dynamics/crestDb",
+        "value": 20.4
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/dynamics/peakToLoudnessDb",
+        "value": 15.6
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/stereo/correlation",
+        "value": 0.34
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/stereo/width",
+        "value": 0.27
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/stereo/lowEndMono",
+        "value": true
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/overTime/every",
+        "value": "1.9 s"
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/overTime/lufs/8",
+        "value": -37.9
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/balance/bands/6/correlation",
+        "value": -0.03
+      },
+      {
+        "tool_call_id": "call_audio_001",
+        "pointer": "/balance/bands/7/correlation",
+        "value": -0.07
+      }
+    ],
+    "review_notes": "All numeric claims match full30s nativefile analysis. Nonsilence, unclipped samples and level/peak independently checked. Minimum overTime LUFS is -37.9; no brief-silence guarantee or listening judgment asserted. LowEndMono is a tool classification, not a universal phase guarantee. File unchanged confirmed by complete batch status.",
+    "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+  },
+  "req_5a26ed3c76c14564911cf8f570395297": {
+    "content_sha256": "a279653ff524e476ecc2c13b7e7ee4872eba9851ea95b4ea85fa2d666f4aac25",
+    "all_claims_reviewed": true,
+    "no_subjective_quality_or_audition_claim": true,
+    "fact_groundings": [
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/mine/loudness/integratedLufs",
+        "value": -25.7
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/reference/loudness/integratedLufs",
+        "value": -17
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/loudness/differenceLu",
+        "value": -8.7
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/loudness/truePeak",
+        "value": [
+          -10.1,
+          -2.8
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/loudness/range",
+        "value": [
+          7.9,
+          4.5
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/dynamics/crestDb",
+        "value": [
+          20.4,
+          18.7
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/mine/loudness/clippedSamples",
+        "value": 0
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/reference/loudness/clippedSamples",
+        "value": 0
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/stereo/correlation",
+        "value": [
+          0.34,
+          0.29
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/stereo/lowEndMono",
+        "value": [
+          true,
+          true
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/balance/5/difference",
+        "value": -6.1
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/balance/6/difference",
+        "value": -9.5
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/balance/7/difference",
+        "value": -21.3
+      },
+      {
+        "tool_call_id": "call_audio_002",
+        "pointer": "/comparison/balance/8/difference",
+        "value": -16.1
+      }
+    ],
+    "review_notes": "Second-minus-first loudness =8.7LU; -8.7dB playback trim is a proposed starting point, explicitly not applied. Numeric fields and measured comparison direction match. No audible preference or exact perceptual matching guarantee asserted. Spectral comparison is explicitly tool-reported and levelmatched.",
+    "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+  },
+  "req_cb513040341840419cbdd889899cd09f": {
+    "content_sha256": "6f6a66727382d776dc56be7a27edfe7884332b0d6953c21ad09f6734fa142d49",
+    "all_claims_reviewed": true,
+    "no_subjective_quality_or_audition_claim": true,
+    "fact_groundings": [
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/truePeak",
+        "value": [
+          -2.8,
+          -2.4
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/mineLufs",
+        "value": -17
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/referenceLufs",
+        "value": -17.9
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/differenceLu",
+        "value": 0.9
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/range",
+        "value": [
+          4.5,
+          6.7
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/dynamics/crestDb",
+        "value": [
+          18.7,
+          19.8
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/dynamics/peakToLoudnessDb",
+        "value": [
+          14.2,
+          15.5
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/mine/loudness/clippedSamples",
+        "value": 0
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/reference/loudness/clippedSamples",
+        "value": 0
+      }
+    ],
+    "review_notes": "Headroom=0 minus truepeak; B has0.4dB less and0.9LU lower mean. InspectB is conditional advice grounded in higherreportedLRA/crest, not a subjective quality preference or claimcompression needed. -0.9dB trim proposed onA. No audio mutation or audition claimed.",
+    "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+  },
+  "req_425a24ecad5f4704815b71f1496893d8": {
+    "content_sha256": "5f6ebedf4ace6fa340fc66d8b7313a72738af4893119656a63c11fb6aec511f1",
+    "all_claims_reviewed": true,
+    "no_subjective_quality_or_audition_claim": true,
+    "fact_groundings": [
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/truePeak",
+        "value": [
+          -2.8,
+          -2.4
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/mineLufs",
+        "value": -17
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/referenceLufs",
+        "value": -17.9
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/differenceLu",
+        "value": 0.9
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/loudness/range",
+        "value": [
+          4.5,
+          6.7
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/dynamics/crestDb",
+        "value": [
+          18.7,
+          19.8
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/comparison/dynamics/peakToLoudnessDb",
+        "value": [
+          14.2,
+          15.5
+        ]
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/mine/loudness/clippedSamples",
+        "value": 0
+      },
+      {
+        "tool_call_id": "call_audio_004",
+        "pointer": "/reference/loudness/clippedSamples",
+        "value": 0
+      }
+    ],
+    "review_notes": "Actual human followup answered from observedA/B comparison. Every quotednumber matches; loweraverage does notimplylowerpeak. Constant gain preservesrelative dynamics ifitdoesnotclip; compressiondependslisteninggoal. No newprocessing, unheardjudgment or exactexternalmetercalibration claimed.",
+    "metric_definition_limit": "Loudness range, crest, width and correlation are Kumi-reported definitions; not certified interchangeable with another meter. Global stereo RMS crest differs from this Kumi crest."
+  }
+}

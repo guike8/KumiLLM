@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-05T23:12:58.420398+00:00",
+  "kumi_mapping_status": "not_yet_mapped_to_kumi",
+  "source_attempts": 15,
+  "scraper_status_counts": {
+    "partial": 5,
+    "success": 10
+  },
+  "supplemental_license_page_attempts": 2,
+  "total_scraper_page_attempts": 17,
+  "substantive_non_API_sources": 10,
+  "additional_recording_license_sources": 4,
+  "empty_repository_not_counted_as_substantive": [
+    "mixagent-repository"
+  ],
+  "extracted_text_characters": 207267,
+  "network_bytes": null,
+  "network_bytes_note": "The scraper bounds response size but this wrapper does not measure actual wire bytes; local artifact bytes are not download-byte accounting.",
+  "audio_or_corpus_bytes_downloaded": 11028604,
+  "model_weights_downloaded": 0,
+  "speech_archive_prefix_bytes": 638976,
+  "full_corpus_downloaded": false,
+  "downloaded_recordings": 9,
+  "decoded_wav_working_files": 9,
+  "total_local_audio_bytes": 34051666,
+  "independent_audio_source_groups": [
+    "librispeech_speaker_374",
+    "open_goldberg_2012_kimiko_ishizaka",
+    "vsco2ce_sam_gossner_simon_dalzell"
+  ],
+  "supplemental_recording_license_evidence": [
+    {
+      "id": "open-goldberg-official",
+      "url": "https://opengoldbergvariations.org/",
+      "status": "success",
+      "source_hash": "19fb7a263f283a5bbd5bca57c0481fe0bdcd2dca3c10a338633220fc20a2b3dc",
+      "retrieved_at": "2026-11-05T23:02:11.292538Z",
+      "warnings": []
+    },
+    {
+      "id": "open-goldberg-archive",
+      "url": "https://archive.org/details/The_Open_Goldberg_Variations-11823",
+      "status": "success",
+      "source_hash": "810531032aab32c0ef26f1ce860ba18b8df27b1a66913bf077f5f030d1c1541f",
+      "retrieved_at": "2026-11-05T23:02:12.162231Z",
+      "warnings": []
+    }
+  ],
+  "inference_calls": 0,
+  "new_training_records": 0,
+  "original_task_seeds": 30,
+  "acquisition_method": "Existing Evidence AI scraper Pipeline + DirectHTTPRetriever + deterministic page_v1 extraction + schema/evidence validation; inference=None and renderer=None; exact public host allowlist.",
+  "search_method": "OpenCLI tried first. Browser bridge unavailable in parent; arXiv adapter failed DNS locally; GitHub adapter has no search command. OpenCLI Archive search/item succeeded for the Open Goldberg recording; LJ Speech search returned an explicit empty result. Available web tool used for additional primary-source discovery/inspection. Actual source-page acquisition used the AI scraper directly.",
+  "partial_means_partial": [
+    "ableton-grooves",
+    "ableton-recording",
+    "ableton-routing",
+    "rime-repository",
+    "fsd50k-release"
+  ],
+  "known_coverage_limits": [
+    "No recursive dataset acquisition, audio render, plugin execution or Kumi execution occurred in this source pass.",
+    "LLM2Fx static extraction contains only 463 text characters; no demo examples/corpus imported.",
+    "Scraper success establishes its extraction contract, not completeness of an entire website or dataset.",
+    "Paper licenses were kept separate from unavailable or unestablished code/data terms.",
+    "Raw article bodies and snapshots remain private and gitignored."
+  ],
+  "next_execution_gate": [
+    "Create rights-cleared original fixtures or complete per-asset license audit.",
+    "Map the original goals into supported Kumi operations.",
+    "Execute and record state transitions, tool outcomes, renders and observations.",
+    "Reject silent/no-op/capability-inventing trajectories and maintain source/project-level split isolation.",
+    "Promote only verified trajectories, retaining seed IDs and all provenance."
+  ],
+  "publication_scope": "Metadata/scenarios only; audio binaries and raw source bodies are not included."
+}

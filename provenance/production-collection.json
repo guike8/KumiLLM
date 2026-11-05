@@ -1,0 +1,89 @@
+{
+  "schema": "kumi-production-collection-status/1",
+  "updated_at": "2026-11-05T23:23:04.401077+00:00",
+  "source_collection": {
+    "scraper_page_attempts": 17,
+    "successful_pages": 12,
+    "partial_pages": 5,
+    "recording_seeds": 9,
+    "recording_source_groups": 3,
+    "local_original_and_working_audio_bytes": 34051666,
+    "original_task_scenarios": 30,
+    "audio_licenses": [
+      "CC0-1.0",
+      "CC-BY-4.0"
+    ],
+    "source_bodies_and_audio_private": true
+  },
+  "native_file_collection": {
+    "teacher": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "teacher_transport": "codex_agent_openai_compatible_file_queue",
+    "goals": 3,
+    "model_requests": 10,
+    "native_listen_calls": 4,
+    "evidence_reviewed_candidates": 7,
+    "tool_targets": 3,
+    "checked_public_response_targets": 4,
+    "excluded_runtime_nudge_targets": 3,
+    "exact_qwen_tokenization_passed": 7,
+    "full_token_range": [
+      8330,
+      9846
+    ],
+    "target_token_range": [
+      80,
+      313
+    ],
+    "candidate_file_sha256": "7c7ddd112403806b82822c116d7d0b1c771436748ca983305f2588220737aac8",
+    "source_audio_unchanged": true,
+    "all_in_one_train_only_audio_source_group": true,
+    "real_daw_edit_verified": false,
+    "human_audio_quality_verified": false,
+    "ready_for_current_v1_trainer": false,
+    "future_trainer_requires": "strict_final_target_excluding_padding",
+    "strict_loss_probe_passed": true,
+    "measured_provider_usage_available": false,
+    "authored_user_turns": 4,
+    "prompt_provenance": "authored_collection_scenarios_and_scripted_followup"
+  },
+  "recovery_candidates": {
+    "verified_correction_targets": 1,
+    "verified_diagnostic_reads": 5,
+    "current_32768_cap_admitted": 0,
+    "full_token_range": [
+      40278,
+      58737
+    ],
+    "untruncated_65536_research_diagnostic_passed": 6,
+    "ready_for_current_trainer": false
+  },
+  "studio_setup": {
+    "daw": "REAPER",
+    "version": "7.85",
+    "isolated_portable_profile": true,
+    "publisher_signature_verified": true,
+    "kumi_bridge_installed": "0.1.12",
+    "lab_startup_block": "REAPER startup dialogs need dismissal by the user; SSH has no accessibility or screen-capture permission.",
+    "real_daw_bridge_connected": false
+  },
+  "v1_training": {
+    "snapshot_unchanged": true,
+    "stage_last_observed": "running",
+    "last_metric_at": "2026-11-05T23:16:28.758554+00:00",
+    "microbatches_completed": 162,
+    "planned_microbatches": 288,
+    "optimizer_updates_completed": 20,
+    "planned_optimizer_updates": 36,
+    "new_data_added_to_running_job": false
+  },
+  "public_admitted_sft_records_unchanged": 492,
+  "xlam": {
+    "dataset_id": "Salesforce/xlam-function-calling-60k",
+    "revision": "26d14ebfe18b1f7b524bd39b404b50af5dc97866",
+    "metadata_license": "cc-by-4.0",
+    "existing_hf_access": "403 GatedRepo",
+    "rows_imported": 0
+  },
+  "qualification_ten_real_workflows_complete": false
+}

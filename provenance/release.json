@@ -48,8 +48,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 468,
-      "sha256": "7952996984c0f560b40ca96bb81f5b467dc7de5828fa381a6e6bb4beb0e8d646"
+      "bytes": 611,
+      "sha256": "ee0cb93581ed1e36bc426efbaa8c7615d57e63063c58e923e05e9b1d751d5ba9"
     },
     {
       "path": "DATASET_CARD.md",
@@ -63,13 +63,68 @@
     },
     {
       "path": "README.md",
-      "bytes": 7883,
-      "sha256": "440090e02513fe7926ddcb63d93f5f844be9ff75182a631be56fdb9f57cafba1"
+      "bytes": 9391,
+      "sha256": "685fb90768ef141d4f86fc10556ee7537f4c0d0ece9d39568cb1db166a9f8b3d"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 5035,
-      "sha256": "45873119783e777faf9f62354c9b0071e74ab9b77bee15356cd687f343699a95"
+      "bytes": 5673,
+      "sha256": "f80b7591948161c13f4e785ee83b3fd8153c573cd14760bcb7c25bee20e952df"
+    },
+    {
+      "path": "data/production-source-seeds/.gitignore",
+      "bytes": 32,
+      "sha256": "7ff862a91c4076d87e56a342039181df80e370020eb981bc450a3bb3fea9b4cb"
+    },
+    {
+      "path": "data/production-source-seeds/README.md",
+      "bytes": 7198,
+      "sha256": "cff6e45916cc94ea2dc74e3b5f48471f02215eeae46400b3a69ba0df5520517f"
+    },
+    {
+      "path": "data/production-source-seeds/acquisition-report.json",
+      "bytes": 3729,
+      "sha256": "0de4c3ac04ac0bd6376551d8cedfaf5f7cc12a73962430e93a02475bbe76fc91"
+    },
+    {
+      "path": "data/production-source-seeds/asset-download-manifest.json",
+      "bytes": 25759,
+      "sha256": "6d5369c947fd4efb90f1e7163d581c80d35e7684281ffac31f6db19993b42a6f"
+    },
+    {
+      "path": "data/production-source-seeds/bundle-integrity.json",
+      "bytes": 1309,
+      "sha256": "507352aa8a8cba7b7fee7f6f2d2eee3f7ee70cf12ef46533ab01e402fb2f6237"
+    },
+    {
+      "path": "data/production-source-seeds/downloader-live-check.json",
+      "bytes": 764,
+      "sha256": "af9c496321f033fb517bdc013fbd1c7e1a2583e7a772a935722e2ec825ebcb21"
+    },
+    {
+      "path": "data/production-source-seeds/fetch_assets.py",
+      "bytes": 7803,
+      "sha256": "62eea921da85f1995c55bca4fe40fc7ef166d002935a91a25c0e7e7b4d7067a0"
+    },
+    {
+      "path": "data/production-source-seeds/reusable-assets.json",
+      "bytes": 32991,
+      "sha256": "718cdce6c5c42c7cddbd999223538e3f5d7d7cc1eb9c2374ea04c70559003869"
+    },
+    {
+      "path": "data/production-source-seeds/source-catalog.json",
+      "bytes": 26201,
+      "sha256": "1b84c53b09b5ea75b51d4d3aa96b272a6b14230fa18be710e3171327136a8f22"
+    },
+    {
+      "path": "data/production-source-seeds/task-seeds.json",
+      "bytes": 48729,
+      "sha256": "6978196843b914717d840b2ff22e82dc40951ce58a71d77051027f067ebf18c9"
+    },
+    {
+      "path": "data/production-source-seeds/test_fetch_assets.py",
+      "bytes": 2431,
+      "sha256": "d218e245fb83ecc33b5939c336d90213c5866da52a538df60a3f4ddbb5bc700c"
     },
     {
       "path": "data/v1/LICENSE.txt",
@@ -172,6 +227,81 @@
       "sha256": "101a046fd67a6e63f7ca290f7aca7bd491114b838b149622dfb59fa500281692"
     },
     {
+      "path": "data/v4-native-audio-candidates/README.md",
+      "bytes": 6700,
+      "sha256": "4eab95f36d9cfb95df1218e62b9a5c22f66754b7915b9ec29c850e301f508db7"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/implementation-report.json",
+      "bytes": 1078,
+      "sha256": "f8f950b82bc10d87944e34b9e5a3ce42095e62be6a48f8c51b5161c55fe697e2"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/independent-audio-checks.json",
+      "bytes": 2080,
+      "sha256": "0a198470f28ecf49c3703024e229136d17174c3f55abc29d2cc4ac9e3f5929a2"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/manifest.json",
+      "bytes": 35894,
+      "sha256": "06e117e624cc94cc41f42962bd4876b356ce9d032ff6aaf6a27e0ed8ad9cfdc5"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/packaging.json",
+      "bytes": 8032,
+      "sha256": "7f05bf071c1c397c59e47b90eaaf65ecd11fca4f4ce11782d886d93baa5bedb3"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/raw-evidence.tar.gz",
+      "bytes": 123694,
+      "sha256": "cc9bf85b5df954e902682e08ae411404ffbfce2cf514ef31fce6496bad850360"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/reviewed-public-responses.json",
+      "bytes": 10051,
+      "sha256": "9f8856c04d6d3909c6e3becb3db87d696c613bc7019cca819ded1440bf4c7111"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/studio-tokenization.json",
+      "bytes": 7523,
+      "sha256": "9716b2d3cd60b7d4b6a2dc84d9daebf03902832544612d488b821368e84cfce6"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/tooling/admit_native_audio.py",
+      "bytes": 16809,
+      "sha256": "62722e5f9bf8c93cd7ec08cd95c5d612befe6138538dfb8ef0cc2f34eaeff364"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/tooling/check_audio.py",
+      "bytes": 2369,
+      "sha256": "8a1d01c1dc73939447db8ecf4710ebe08f88125a5f5b9d09af61c2be41d9cd88"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/tooling/final_target_loss.py",
+      "bytes": 831,
+      "sha256": "80076be5bdae50ca3a71d6f0caf268219de957d59907bfc9b48fe43400784d2e"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/tooling/test_admission.py",
+      "bytes": 5406,
+      "sha256": "37482c5d2280827c4c32428931fe65e805b788dd5364e87048bd4bb1c99f1266"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/tooling/verification_helpers.py",
+      "bytes": 18547,
+      "sha256": "af51a2962117b8d3a4dcacbad05227ac816b971f4c2f3aa04f459988d07c654e"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/tooling/verify_tokenization.py",
+      "bytes": 5452,
+      "sha256": "e9a878889123b09c564180e578cfbb8ff621ba8c43ee275850934d99e9153628"
+    },
+    {
+      "path": "data/v4-native-audio-candidates/train.jsonl",
+      "bytes": 214144,
+      "sha256": "7c7ddd112403806b82822c116d7d0b1c771436748ca983305f2588220737aac8"
+    },
+    {
       "path": "docs/research-collection.md",
       "bytes": 10636,
       "sha256": "bfe74143e17b84366e09e35d08cd13f5490285a47d890a9a6c948ff2cac22d46"
@@ -247,6 +377,11 @@
       "sha256": "471dcb7495f971da1d65fdf78cae86d603b8f5996364741bb6f50cfd80f32410"
     },
     {
+      "path": "provenance/production-collection.json",
+      "bytes": 2931,
+      "sha256": "413ecad946ca0f72eb32215542b1ef24c9c203dbd2061ebeb6bfebe55487bc9f"
+    },
+    {
       "path": "provenance/research-overlap-audit.json",
       "bytes": 2599,
       "sha256": "dbef0062eab8fa63d828a3869d32d6b8e595c83f42a106b3164a3bf86535f250"
@@ -300,6 +435,11 @@
       "path": "provenance/verification.json",
       "bytes": 4255,
       "sha256": "ce46a80ddf37352a0999ade82c7836f6ea168e87e79acd3677e2462f58256e93"
+    },
+    {
+      "path": "provenance/xlam-access-assessment.json",
+      "bytes": 4290,
+      "sha256": "66be5acfc716bd9454b0b7222dc4c465a37e4647dcb39600c32883ac594b8ce1"
     },
     {
       "path": "scripts/check_tokenization.py",
@@ -378,7 +518,9 @@
     "data/v2-sol-ultra-pilot/collections/",
     "data/v3-research-guided/raw/",
     "data/v3-research-guided/collections/",
-    "data/v3-research-guided/reference_manifest.json"
+    "data/v3-research-guided/reference_manifest.json",
+    "data/production-source-seeds/audio-cache/",
+    "data/v4-native-audio-candidates/raw/"
   ],
   "private_heldout_task_inputs_included": false,
   "privacy_scan": "passed",
@@ -388,5 +530,27 @@
   "raw_sources_unchanged": true,
   "sol_tokenizer_records_passed": 20,
   "trained_model_competitiveness_established": false,
-  "research_tokenizer_records_passed": 40
+  "research_tokenizer_records_passed": 40,
+  "staged_production_collection": {
+    "source_catalog_recordings": 9,
+    "source_groups": 3,
+    "authored_scenarios": 30,
+    "native_file_goals": 3,
+    "authored_user_turns": 4,
+    "reviewed_native_candidates": 7,
+    "native_tokenizer_records_passed": 7,
+    "full_token_range": [
+      8330,
+      9846
+    ],
+    "target_token_range": [
+      80,
+      313
+    ],
+    "current_trainer_ready": false,
+    "future_loss_contract": "strict_final_target_excluding_padding",
+    "real_daw_edit_or_audio_quality_verified": false,
+    "xlam_rows_imported": 0
+  },
+  "production_collection_regressions_passed": 13
 }
