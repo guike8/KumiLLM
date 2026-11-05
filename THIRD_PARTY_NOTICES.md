@@ -45,7 +45,7 @@ The full Apache License, Version 2.0 is preserved in [licenses/QWEN-VLLM-APACHE-
 - Reference: <https://huggingface.co/mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit>.
 - Pinned revision: `6e302ea604ad9ab206367e2c501d1571023e7b6d`.
 
-Model weights and tokenizer assets are not bundled. Users obtain them separately under their applicable terms. The v1 demonstrations use a scripted teacher. The v2 pilot uses GPT-6.1 Sol with Ultra reasoning through a Codex agent file queue. Neither corpus contains outputs sampled from the referenced Qwen model. The v2 provenance describes that outer transport and its limitations.
+Model weights and tokenizer assets are not bundled. Users obtain them separately under their applicable terms. The v1 demonstrations use a scripted teacher. The v2 and v3 corpora use GPT-6.1 Sol with Ultra reasoning through a Codex agent file queue. Neither corpus contains outputs sampled from the referenced Qwen model. The v2 provenance describes that outer transport and its limitations.
 
 ## Distribution scope
 
@@ -54,3 +54,7 @@ This release contains synthetic Kumi execution data, collection and verification
 Ableton Live is a trademark of Ableton AG. KumiLLM is not affiliated with, endorsed by, or sponsored by Ableton AG. Upstream projects retain their names and trademarks.
 
 Exact license-source URLs and file hashes are recorded in [licenses/SOURCES.json](licenses/SOURCES.json).
+
+## Reference collection
+
+The optional collect_references.py driver uses a separately installed Evidence AI Scraper. Scraper implementation files and third-party source article bodies are not bundled. Public reference metadata contains original URLs, hashes, titles and extraction statistics; private snapshots remain reference evidence. The repository MIT license does not replace the terms of linked websites or separately installed dependencies. The collected documentation is not copied into supervised targets.

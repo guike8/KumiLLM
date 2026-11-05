@@ -1,12 +1,14 @@
 import copy
+from contextlib import redirect_stdout
 import hashlib
+from io import StringIO
 import json
 from pathlib import Path
 import tempfile
 import unittest
 from unittest import mock
 
-from normalize_sol_episodes import CORPUS_VERSION, TEACHER_PROVENANCE, Rejected, collect, default_validator_path, load_validator, normalize_episode
+from normalize_sol_episodes import CORPUS_VERSION, TEACHER_PROVENANCE, Rejected, collect, default_validator_path, load_reference_manifest, load_validator, main, normalize_episode
 
 
 VALIDATOR = default_validator_path()
@@ -37,7 +39,299 @@ def episode(number=1, split="train", family=None):
                        "response": [{"type": "text-delta", "id": "answer", "delta": "Observed " + str(number) + "."}, finish("stop")]}]}
 
 
+def reference_document():
+    return {"format_version": 1, "sources": [
+        {"id": "lom_song", "url": "https://docs.cycling74.com/apiref/lom/song/", "source_hash": "a" * 64, "status": "success"},
+        {"id": "lom_track", "url": "https://docs.cycling74.com/apiref/lom/track/", "source_hash": "B" * 64, "status": "success"},
+    ]}
+
+
+def referenced_episode(manifest_path, number=1):
+    raw = episode(number)
+    raw.update(reference_manifest_sha256=hashlib.sha256(Path(manifest_path).read_bytes()).hexdigest(),
+               reference_source_ids=["lom_song", "lom_track"])
+    return raw
+
+
 class NormalizationTests(unittest.TestCase):
+    def write_reference_manifest(self, directory, document=None):
+        path = Path(directory) / "reference-manifest.json"
+        path.write_text(json.dumps(reference_document() if document is None else document, indent=2))
+        return path
+
+    def test_tool_only_targets_filter_final_prose_without_changing_raw(self):
+        raw = episode()
+        original = copy.deepcopy(raw)
+        records = normalize_episode(raw, VALIDATE_RECORD, tool_actions_only=True)
+        self.assertEqual(raw, original)
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]['metadata']['call_index'], 0)
+        self.assertEqual(records[0]['metadata']['target_policy'], 'verified_tool_calls_only')
+        self.assertTrue(records[0]['messages'][-1]['tool_calls'])
+        self.assertEqual(records[0]['messages'][-1]['content'], '')
+        default = normalize_episode(raw, VALIDATE_RECORD)
+        self.assertEqual(len(default), 2)
+        self.assertNotIn('target_policy', default[0]['metadata'])
+
+    def test_tool_only_collection_reports_policy_and_filtered_record_counts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            raw = episode()
+            source, output, manifest = self.collect_sources(directory, [raw], tool_actions_only=True)
+            self.assertEqual(manifest['accepted_episodes'], 1)
+            self.assertEqual(manifest['records_by_split'], {'train':1, 'valid':0, 'test':0})
+            self.assertEqual(manifest['episodes'][0]['accepted_records'], 1)
+            self.assertEqual(manifest['target_policy'], 'verified_tool_calls_only')
+            self.assertEqual(json.loads((source/'0.json').read_text()), raw)
+            target = json.loads((output/'train.jsonl').read_text())
+            self.assertEqual(target['metadata']['target_policy'], manifest['target_policy'])
+            self.assertTrue(target['messages'][-1]['tool_calls'])
+
+    def test_tool_only_filter_cannot_hide_failures_in_the_full_episode(self):
+        cases = [
+            (lambda r:r['calls'][1]['request']['prompt'][-1]['content'][0].update(
+                output={'type':'json','value':{'ok':False,'error':'failed'}}), 'tool_result_reports_failure'),
+            (lambda r:r['calls'][1]['response'].insert(0, {'type':'error','error':{'message':'failed final'}}),
+             'error_or_unsupported_stream_part:error'),
+            (lambda r:r['calls'][1].update(finished=False), 'unfinished_call'),
+            (lambda r:r['calls'][1]['response'][-1]['finishReason'].update(unified='length'), 'incomplete_or_error_finish'),
+            (lambda r:r.update(calls=r['calls'][:1]), 'missing_subsequent_successful_tool_result'),
+            (lambda r:r['verification']['checks'].update(unchanged=False), 'verification_checks_not_all_true'),
+        ]
+        for modify, reason in cases:
+            with self.subTest(reason=reason), tempfile.TemporaryDirectory() as directory:
+                raw = episode()
+                modify(raw)
+                _, output, manifest = self.collect_sources(directory, [raw], tool_actions_only=True)
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['quarantined_episodes'], 1)
+                self.assertEqual(manifest['episodes'][0]['reasons'], [reason])
+                self.assertEqual((output/'train.jsonl').read_text(), '')
+
+    def test_tool_only_mode_quarantines_accompanying_prose_instead_of_rewriting(self):
+        for text in ('I have verified this action.', ' '):
+            with self.subTest(text=text), tempfile.TemporaryDirectory() as directory:
+                raw = episode()
+                raw['calls'][0]['response'].insert(0, {'type':'text-delta','id':'explanation','delta':text})
+                original = copy.deepcopy(raw)
+                self.assertEqual(normalize_episode(raw, VALIDATE_RECORD)[0]['messages'][-1]['content'], text)
+                source, output, manifest = self.collect_sources(directory, [raw], tool_actions_only=True)
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['episodes'][0]['reasons'], ['tool_action_target_contains_public_text'])
+                self.assertEqual((output/'train.jsonl').read_text(), '')
+                self.assertEqual(raw, original)
+                self.assertEqual(json.loads((source/'0.json').read_text()), original)
+
+    def test_tool_only_mode_quarantines_episodes_without_tool_targets(self):
+        raw = episode()
+        raw['calls'] = [raw['calls'][0]]
+        raw['calls'][0]['response'] = [{'type':'text-delta','id':'answer','delta':'No changes needed.'}, finish('stop')]
+        self.assertEqual(len(normalize_episode(raw, VALIDATE_RECORD)), 1)
+        with tempfile.TemporaryDirectory() as directory:
+            _, output, manifest = self.collect_sources(directory, [raw], tool_actions_only=True)
+            self.assertEqual(manifest['accepted_episodes'], 0)
+            self.assertEqual(manifest['episodes'][0]['reasons'], ['episode_has_no_tool_action_targets'])
+            self.assertEqual((output/'train.jsonl').read_text(), '')
+
+    def test_tool_only_mode_keeps_prior_prose_as_prompt_context_not_target(self):
+        raw = episode()
+        prose = {'role':'assistant','content':[{'type':'text','text':'Observed 1.'}]}
+        followup = {'role':'user','content':[{'type':'text','text':'Inspect the same item again.'}]}
+        prefix = copy.deepcopy(raw['calls'][1]['request']['prompt']) + [prose, followup]
+        raw['calls'].append({'finished':True,
+            'request':{'prompt':prefix,'tools':copy.deepcopy(raw['calls'][0]['request']['tools'])},
+            'response':[{'type':'tool-call','toolCallId':'c2','toolName':'inspect_value','input':'{"level":-3}'},finish('tool-calls')]})
+        historical = copy.deepcopy(prefix) + [
+            {'role':'assistant','content':[{'type':'tool-call','toolCallId':'c2','toolName':'inspect_value','input':{'level':-3}}]},
+            {'role':'tool','content':[{'type':'tool-result','toolCallId':'c2','toolName':'inspect_value',
+                                    'output':{'type':'json','value':{'value':1}}}]}]
+        raw['calls'].append({'finished':True,
+            'request':{'prompt':historical,'tools':copy.deepcopy(raw['calls'][0]['request']['tools'])},
+            'response':[{'type':'text-delta','id':'answer2','delta':'Observed again.'},finish('stop')]})
+        original = copy.deepcopy(raw)
+        records = normalize_episode(raw, VALIDATE_RECORD, tool_actions_only=True)
+        self.assertEqual(raw, original)
+        self.assertEqual([r['metadata']['call_index'] for r in records], [0,2])
+        self.assertIn({'role':'assistant','content':'Observed 1.'}, records[1]['messages'][:-1])
+        self.assertTrue(all(record['messages'][-1].get('tool_calls') for record in records))
+        self.assertTrue(all(record['messages'][-1]['content']=='' for record in records))
+
+    def test_valid_references_preserve_raw_and_publish_only_selected_provenance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            document = reference_document()
+            document['local_snapshot'] = '/private/local/snapshot'
+            document['sources'][0].update(text='ARTICLE TEXT MUST STAY PRIVATE', snapshot_path='/private/local/page')
+            document['sources'].append({'id': 'not_used', 'url': '/private/failed', 'status': 'failed', 'source_hash': None})
+            reference = self.write_reference_manifest(directory, document)
+            raw = referenced_episode(reference)
+            original = copy.deepcopy(raw)
+            source, output, manifest = self.collect_sources(directory, [raw], corpus_version='v3-research-guided', reference_manifest=reference)
+            self.assertEqual(json.loads((source/'0.json').read_text()), original)
+            records = [json.loads(line) for line in (output/'train.jsonl').read_text().splitlines()]
+            self.assertEqual(manifest['accepted_episodes'], 1)
+            self.assertEqual(manifest['corpus_version'], 'v3-research-guided')
+            self.assertEqual(manifest['reference_manifest_sha256'], original['reference_manifest_sha256'])
+            self.assertEqual(manifest['reference_sources'], {
+                item['id']: {key:item[key] for key in ('url','source_hash','status')} for item in reference_document()['sources']})
+            for record in records:
+                self.assertEqual(record['metadata']['reference_manifest_sha256'], original['reference_manifest_sha256'])
+                self.assertEqual(record['metadata']['reference_source_ids'], original['reference_source_ids'])
+                self.assertEqual(record['metadata']['corpus_version'], 'v3-research-guided')
+            public = json.dumps({'reference_sources':manifest['reference_sources']})
+            self.assertNotIn('ARTICLE TEXT', public)
+            self.assertNotIn('/private/', public)
+            self.assertNotIn('snapshot', public)
+
+    def test_reference_hash_matches_exact_bytes_not_reserialized_json(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.write_reference_manifest(directory)
+            raw = referenced_episode(path)
+            path.write_text(json.dumps(reference_document(), separators=(',', ':')))
+            _, output, manifest = self.collect_sources(directory, [raw], reference_manifest=path)
+            self.assertEqual(manifest['accepted_episodes'], 0)
+            self.assertEqual(manifest['episodes'][0]['reasons'], ['reference_manifest_sha256_mismatch'])
+            self.assertEqual((output/'train.jsonl').read_text(), '')
+
+    def test_unchecked_reference_fields_without_manifest_are_quarantined(self):
+        for field, value in [('reference_manifest_sha256', 'a'*64), ('reference_source_ids', []), ('reference_source_ids', None)]:
+            with self.subTest(field=field, value=value), tempfile.TemporaryDirectory() as directory:
+                raw = episode()
+                raw[field] = value
+                _, _, manifest = self.collect_sources(directory, [raw])
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['episodes'][0]['reasons'], ['reference_manifest_not_provided'])
+                self.assertNotIn('reference_sources', manifest)
+
+    def test_provided_manifest_requires_nonempty_unique_known_episode_references(self):
+        cases = [(lambda r:r.pop('reference_manifest_sha256'), 'missing_or_invalid_reference_manifest_sha256'),
+                 (lambda r:r.update(reference_manifest_sha256='not-a-hash'), 'missing_or_invalid_reference_manifest_sha256'),
+                 (lambda r:r.pop('reference_source_ids'), 'reference_source_ids_missing_or_empty'),
+                 (lambda r:r.update(reference_source_ids=[]), 'reference_source_ids_missing_or_empty'),
+                 (lambda r:r.update(reference_source_ids='lom_song'), 'reference_source_ids_missing_or_empty'),
+                 (lambda r:r.update(reference_source_ids=['lom_song','lom_song']), 'duplicate_episode_reference_source_id'),
+                 (lambda r:r.update(reference_source_ids=['unknown_id']), 'unknown_reference_source_id'),
+                 (lambda r:r.update(reference_source_ids=['../private']), 'invalid_episode_reference_source_id'),
+                 (lambda r:r.update(reference_source_ids=[{}]), 'invalid_episode_reference_source_id')]
+        for modify, reason in cases:
+            with self.subTest(reason=reason), tempfile.TemporaryDirectory() as directory:
+                path = self.write_reference_manifest(directory)
+                raw = referenced_episode(path)
+                modify(raw)
+                _, _, manifest = self.collect_sources(directory, [raw], reference_manifest=path)
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['episodes'][0]['reasons'], [reason])
+                self.assertEqual(manifest['reference_sources'], {})
+
+    def test_duplicate_or_invalid_manifest_source_ids_quarantine_all_episodes(self):
+        for source_id, reason in [('lom_song', 'duplicate_reference_source_id'), ('bad/path', 'invalid_reference_source_id')]:
+            with self.subTest(source_id=source_id), tempfile.TemporaryDirectory() as directory:
+                document = reference_document()
+                document['sources'][1]['id'] = source_id
+                path = self.write_reference_manifest(directory, document)
+                _, _, manifest = self.collect_sources(directory, [referenced_episode(path,1), referenced_episode(path,2)], reference_manifest=path)
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['quarantined_episodes'], 2)
+                self.assertTrue(all(entry['reasons']==[reason] for entry in manifest['episodes']))
+                self.assertEqual(manifest['reference_manifest_error'], reason)
+                self.assertEqual(manifest['reference_sources'], {})
+
+    def test_cited_source_must_be_successful_https_and_hash_identified(self):
+        cases = [('status','partial','reference_source_not_successful'),
+                 ('url','http://docs.cycling74.com/apiref/lom/song/','reference_source_url_must_be_https'),
+                 ('url','https:///missing-host','reference_source_url_must_be_https'),
+                 ('url','https://user:secret@example.org/','reference_source_url_must_be_https'),
+                 ('source_hash','x'*64,'invalid_reference_source_hash'),
+                 ('source_hash',None,'invalid_reference_source_hash')]
+        for field, value, reason in cases:
+            with self.subTest(field=field,value=value), tempfile.TemporaryDirectory() as directory:
+                document = reference_document()
+                document['sources'][0][field] = value
+                path = self.write_reference_manifest(directory, document)
+                _, _, manifest = self.collect_sources(directory, [referenced_episode(path)], reference_manifest=path)
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['episodes'][0]['reasons'], [reason])
+
+    def test_missing_or_malformed_reference_manifest_quarantines_without_path_disclosure(self):
+        for contents, reason in [(None,'reference_manifest_missing_or_not_file'),
+                                 ('not JSON','invalid_reference_manifest_json'),
+                                 ('{"format_version":1,"sources":[],"sources":[]}', 'invalid_reference_manifest_json'),
+                                 ('{"format_version":true,"sources":[]}', 'unsupported_reference_manifest_format')]:
+            with self.subTest(reason=reason), tempfile.TemporaryDirectory() as directory:
+                path = Path(directory)/'private-reference.json'
+                if contents is not None:
+                    path.write_text(contents)
+                raw = episode()
+                raw.update(reference_manifest_sha256='a'*64, reference_source_ids=['lom_song'])
+                _, _, manifest = self.collect_sources(directory, [raw], reference_manifest=path)
+                self.assertEqual(manifest['accepted_episodes'], 0)
+                self.assertEqual(manifest['episodes'][0]['reasons'], [reason])
+                self.assertNotIn(directory, json.dumps({key:manifest[key] for key in ('reference_sources','reference_manifest_error')}))
+
+    def test_reference_manifest_symlink_is_not_read_or_hashed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = self.write_reference_manifest(directory)
+            raw = referenced_episode(target)
+            link = Path(directory)/'linked-reference.json'
+            link.symlink_to(target)
+            original_read = Path.read_bytes
+            def guarded_read(path):
+                if path in (link,target):
+                    raise AssertionError('Reference symlink targets must never be opened')
+                return original_read(path)
+            with mock.patch.object(Path,'read_bytes',guarded_read):
+                _, _, manifest = self.collect_sources(directory, [raw], reference_manifest=link)
+            self.assertEqual(manifest['episodes'][0]['reasons'], ['reference_manifest_symlink_not_allowed'])
+            self.assertIsNone(manifest['reference_manifest_sha256'])
+
+    def test_reference_manifest_cannot_be_deleted_by_output_overwrite(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source=Path(directory)/'raw'
+            source.mkdir()
+            (source/'episode.json').write_text(json.dumps(episode()))
+            output=Path(directory)/'output'
+            output.mkdir()
+            reference=self.write_reference_manifest(output)
+            before=reference.read_bytes()
+            with self.assertRaisesRegex(Rejected,'reference_manifest_must_not_be_inside_output_directory'):
+                collect(source,output,VALIDATOR,overwrite=True,reference_manifest=reference)
+            self.assertEqual(reference.read_bytes(),before)
+
+    def test_valid_references_do_not_admit_failed_tool_actions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=self.write_reference_manifest(directory)
+            raw=referenced_episode(path)
+            raw['calls'][1]['request']['prompt'][-1]['content'][0]['output']={'type':'json','value':{'ok':False,'error':'failed'}}
+            _,output,manifest=self.collect_sources(directory,[raw],reference_manifest=path)
+            self.assertEqual(manifest['episodes'][0]['reasons'],['tool_result_reports_failure'])
+            self.assertEqual(manifest['accepted_episodes'],0)
+            self.assertEqual((output/'train.jsonl').read_text(),'')
+
+    def test_corpus_version_accepts_safe_labels_and_rejects_paths(self):
+        for label in ('v3-research-guided','v3.1_sources','V3'):
+            self.assertTrue(all(r['metadata']['corpus_version']==label for r in normalize_episode(episode(),VALIDATE_RECORD,corpus_version=label)))
+        for label in ('','../v3','/private/v3','v3/subdir','v3\\subdir','.','..','v3 with spaces','épisode','x'*97,None):
+            with self.subTest(label=label), self.assertRaisesRegex(Rejected,'invalid_corpus_version'):
+                normalize_episode(episode(),VALIDATE_RECORD,corpus_version=label)
+
+    def test_cli_passes_reference_manifest_corpus_version_and_target_policy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=self.write_reference_manifest(directory)
+            source=Path(directory)/'raw'
+            source.mkdir()
+            (source/'one.json').write_text(json.dumps(referenced_episode(path)))
+            output=Path(directory)/'output'
+            argv=['normalize_sol_episodes.py','--raw-dir',str(source),'--output-dir',str(output),
+                  '--corpus-version','v3-cli','--reference-manifest',str(path),'--tool-actions-only']
+            stdout=StringIO()
+            with mock.patch('sys.argv',argv),redirect_stdout(stdout):
+                self.assertEqual(main(),0)
+            self.assertTrue(json.loads(stdout.getvalue())['ok'])
+            manifest=json.loads((output/'manifest.json').read_text())
+            self.assertEqual(manifest['corpus_version'],'v3-cli')
+            self.assertEqual(manifest['accepted_episodes'],1)
+            self.assertEqual(manifest['records_by_split']['train'],1)
+            self.assertEqual(manifest['target_policy'],'verified_tool_calls_only')
+            self.assertEqual(manifest['reference_manifest_sha256'],hashlib.sha256(path.read_bytes()).hexdigest())
+
     def test_exact_teacher_provenance_is_preserved_without_relabeling(self):
         raw = episode()
         before = copy.deepcopy(raw)
@@ -200,13 +494,13 @@ class NormalizationTests(unittest.TestCase):
         with self.assertRaisesRegex(Rejected, "streamed_tool_input_mismatch"):
             normalize_episode(raw, VALIDATE_RECORD)
 
-    def collect_sources(self, directory, episodes):
+    def collect_sources(self, directory, episodes, **options):
         source = Path(directory) / "raw"
         source.mkdir()
         for index, raw in enumerate(episodes):
             (source / (str(index) + ".json")).write_text(json.dumps(raw))
         output = Path(directory) / "dataset"
-        return source, output, collect(source, output, VALIDATOR)
+        return source, output, collect(source, output, VALIDATOR, **options)
 
     def test_group_split_leakage_quarantines_whole_episodes(self):
         with tempfile.TemporaryDirectory() as directory:

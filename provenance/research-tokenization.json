@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "max_seq_length": 32768,
+  "splits": {
+    "train": {
+      "records": 26,
+      "checked": 26,
+      "tokens": {
+        "full": {
+          "min": 22316,
+          "max": 31293
+        },
+        "prompt": {
+          "min": 22234,
+          "max": 31222
+        },
+        "target": {
+          "min": 35,
+          "max": 201
+        }
+      }
+    },
+    "valid": {
+      "records": 14,
+      "checked": 14,
+      "tokens": {
+        "full": {
+          "min": 22428,
+          "max": 31326
+        },
+        "prompt": {
+          "min": 22346,
+          "max": 31255
+        },
+        "target": {
+          "min": 60,
+          "max": 248
+        }
+      }
+    }
+  },
+  "error_count": 0,
+  "errors": [],
+  "format_version": 1,
+  "corpus_version": "v3-research-guided",
+  "provided_splits": [
+    "train",
+    "valid"
+  ],
+  "intentionally_empty_splits": [
+    "test"
+  ],
+  "split_sha256": {
+    "train": "ec726e98bb621f3c76fbcde6fe3f6e60c1ba556974493e941b2c2a87d05481eb",
+    "valid": "101a046fd67a6e63f7ca290f7aca7bd491114b838b149622dfb59fa500281692"
+  },
+  "reference_manifest_sha256": "9a8f6ca34e23186d8b551c924a3ae6c9411dc10cae9c7b7280f8eed06c6428b0",
+  "model_repository": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+  "model_revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d",
+  "local_files_only": true,
+  "trust_remote_code": false,
+  "training_started_on_this_corpus": false,
+  "verification": "Exact rendered prompt-token prefix, positive final-target token count and no context truncation.",
+  "validation_coverage_present": true,
+  "final_test_coverage_present": false
+}

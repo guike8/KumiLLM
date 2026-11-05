@@ -2,9 +2,9 @@
   "format_version": 2,
   "repository": "guike8/KumiLLM",
   "scope": "executed_synthetic_kumi",
-  "accepted_episodes": 100,
-  "quarantined_episodes": 2,
-  "assistant_target_records": 452,
+  "accepted_episodes": 112,
+  "quarantined_episodes": 3,
+  "assistant_target_records": 492,
   "corpora": {
     "v1": {
       "accepted_episodes": 96,
@@ -20,6 +20,24 @@
       "teacher": "gpt-6.1-sol-ultra",
       "teacher_transport": "codex_agent_file_queue",
       "train_only": true
+    },
+    "v3-research-guided": {
+      "attempted_episodes": 13,
+      "accepted_episodes": 12,
+      "quarantined_episodes": 1,
+      "assistant_target_records": 40,
+      "records_by_split": {
+        "train": 26,
+        "valid": 14,
+        "test": 0
+      },
+      "teacher": "gpt-6.1-sol-ultra",
+      "teacher_transport": "codex_agent_file_queue",
+      "target_policy": "verified_tool_calls_only",
+      "official_reference_sources": 12,
+      "reference_manifest_sha256": "9a8f6ca34e23186d8b551c924a3ae6c9411dc10cae9c7b7280f8eed06c6428b0",
+      "training_layouts": 2,
+      "validation_layouts": 1
     }
   },
   "public_artifacts": [
@@ -30,8 +48,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 312,
-      "sha256": "9f3a14ad9d1005eaa85542d427d9947427cf68964c3e46efddfabdc461c43ccd"
+      "bytes": 468,
+      "sha256": "7952996984c0f560b40ca96bb81f5b467dc7de5828fa381a6e6bb4beb0e8d646"
     },
     {
       "path": "DATASET_CARD.md",
@@ -45,13 +63,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6808,
-      "sha256": "04a2d2117b293d0397d0d5bcccf04f6c10ae1a3378d48118330cb6e009165035"
+      "bytes": 7883,
+      "sha256": "440090e02513fe7926ddcb63d93f5f844be9ff75182a631be56fdb9f57cafba1"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 4511,
-      "sha256": "bc3f5133f7ad7582266d4e6b1556717d5cafd7fe0817652cf38f147062ffe58a"
+      "bytes": 5035,
+      "sha256": "45873119783e777faf9f62354c9b0071e74ab9b77bee15356cd687f343699a95"
     },
     {
       "path": "data/v1/LICENSE.txt",
@@ -119,6 +137,46 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/v3-research-guided/LICENSE.txt",
+      "bytes": 1217,
+      "sha256": "f6a4bf820a492313c9d4e100e16bd474cd5cf06c0fba27c1035238acb4af75cb"
+    },
+    {
+      "path": "data/v3-research-guided/README.md",
+      "bytes": 5211,
+      "sha256": "e879e782ba7c7ddffea8a9e1f116d16d041ee5c29d14d08a58cc15a3fc147e84"
+    },
+    {
+      "path": "data/v3-research-guided/manifest.json",
+      "bytes": 13899,
+      "sha256": "0059296b5449ab06b9a1e9b58ff8ad2a897ea6ae99c34b72fd9a9e18958b7f5b"
+    },
+    {
+      "path": "data/v3-research-guided/raw-evidence.tar.gz",
+      "bytes": 1925377,
+      "sha256": "bf4ae4232bf25caa97eb0576af2ee469a001236e69577d9e0fe23fbdaf87f8ee"
+    },
+    {
+      "path": "data/v3-research-guided/test.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/v3-research-guided/train.jsonl",
+      "bytes": 2152086,
+      "sha256": "ec726e98bb621f3c76fbcde6fe3f6e60c1ba556974493e941b2c2a87d05481eb"
+    },
+    {
+      "path": "data/v3-research-guided/valid.jsonl",
+      "bytes": 1202212,
+      "sha256": "101a046fd67a6e63f7ca290f7aca7bd491114b838b149622dfb59fa500281692"
+    },
+    {
+      "path": "docs/research-collection.md",
+      "bytes": 10636,
+      "sha256": "bfe74143e17b84366e09e35d08cd13f5490285a47d890a9a6c948ff2cac22d46"
+    },
+    {
       "path": "docs/sol-collector-protocol.md",
       "bytes": 8488,
       "sha256": "de51f49a279ae1e85ed630476dc7511912147816ed7168bfbd20a04fd4400903"
@@ -159,6 +217,11 @@
       "sha256": "a0431184c410c5f5d0b8b8f674e8197b10c66e3a6b68aeef77dd99b11fd045a0"
     },
     {
+      "path": "patches/kumi-research-collection.patch",
+      "bytes": 164945,
+      "sha256": "27670d38f80efe6517579d3359a2c85e3a9f9c8f5c11570a754f783247f695cc"
+    },
+    {
       "path": "patches/kumi-sol-ultra-collection.patch",
       "bytes": 103413,
       "sha256": "e1b606a7fda2c5939a91b91a7b11ed9ab6f1547f91bf6dd739ef462d317ea8e2"
@@ -182,6 +245,31 @@
       "path": "provenance/dataset-source.json",
       "bytes": 40237,
       "sha256": "471dcb7495f971da1d65fdf78cae86d603b8f5996364741bb6f50cfd80f32410"
+    },
+    {
+      "path": "provenance/research-overlap-audit.json",
+      "bytes": 2599,
+      "sha256": "dbef0062eab8fa63d828a3869d32d6b8e595c83f42a106b3164a3bf86535f250"
+    },
+    {
+      "path": "provenance/research-recollection-audit.json",
+      "bytes": 1105,
+      "sha256": "4d0a7c48f89744df16d21aed3587d98a850d25e2f92ce010c1297ede99965bfb"
+    },
+    {
+      "path": "provenance/research-source-manifest.json",
+      "bytes": 26730,
+      "sha256": "9a8f6ca34e23186d8b551c924a3ae6c9411dc10cae9c7b7280f8eed06c6428b0"
+    },
+    {
+      "path": "provenance/research-tokenization.json",
+      "bytes": 1619,
+      "sha256": "0c30a7dcb224024d845e62a1dfed9642deafa1fe9bc4d6bee226e1820a4a98e6"
+    },
+    {
+      "path": "provenance/research-verification.json",
+      "bytes": 6307,
+      "sha256": "a083d369b150c85dbdb8edafa60634767ec80f210a15cc5563fae0b32a35a935"
     },
     {
       "path": "provenance/sol-competition-plan.json",
@@ -219,14 +307,19 @@
       "sha256": "183f75c75a25bb1948697d7f50a4e9a4312943cc650b9daa90ed1bab90cda455"
     },
     {
+      "path": "scripts/collect_references.py",
+      "bytes": 6471,
+      "sha256": "e073596536243f6aaeda3bd9bce031806e82031a4744d5075b3a91b5679b461b"
+    },
+    {
       "path": "scripts/normalize_episodes.py",
       "bytes": 21741,
       "sha256": "b97da48c85a086f6a56f7a3ad6fe6f4e06c1e125f14006cd29fb4d350a8b973b"
     },
     {
       "path": "scripts/normalize_sol_episodes.py",
-      "bytes": 25061,
-      "sha256": "85211ab3a1a343c7da203f227b71895d7e2958121fae58ad31a8732389881d7e"
+      "bytes": 32800,
+      "sha256": "9acd92a9ea16315c279a981343e85dab2abd9dcd1b8458560953c7b08adf76e0"
     },
     {
       "path": "scripts/parser-fix/README.md",
@@ -265,8 +358,8 @@
     },
     {
       "path": "scripts/test_normalize_sol_episodes.py",
-      "bytes": 15869,
-      "sha256": "1b73118334dc40aa8919b282f5f7d62acd6545faa896ddbbc894579b4c1839bf"
+      "bytes": 36173,
+      "sha256": "d36e392cd4a9e153fcde420cf4b5501c5e3a849c823fcf3eff66070ac6000f6f"
     },
     {
       "path": "scripts/test_validate_dataset.py",
@@ -281,14 +374,19 @@
   ],
   "excluded_local_paths": [
     "data/v1/raw/",
-    "data/v2-sol-ultra-pilot/raw/"
+    "data/v2-sol-ultra-pilot/raw/",
+    "data/v2-sol-ultra-pilot/collections/",
+    "data/v3-research-guided/raw/",
+    "data/v3-research-guided/collections/",
+    "data/v3-research-guided/reference_manifest.json"
   ],
   "private_heldout_task_inputs_included": false,
   "privacy_scan": "passed",
-  "public_tools_regressions_passed": 69,
-  "corrected_native_collector_regressions_passed": 14,
+  "public_tools_regressions_passed": 87,
+  "corrected_native_collector_regressions_passed": 28,
   "dataset_hashes_identical_to_verified_studio_outputs": true,
   "raw_sources_unchanged": true,
   "sol_tokenizer_records_passed": 20,
-  "trained_model_competitiveness_established": false
+  "trained_model_competitiveness_established": false,
+  "research_tokenizer_records_passed": 40
 }

@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "audit_utc": "2026-11-05T22:35:37.973502+00:00",
+  "base_audit_sha256": "1ffa3c3bdf36db4eacb5c7032aed1c4dab878263a9c12a3174abf87efc9c670b",
+  "research_source_sha256": "2bbaa4c63889584ad7cdb514f1c1a43f4348efde16285840498831db43cb3cb8",
+  "collector_source_sha256": "7fd636bc8b4ed5d81e4a52a4eed2e2a1b4149043e90bc93c53a85818449f2d4c",
+  "prior_selection_sha256": "ed9c448bc39cec36bc310383282b21a5ed73b61c7585c449eff9ded50b5f3536",
+  "repeat_selection_sha256": "6d73c784b8fe096b3ae8a778dd530f3b147a1f91d9911f4143b5fa1fc066630a",
+  "counts": {
+    "series_only_transitions_reviewed": 1,
+    "selected_indices_reviewed": 1,
+    "additional_attempts_proposed": 1,
+    "new_task_compositions": 0,
+    "new_layouts": 0,
+    "new_split_groups": 0,
+    "changes_to_existing_collision_counts": 0,
+    "protected_task_inputs_read_for_addendum": 0,
+    "teacher_responses_read": 0,
+    "grading_results_read": 0,
+    "source_files_modified": 0
+  },
+  "constructor_invariance_confirmed": true,
+  "research_source_matches_base_audit": true,
+  "same_composition_layout_split_confirmed": true
+}

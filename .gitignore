@@ -30,3 +30,8 @@ cache/
 /data/v1/raw/
 
 /data/v2-sol-ultra-pilot/raw/
+
+/data/v2-sol-ultra-pilot/collections/
+/data/v3-research-guided/raw/
+/data/v3-research-guided/collections/
+/data/v3-research-guided/reference_manifest.json

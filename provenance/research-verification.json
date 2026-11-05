@@ -1,0 +1,142 @@
+{
+  "format_version": 1,
+  "scope": "executed_synthetic_kumi",
+  "corpus_version": "v3-research-guided",
+  "upstream_kumi_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+  "collector_patch": "patches/kumi-research-collection.patch",
+  "collector_patch_sha256": "27670d38f80efe6517579d3359a2c85e3a9f9c8f5c11570a754f783247f695cc",
+  "collector_binary_sha256": "ae2a03bffff827a17bb918a23b7778e98c7bf38e2cda174e43a753faeb759ba4",
+  "teacher": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "transport": "codex_agent_file_queue",
+    "configured_agents": 2,
+    "native_teacher_requests": 66,
+    "provider_api_request_count": null,
+    "provider_token_usage": null,
+    "provider_identity_independently_authenticated": false,
+    "private_reasoning_collected": false
+  },
+  "scraper": {
+    "tool": "Evidence AI Scraper",
+    "version": "0.2.0",
+    "execution_host": "mac_studio",
+    "successful_sources": 12,
+    "attempted_urls": 12,
+    "extracted_text_characters": 50115,
+    "inference_attempts": 0,
+    "reference_catalog": "research-source-manifest.json",
+    "reference_manifest_sha256": "9a8f6ca34e23186d8b551c924a3ae6c9411dc10cae9c7b7280f8eed06c6428b0",
+    "article_bodies_published": false,
+    "article_bodies_used_as_targets": false
+  },
+  "batches": [
+    {
+      "id": "a",
+      "series": "S04",
+      "start": 0,
+      "count": 6,
+      "native_teacher_requests": 30
+    },
+    {
+      "id": "b",
+      "series": "S04",
+      "start": 6,
+      "count": 6,
+      "native_teacher_requests": 32
+    },
+    {
+      "id": "recollection",
+      "series": "S05",
+      "start": 8,
+      "count": 1,
+      "native_teacher_requests": 4,
+      "purpose": "Fresh clean demonstration; original unsupported-read trace remains unchanged in quarantine."
+    }
+  ],
+  "admission": {
+    "attempted_episodes": 13,
+    "accepted_episodes": 12,
+    "quarantined_episodes": 1,
+    "accepted_episodes_by_split": {
+      "train": 8,
+      "valid": 4,
+      "test": 0
+    },
+    "records_by_split": {
+      "train": 26,
+      "valid": 14,
+      "test": 0
+    },
+    "target_policy": "verified_tool_calls_only",
+    "whole_episode_validation_before_target_filtering": true,
+    "public_text_on_tool_targets_forbidden": true,
+    "free_text_final_reports_supervised": false,
+    "historical_public_reports_retained_as_masked_context": true,
+    "prompt_loss_masking_required": true,
+    "quarantine": {
+      "kumi-sol-research-v1-S04R09": "Native Python read returned an unsupported error. Final project state passed, but strict whole-episode admission rejects failed native actions."
+    },
+    "raw_sources_unchanged": true,
+    "raw_sha256": {
+      "kumi-sol-research-v1-S04R01.json": "0aa0fbb5970117ee01affa7e5797da4000427185aea6a1d67ab923fecb8a81f3",
+      "kumi-sol-research-v1-S04R10.json": "1e7acd39706c6a36a212780097006351639796015f8afe61207a4744878fd324",
+      "kumi-sol-research-v1-S04R06.json": "b5dfe753a9f520cdbc03ca661eedb776e08212d91dc6924191aa79cc19c0a91d",
+      "kumi-sol-research-v1-S04R07.json": "31690ffaacb04a53b92d12ad49a387a5d6fc45a357f3e946e3cd062d48b78e7f",
+      "kumi-sol-research-v1-S04R11.json": "8d3a756d653635e97f4038029f1b52405476a76967027d2fc4ca979a9a4ead18",
+      "kumi-sol-research-v1-S04R04.json": "d995a649faa38812035f7275bf92db1ae4d84bcf5b76cbf1f277e992ba06df43",
+      "kumi-sol-research-v1-S04R12.json": "c601ca4a126d23d2835a29b4cd83c11c35fee422ab05e9658f398c7098994bf4",
+      "kumi-sol-research-v1-S04R08.json": "8c585acc0698feed004beea03ba60d114c62b00287c2f6e2d7f49a95e7289897",
+      "kumi-sol-research-v1-S05R09.json": "3134d7cb0f414e589e25469636ce950b87dd5d363a90f999d23638e5fe9818a1",
+      "kumi-sol-research-v1-S04R09.json": "3a87337cfc86c3d0c16fe66ecd1922bc7ecc50aea42be08c4bea8fc095974b4d",
+      "kumi-sol-research-v1-S04R05.json": "495c11039acb3e11bef8f5e8ffc169e57aa636ab6af81d6d4339a46c7b796475",
+      "kumi-sol-research-v1-S04R02.json": "dee8e1833340b116435bfd550cb442cea3b2dbc643b799f00d7472741cdfca43",
+      "kumi-sol-research-v1-S04R03.json": "0258c8278dc9b5eeff1b1e25815a356c480f1534ab1217625be318ba9352d45a"
+    },
+    "normalizer_sha256": "9acd92a9ea16315c279a981343e85dab2abd9dcd1b8458560953c7b08adf76e0",
+    "validator_sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+    "normalized_sha256": {
+      "train.jsonl": "ec726e98bb621f3c76fbcde6fe3f6e60c1ba556974493e941b2c2a87d05481eb",
+      "valid.jsonl": "101a046fd67a6e63f7ca290f7aca7bd491114b838b149622dfb59fa500281692",
+      "test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "independent_local_reproduction_identical_to_studio": true
+  },
+  "split_design": {
+    "task_families": 6,
+    "project_layouts": 3,
+    "train_layouts": [
+      0,
+      1
+    ],
+    "validation_layouts": [
+      2
+    ],
+    "shared_train_validation_layout_families": 0,
+    "validation_task_families": 4,
+    "no_test_data_generated": true
+  },
+  "verification": {
+    "public_python_regressions_passed": 87,
+    "native_collector_regressions_passed": 28,
+    "tokenizer_records_passed": 40,
+    "context_limit": 32768,
+    "tokenizer_report": "research-tokenization.json",
+    "overlap_audit": "research-overlap-audit.json",
+    "fresh_name_only_recollection_reviewed": true,
+    "recollection_addendum_sha256": "4d0a7c48f89744df16d21aed3587d98a850d25e2f92ce010c1297ede99965bfb",
+    "recollection_addendum": "research-recollection-audit.json"
+  },
+  "known_limits": [
+    "Synthetic bridge execution is distinct from real Live and audio-quality verification.",
+    "Typed parameter discovery exposed current display values, not a complete enum-label catalog; explicit requested labels were set through native fitting and verified by actual readback.",
+    "An original parameter attempt required focused followup after readback showed one requested value unchanged; the complete actual trace is preserved.",
+    "The source catalog supplies references, not source-article supervision.",
+    "Validation covers one held-out layout and four families; no competitive result or general reliability estimate is established."
+  ],
+  "v1_training_snapshot_changed": false,
+  "trained_on_this_corpus": false,
+  "real_live_verified": false,
+  "audio_quality_verified": false,
+  "competitive_result_established": false
+}

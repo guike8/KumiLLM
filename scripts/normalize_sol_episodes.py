@@ -15,9 +15,11 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import re
 import shutil
 import sys
 import tempfile
+from urllib.parse import urlsplit
 
 SPLITS = ("train", "valid", "test")
 SCOPE = "executed_synthetic_kumi"
@@ -33,6 +35,7 @@ TEACHER_PROVENANCE = {
     "teacher_transport": TEACHER_TRANSPORT,
 }
 PRIVATE_REASONING_FIELDS = frozenset(("analysis", "reasoning", "chain_of_thought", "private_reasoning", "thoughts"))
+REFERENCE_FIELDS = ("reference_manifest_sha256", "reference_source_ids")
 
 
 def default_validator_path():
@@ -79,6 +82,89 @@ def load_json(text):
 def identifier(value, label):
     require(isinstance(value, str) and bool(value.strip()), label + "_missing_or_invalid")
     return value
+
+
+def checked_corpus_version(value):
+    require(isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,95}", value) is not None,
+            "invalid_corpus_version")
+    return value
+
+
+def valid_source_id(value):
+    return isinstance(value, str) and re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]{0,127}", value) is not None
+
+
+def valid_sha256(value):
+    return isinstance(value, str) and re.fullmatch(r"[0-9A-Fa-f]{64}", value) is not None
+
+
+def https_source_url(value):
+    if not isinstance(value, str) or any(character.isspace() for character in value):
+        return False
+    try:
+        url = urlsplit(value)
+        return url.scheme == "https" and bool(url.hostname) and url.username is None and url.password is None
+    except ValueError:
+        return False
+
+
+def load_reference_manifest(path):
+    """Keep only source identities/provenance; a bad manifest quarantines its episodes.
+
+    The actual input bytes, rather than a reserialized document, define its hash.
+    Errors are fixed labels so private input paths or article text cannot enter
+    the output manifest through an exception message.
+    """
+    reference = {"sha256": None, "sources": {}, "error": None}
+    try:
+        path = Path(path)
+        require(not path.is_symlink(), "reference_manifest_symlink_not_allowed")
+        require(path.is_file(), "reference_manifest_missing_or_not_file")
+        raw = path.read_bytes()
+        reference["sha256"] = digest(raw)
+        try:
+            document = load_json(raw.decode("utf-8"))
+        except (ValueError, UnicodeError):
+            raise Rejected("invalid_reference_manifest_json") from None
+        require(isinstance(document, dict), "reference_manifest_must_be_object")
+        require(type(document.get("format_version")) is int and document["format_version"] == 1,
+                "unsupported_reference_manifest_format")
+        sources = document.get("sources")
+        require(isinstance(sources, list) and sources, "reference_manifest_sources_missing")
+        for source in sources:
+            require(isinstance(source, dict), "invalid_reference_source")
+            source_id = source.get("id")
+            require(valid_source_id(source_id), "invalid_reference_source_id")
+            require(source_id not in reference["sources"], "duplicate_reference_source_id")
+            reference["sources"][source_id] = {key: source.get(key) for key in ("url", "source_hash", "status")}
+    except Rejected as error:
+        reference["error"] = str(error)
+        reference["sources"] = {}
+    except OSError:
+        reference["error"] = "reference_manifest_unreadable"
+        reference["sources"] = {}
+    return reference
+
+
+def check_references(episode, reference):
+    if reference is None:
+        require(not any(key in episode for key in REFERENCE_FIELDS), "reference_manifest_not_provided")
+        return {}
+    require(reference["error"] is None, reference["error"])
+    declared_hash = episode.get("reference_manifest_sha256")
+    require(valid_sha256(declared_hash), "missing_or_invalid_reference_manifest_sha256")
+    require(declared_hash.lower() == reference["sha256"], "reference_manifest_sha256_mismatch")
+    source_ids = episode.get("reference_source_ids")
+    require(isinstance(source_ids, list) and source_ids, "reference_source_ids_missing_or_empty")
+    require(all(valid_source_id(source_id) for source_id in source_ids), "invalid_episode_reference_source_id")
+    require(len(set(source_ids)) == len(source_ids), "duplicate_episode_reference_source_id")
+    for source_id in source_ids:
+        require(source_id in reference["sources"], "unknown_reference_source_id")
+        source = reference["sources"][source_id]
+        require(source["status"] == "success", "reference_source_not_successful")
+        require(https_source_url(source["url"]), "reference_source_url_must_be_https")
+        require(valid_sha256(source["source_hash"]), "invalid_reference_source_hash")
+    return {"reference_manifest_sha256": declared_hash, "reference_source_ids": list(source_ids)}
 
 
 def check_teacher_provenance(episode):
@@ -293,13 +379,15 @@ def normalize_response(parts):
     return assistant
 
 
-def normalize_episode(episode, validate_record):
+def normalize_episode(episode, validate_record, *, corpus_version=CORPUS_VERSION, reference=None, tool_actions_only=False):
+    corpus_version = checked_corpus_version(corpus_version)
     require(isinstance(episode, dict), "episode_must_be_object")
     require(type(episode.get("format_version")) is int and episode["format_version"] == 1, "unsupported_format_version")
     for key in ("episode_id", "project_id", "project_family_id", "source_revision"):
         identifier(episode.get(key), key)
     require(episode.get("scope") == SCOPE, "wrong_scope")
     check_teacher_provenance(episode)
+    reference_metadata = check_references(episode, reference)
     require(episode.get("split") in SPLITS, "invalid_split")
     require(isinstance(episode.get("goals"), dict) and episode["goals"], "missing_goals")
     verification = episode.get("verification")
@@ -329,7 +417,8 @@ def normalize_episode(episode, validate_record):
         require(all(item["function"]["name"] in active for item in assistant.get("tool_calls", [])), "target_tool_not_in_active_schema")
         metadata = {key: episode[key] for key in ("episode_id", "project_id", "project_family_id", "scope", "source_revision", "split")}
         metadata.update(TEACHER_PROVENANCE)
-        metadata.update(corpus_version=CORPUS_VERSION, call_index=index,
+        metadata.update(reference_metadata)
+        metadata.update(corpus_version=corpus_version, call_index=index,
                         verification="executed_synthetic_state_predicate_passed", real_live_verified=False,
                         teacher_usage_reported=False)
         record = {"messages": prefix + [assistant], "tools": tools, "metadata": metadata}
@@ -349,6 +438,19 @@ def normalize_episode(episode, validate_record):
                     require(all(result.get("name") == target["function"]["name"] for result in results), "tool_result_name_mismatch")
                     seen = True
             require(seen, "missing_subsequent_successful_tool_result")
+    # All native calls, results, state checks and response envelopes above must
+    # pass before target selection. Dropping a prose target must never hide a
+    # failed action or an invalid later response from whole-episode admission.
+    if tool_actions_only:
+        tool_records = []
+        for record in records:
+            target = record["messages"][-1]
+            if target.get("tool_calls"):
+                require(target.get("content") in (None, ""), "tool_action_target_contains_public_text")
+                record["metadata"]["target_policy"] = "verified_tool_calls_only"
+                tool_records.append(record)
+        require(bool(tool_records), "episode_has_no_tool_action_targets")
+        records = tool_records
     return records
 
 
@@ -361,12 +463,19 @@ def load_validator(path):
     return module
 
 
-def collect(raw_dir, output_dir, validator_path, *, overwrite=False):
+def collect(raw_dir, output_dir, validator_path, *, overwrite=False, corpus_version=CORPUS_VERSION, reference_manifest=None,
+            tool_actions_only=False):
+    corpus_version = checked_corpus_version(corpus_version)
     raw_dir, output_dir, validator_path = Path(raw_dir).resolve(), Path(output_dir).resolve(), Path(validator_path).resolve()
     require(raw_dir.is_dir(), "raw_directory_missing")
     require(raw_dir != output_dir and raw_dir not in output_dir.parents and output_dir not in raw_dir.parents, "raw_and_output_directories_must_not_overlap")
     require(not output_dir.exists() or output_dir.is_dir(), "output_is_not_directory")
     require(overwrite or not output_dir.exists() or not any(output_dir.iterdir()), "output_directory_not_empty_use_explicit_overwrite")
+    reference_path = Path(reference_manifest) if reference_manifest is not None else None
+    if reference_path is not None:
+        require(reference_path.resolve() != output_dir and output_dir not in reference_path.resolve().parents,
+                "reference_manifest_must_not_be_inside_output_directory")
+    reference = load_reference_manifest(reference_path) if reference_path is not None else None
     validator = load_validator(validator_path)
     sources = sorted(raw_dir.rglob("*.json"))
     require(bool(sources), "no_raw_episode_json_files")
@@ -380,7 +489,8 @@ def collect(raw_dir, output_dir, validator_path, *, overwrite=False):
             episode = load_json(raw.decode("utf-8"))
             require(isinstance(episode, dict), "episode_must_be_object")
             entry["identity"] = {key: episode.get(key) for key in ("episode_id", "project_id", "project_family_id", "split", "source_revision", *TEACHER_PROVENANCE)}
-            entry["records"] = normalize_episode(episode, validator.validate_record)
+            entry["records"] = normalize_episode(episode, validator.validate_record, corpus_version=corpus_version,
+                                                 reference=reference, tool_actions_only=tool_actions_only)
         except (Rejected, ValueError, UnicodeError, TypeError, KeyError) as error:
             entry["reasons"].append(str(error) if isinstance(error, Rejected) else "invalid_raw_episode:" + type(error).__name__)
         entries.append(entry)
@@ -427,7 +537,7 @@ def collect(raw_dir, output_dir, validator_path, *, overwrite=False):
             output_hashes[path.name] = digest(path.read_bytes())
         records_by_split = {split: len(records) for split, records in accepted.items()}
         empty_splits = [split for split, count in records_by_split.items() if count == 0]
-        manifest = {"format_version": 2, "raw_format_version": 1, "corpus_version": CORPUS_VERSION,
+        manifest = {"format_version": 2, "raw_format_version": 1, "corpus_version": corpus_version,
                     "scope": SCOPE, **TEACHER_PROVENANCE, "real_live_verified": False,
                     "teacher_usage_reported": False,
                     "teacher_provenance_check": "exact declared model/effort/transport; not independent provider authentication",
@@ -447,12 +557,27 @@ def collect(raw_dir, output_dir, validator_path, *, overwrite=False):
                                     "Train-only pilots have no validation/test coverage and must not be treated as a complete evaluation corpus.",
                                     "Successful teacher examples do not establish a competitive success rate; all held-out evaluation attempts must be scored separately.",
                                     "Token lengths, prompt masks and musical quality require separate checks."]}
+        if tool_actions_only:
+            manifest["target_policy"] = "verified_tool_calls_only"
+            manifest["target_policy_note"] = (
+                "Only verified tool-call targets with no accompanying public text are emitted. Text-only responses remain in raw "
+                "evidence and any later prompt context; that context must remain loss-masked by the trainer.")
+        if reference is not None:
+            used_sources = {source_id for records in accepted.values() for record in records
+                            for source_id in record["metadata"]["reference_source_ids"]}
+            manifest.update(reference_manifest_sha256=reference["sha256"],
+                            reference_sources={source_id: reference["sources"][source_id] for source_id in sorted(used_sources)})
+            if reference["error"] is not None:
+                manifest["reference_manifest_error"] = reference["error"]
         for entry in entries:
             if "source_sha256" not in entry:
                 continue  # Rejected links were deliberately never opened or hashed.
             source = raw_dir / entry["source"]
             require(not source.is_symlink(), "raw_source_changed_during_collection")
             require(digest(source.read_bytes()) == entry["source_sha256"], "raw_source_changed_during_collection")
+        if reference is not None and reference["sha256"] is not None:
+            require(not reference_path.is_symlink(), "reference_manifest_changed_during_collection")
+            require(digest(reference_path.read_bytes()) == reference["sha256"], "reference_manifest_changed_during_collection")
         (stage / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         if output_dir.exists():
             shutil.rmtree(output_dir)
@@ -465,10 +590,15 @@ def main():
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--validator", type=Path, default=default_validator_path())
+    parser.add_argument("--corpus-version", default=CORPUS_VERSION, help="ASCII corpus label, up to 96 letters/digits/dots/underscores/hyphens; starts with a letter or digit")
+    parser.add_argument("--reference-manifest", type=Path, help="Research source manifest required for raw reference provenance claims")
+    parser.add_argument("--tool-actions-only", action="store_true", help="Emit only verified tool-call targets with no accompanying prose, after validating the entire episode")
     parser.add_argument("--overwrite", action="store_true", help="Explicitly replace an existing output dataset directory")
     args = parser.parse_args()
     try:
-        manifest = collect(args.raw_dir, args.output_dir, args.validator, overwrite=args.overwrite)
+        manifest = collect(args.raw_dir, args.output_dir, args.validator, overwrite=args.overwrite,
+                           corpus_version=args.corpus_version, reference_manifest=args.reference_manifest,
+                           tool_actions_only=args.tool_actions_only)
     except (Rejected, OSError, ImportError) as error:
         print(json.dumps({"ok": False, "error": str(error)}), file=sys.stderr)
         return 2

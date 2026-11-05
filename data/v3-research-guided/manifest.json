@@ -1,0 +1,345 @@
+{
+  "format_version": 2,
+  "raw_format_version": 1,
+  "corpus_version": "v3-research-guided",
+  "scope": "executed_synthetic_kumi",
+  "teacher": "gpt-6.1-sol-ultra",
+  "teacher_model": "gpt-6.1-sol",
+  "teacher_reasoning_effort": "ultra",
+  "teacher_transport": "codex_agent_file_queue",
+  "real_live_verified": false,
+  "teacher_usage_reported": false,
+  "teacher_provenance_check": "exact declared model/effort/transport; not independent provider authentication",
+  "normalizer_sha256": "9acd92a9ea16315c279a981343e85dab2abd9dcd1b8458560953c7b08adf76e0",
+  "validator_sha256": "208b9f352aebda3930a0e9214f8bf113af5ed60c1b697cf2481e32476087b29b",
+  "raw_directory": "raw-evidence.tar.gz:raw",
+  "raw_files_preserved": true,
+  "source_episodes": 13,
+  "accepted_episodes": 12,
+  "quarantined_episodes": 1,
+  "records_by_split": {
+    "train": 26,
+    "valid": 14,
+    "test": 0
+  },
+  "dataset_readiness": {
+    "empty_splits": [
+      "test"
+    ],
+    "all_training_validation_test_splits_nonempty": false,
+    "pilot_only": true,
+    "generalization_evaluation_established": false
+  },
+  "output_sha256": {
+    "train.jsonl": "ec726e98bb621f3c76fbcde6fe3f6e60c1ba556974493e941b2c2a87d05481eb",
+    "valid.jsonl": "101a046fd67a6e63f7ca290f7aca7bd491114b838b149622dfb59fa500281692",
+    "test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "episodes": [
+    {
+      "source": "kumi-sol-research-v1-S04R01.json",
+      "source_sha256": "0aa0fbb5970117ee01affa7e5797da4000427185aea6a1d67ab923fecb8a81f3",
+      "source_bytes": 449962,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R01",
+        "project_id": "research-layout-0-project-S04R01",
+        "project_family_id": "research-layout-family-0",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R02.json",
+      "source_sha256": "dee8e1833340b116435bfd550cb442cea3b2dbc643b799f00d7472741cdfca43",
+      "source_bytes": 467829,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R02",
+        "project_id": "research-layout-1-project-S04R02",
+        "project_family_id": "research-layout-family-1",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R03.json",
+      "source_sha256": "0258c8278dc9b5eeff1b1e25815a356c480f1534ab1217625be318ba9352d45a",
+      "source_bytes": 465995,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R03",
+        "project_id": "research-layout-1-project-S04R03",
+        "project_family_id": "research-layout-family-1",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R04.json",
+      "source_sha256": "d995a649faa38812035f7275bf92db1ae4d84bcf5b76cbf1f277e992ba06df43",
+      "source_bytes": 470676,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R04",
+        "project_id": "research-layout-2-project-S04R04",
+        "project_family_id": "research-layout-family-2",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R05.json",
+      "source_sha256": "495c11039acb3e11bef8f5e8ffc169e57aa636ab6af81d6d4339a46c7b796475",
+      "source_bytes": 823116,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R05",
+        "project_id": "research-layout-2-project-S04R05",
+        "project_family_id": "research-layout-family-2",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 5
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R06.json",
+      "source_sha256": "b5dfe753a9f520cdbc03ca661eedb776e08212d91dc6924191aa79cc19c0a91d",
+      "source_bytes": 778785,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R06",
+        "project_id": "research-layout-0-project-S04R06",
+        "project_family_id": "research-layout-family-0",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 5
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R07.json",
+      "source_sha256": "31690ffaacb04a53b92d12ad49a387a5d6fc45a357f3e946e3cd062d48b78e7f",
+      "source_bytes": 438237,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R07",
+        "project_id": "research-layout-0-project-S04R07",
+        "project_family_id": "research-layout-family-0",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R08.json",
+      "source_sha256": "8c585acc0698feed004beea03ba60d114c62b00287c2f6e2d7f49a95e7289897",
+      "source_bytes": 448791,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R08",
+        "project_id": "research-layout-1-project-S04R08",
+        "project_family_id": "research-layout-family-1",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R09.json",
+      "source_sha256": "3a87337cfc86c3d0c16fe66ecd1922bc7ecc50aea42be08c4bea8fc095974b4d",
+      "source_bytes": 2532059,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R09",
+        "project_id": "research-layout-1-project-S04R09",
+        "project_family_id": "research-layout-family-1",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "quarantined",
+      "reasons": [
+        "tool_result_error_or_unsupported_output"
+      ],
+      "accepted_records": 0
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R10.json",
+      "source_sha256": "1e7acd39706c6a36a212780097006351639796015f8afe61207a4744878fd324",
+      "source_bytes": 792871,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R10",
+        "project_id": "research-layout-2-project-S04R10",
+        "project_family_id": "research-layout-family-2",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R11.json",
+      "source_sha256": "8d3a756d653635e97f4038029f1b52405476a76967027d2fc4ca979a9a4ead18",
+      "source_bytes": 473469,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R11",
+        "project_id": "research-layout-2-project-S04R11",
+        "project_family_id": "research-layout-family-2",
+        "split": "valid",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S04R12.json",
+      "source_sha256": "c601ca4a126d23d2835a29b4cd83c11c35fee422ab05e9658f398c7098994bf4",
+      "source_bytes": 447136,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S04R12",
+        "project_id": "research-layout-0-project-S04R12",
+        "project_family_id": "research-layout-family-0",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    },
+    {
+      "source": "kumi-sol-research-v1-S05R09.json",
+      "source_sha256": "3134d7cb0f414e589e25469636ce950b87dd5d363a90f999d23638e5fe9818a1",
+      "source_bytes": 789944,
+      "identity": {
+        "episode_id": "kumi-sol-research-v1-S05R09",
+        "project_id": "research-layout-1-project-S05R09",
+        "project_family_id": "research-layout-family-1",
+        "split": "train",
+        "source_revision": "2ff07a5be515e0a267ea86f7c3d56fa579b607ea",
+        "teacher": "gpt-6.1-sol-ultra",
+        "teacher_model": "gpt-6.1-sol",
+        "teacher_reasoning_effort": "ultra",
+        "teacher_transport": "codex_agent_file_queue"
+      },
+      "status": "accepted",
+      "reasons": [],
+      "accepted_records": 3
+    }
+  ],
+  "limitations": [
+    "Verification is execution against Kumi's synthetic bridge, not Ableton Live or audio verification.",
+    "Teacher actions were supplied through a Codex-agent file queue; this is not a direct OpenAI API sampling log.",
+    "Provider token usage and private reasoning are not supplied by this transport and are not training data.",
+    "Train-only pilots have no validation/test coverage and must not be treated as a complete evaluation corpus.",
+    "Successful teacher examples do not establish a competitive success rate; all held-out evaluation attempts must be scored separately.",
+    "Token lengths, prompt masks and musical quality require separate checks."
+  ],
+  "target_policy": "verified_tool_calls_only",
+  "target_policy_note": "Only verified tool-call targets with no accompanying public text are emitted. Text-only responses remain in raw evidence and any later prompt context; that context must remain loss-masked by the trainer.",
+  "reference_manifest_sha256": "9a8f6ca34e23186d8b551c924a3ae6c9411dc10cae9c7b7280f8eed06c6428b0",
+  "reference_sources": {
+    "lom_clip": {
+      "url": "https://docs.cycling74.com/apiref/lom/clip/",
+      "source_hash": "5fa1b6de0d9632c56a88115e9a28bce1c2c8c430ccaf23ed9c3fc8ff39b47f0d",
+      "status": "success"
+    },
+    "lom_clipslot": {
+      "url": "https://docs.cycling74.com/apiref/lom/clipslot/",
+      "source_hash": "a18e5edc964be6b4985865b7b7c0256d43f514e0eee71bb92bc070775336ab67",
+      "status": "success"
+    },
+    "lom_device": {
+      "url": "https://docs.cycling74.com/apiref/lom/device/",
+      "source_hash": "9892b2ee75378532540a60d044de698a8f6d76daab59352de562447058c12ced",
+      "status": "success"
+    },
+    "lom_deviceparameter": {
+      "url": "https://docs.cycling74.com/apiref/lom/deviceparameter/",
+      "source_hash": "70280c1e249cd2e15f3975bb4517498185f60d6e3aa89b23cc6ca5cc9fef472f",
+      "status": "success"
+    },
+    "lom_mixerdevice": {
+      "url": "https://docs.cycling74.com/apiref/lom/mixerdevice/",
+      "source_hash": "7ad76f617f6598310aa1cd98da0b87b28ec39ad55e4f192ef5db2a68ec887e4e",
+      "status": "success"
+    },
+    "lom_song": {
+      "url": "https://docs.cycling74.com/apiref/lom/song/",
+      "source_hash": "a3bb81f04cbe67cdcce67261648a287ad2bb68a42211e9c2c7e5eb67be163d49",
+      "status": "success"
+    },
+    "lom_track": {
+      "url": "https://docs.cycling74.com/apiref/lom/track/",
+      "source_hash": "506b349f3e7c90c9a1c81cd553fafe576ed74a19fde62c36d2ed7ca5f86d14d8",
+      "status": "success"
+    }
+  },
+  "public_export": {
+    "changed_fields": [
+      "raw_directory",
+      "public_export"
+    ],
+    "note": "Only this dataset manifest path label is redacted; JSONL and raw episode bytes are identical to Studio.",
+    "original_studio_manifest_sha256": "0934f637880e8e60b5ae6d0bd6d91fd2e5184a180d6b5b9ce268ab938411c849"
+  }
+}

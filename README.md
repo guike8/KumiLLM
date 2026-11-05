@@ -6,6 +6,12 @@ The first release contains **96 executed synthetic episodes and 432 assistant-ta
 
 This is a bootstrap corpus. It does not contain real Ableton sessions, audio evaluations, trained model weights, or a claim of production reliability.
 
+## More Sol data using the AI scraper (v3)
+
+The [source research expansion](data/v3-research-guided/README.md) adds **12 admitted episodes and 40 verified tool-action records**: 26 training and 14 validation. The AI scraper collected twelve official Live API references with hashes and citation evidence; source article bodies stay private and are excluded from training targets. Sol Ultra supplied the actual Kumi actions, and the Studio executed and verified them.
+
+Six task families span gain/pan, sends, new tracks with followups, MIDI, device parameters and read-only inventory. Three structurally different projects are used; one entire layout is reserved for validation. All 40 records passed the exact tokenizer and mask checks. One original unsupported-read trace remains quarantined. This batch has not changed the running v1 training snapshot. See the [collection protocol](docs/research-collection.md) and [verification report](provenance/research-verification.json).
+
 ## Sol Ultra pilot (v2)
 
 The [first Sol teacher batch](data/v2-sol-ultra-pilot/README.md) adds **4 admitted episodes and 20 train-only assistant targets**. GPT-6.1 Sol at Ultra supplied public actions through a Codex file queue; Kumi executed them on the Studio's synthetic bridge. All records passed strict admission and exact tokenizer checks. Two original traces remain quarantined after exposing verifier defects; corrected fresh attempts provide the admitted transport and preference examples.
@@ -35,7 +41,9 @@ Read [DATASET_CARD.md](DATASET_CARD.md) for construction, verification, split ru
 ## Repository layout
 
 ```text
-data/v1/                 Normalized train, validation, and test JSONL; manifest
+data/v1/                 Original scripted corpus
+data/v2-sol-ultra-pilot/  First Sol teacher pilot
+data/v3-research-guided/  Source references and verified new tool actions
 data/v1/raw-evidence.tar.gz  All 96 raw episodes with full requests/results/state
 data/v1/raw/             Evidence after local extraction (not tracked)
 scripts/                 Admission, structure-validation, and tokenizer tools

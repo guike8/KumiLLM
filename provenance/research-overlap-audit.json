@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "audit_utc": "2026-11-05T22:24:20.732249+00:00",
+  "audit_role": "isolated provenance and split auditor; excluded from subsequent teacher or curriculum generation",
+  "scope_counts": {
+    "prospective_episodes": 12,
+    "prospective_composition_families": 6,
+    "prospective_layouts": 3,
+    "frozen_tasks": 40,
+    "frozen_layouts": 5,
+    "composition_pairs_reviewed": 480,
+    "unique_layout_pairs_compared": 15
+  },
+  "collision_counts": {
+    "exact_task_composition_copies": 0,
+    "near_task_composition_copies": 0,
+    "exact_initial_state_copies": 0,
+    "label_invariant_initial_state_topology_copies": 0,
+    "ordered_media_kind_layout_copies": 0,
+    "near_initial_state_copies": 0
+  },
+  "split_counts": {
+    "train_episodes": 8,
+    "valid_episodes": 4,
+    "train_unique_layout_groups": 2,
+    "valid_unique_layout_groups": 1,
+    "shared_layout_groups": 0
+  },
+  "method": [
+    "Reviewed all prospective family/variant prompt constructions against all frozen user-turn compositions, including target cardinality, operation order, target identity/disambiguation, absolute versus relational units, readback contract, and followup dependencies.",
+    "Shared basic DAW capability families alone were not treated as collisions. Near-copy classification requires substantially the same compound objective and dependencies after removing names, literal numeric targets, and wording.",
+    "Compared ordered track media kinds, returns, device class and placement, and occupied clip-slot placement across all unique layouts; graph mismatch excludes exact full-state equality.",
+    "Confirmed prospective train/valid layout-group separation from selection formula without modifying the frozen manifest."
+  ],
+  "limitations": [
+    "Static source/spec audit only: no execution, teacher responses, model scores, builds, network, or Studio access.",
+    "Near-composition assessment is semantic review rather than a universal proof against every possible similarity measure.",
+    "Applies only to recorded source/spec hashes; later task, layout, or series changes require a new audit.",
+    "No frozen prompts, expected answers, hidden checks, or layout details are included in this artifact."
+  ],
+  "collection_module_sha256": "2bbaa4c63889584ad7cdb514f1c1a43f4348efde16285840498831db43cb3cb8",
+  "frozen_evaluation_manifest_sha256": "97fae5ba82bef03cc4a8cdaeceaba3f76542f01c9141c1919165270383e68013",
+  "original_private_audit_sha256": "1ffa3c3bdf36db4eacb5c7032aed1c4dab878263a9c12a3174abf87efc9c670b",
+  "public_summary_omits_private_source_paths": true
+}
